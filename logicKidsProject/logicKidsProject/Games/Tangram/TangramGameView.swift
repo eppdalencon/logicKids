@@ -7,9 +7,18 @@
 
 import SwiftUI
 
+
 // da pra criar um enm para o type se precisar
+
+enum Formats: String { //(largura X altura) - ?? qualquer inteiro
+    case fourSides = "square" //(?x?)
+    case threeSides = "triangle"  //(1x1) e multíplos
+    case fourSidesAngled = "fourSidesAngled" //(5x3)
+}
+
+
 struct BlocksInfos {
-    var type: Int
+    var type: String
     var x: Int
     var y: Int
     var larg: Int
@@ -18,26 +27,25 @@ struct BlocksInfos {
 
 
 struct TangramGameView: View {
-    static var canvasTangramWidth :    CGFloat = 0.50
-    static var canvasTangramHeight : CGFloat = 0.80
+    static var canvasTangramWidth :    CGFloat = 0.80
+    static var canvasTangramHeight : CGFloat = 0.785
     
     
     // MinimumSizeGrid
     //5% da largura do celular na posicao vertical, correspondendo a 80/5 = 16 colunas
     // [1, 2, 4, 5, 10, 20, 25, 50, 100]
-    static var gridMinimumSize : Int = 10 //valor que represente %
-    static var verticalLineSpacing: CGFloat = 10/100 // Valor "x" que você deseja
-    @State var numberOfLines : Int = 0//17
-    @State var numberOfColumns : Int = 0//33
+    static var gridMinimumSize : Int = 6 //valor que represente % da largura do celular na vertical
+    static var verticalLineSpacing: CGFloat = CGFloat(gridMinimumSize)/100 // Valor "px" do quadrado do grid
+    @State var numberOfLines : Int = 0 //Esse valor é carregano no .onApper
+    @State var numberOfColumns : Int = 0 //Esse valor é carregano no .onApper
     
     
     @State var points:[CGPoint] = [CGPoint(x:0,y:0), CGPoint(x:50,y:50)]
 
     var blockList: [BlocksInfos] = [
-        BlocksInfos(type: 1, x: 2, y: 3, larg: 2, alt: 3),
-        BlocksInfos(type: 1, x: 7, y: 10, larg: 2, alt: 2),
-        BlocksInfos(type: 1, x: 2, y: 16, larg: 3, alt: 1),
-
+        BlocksInfos(type: Formats.fourSides.rawValue, x: 2, y: 3, larg: 2, alt: 3),
+        BlocksInfos(type: Formats.threeSides.rawValue, x: 16, y: 10, larg: 2, alt: 2),
+        BlocksInfos(type: Formats.fourSidesAngled.rawValue, x: 5, y: 24, larg: 5, alt: 3),
     ]
     
     func positionX(nodo : Int, width : CGFloat, height : CGFloat) -> CGFloat {
@@ -87,15 +95,15 @@ struct TangramGameView: View {
                     .foregroundColor(.blue)
                     .position(x: geometry.size.width / 2, y: geometry.size.height / 2)
                 ForEach(0..<blockList.count, id: \.self) { index in
-                    Image("blockteste")
+                    Image(blockList[index].type)
                         .resizable()
                         .frame(width: geometry.size.height * TangramGameView.verticalLineSpacing * CGFloat(blockList[index].larg),
                                height: geometry.size.height * TangramGameView.verticalLineSpacing * CGFloat(blockList[index].alt))
                         .position(x: anchorChangeX(width: blockList[index].larg,sizeBlock: geometry.size.height * TangramGameView.verticalLineSpacing) + positionX(nodo: blockList[index].x, width: geometry.size.width, height: geometry.size.height),
                                   y: anchorChangeY(height: blockList[index].alt, sizeBlock:geometry.size.height * TangramGameView.verticalLineSpacing) + positionY(nodo: blockList[index].y,width: geometry.size.width, height: geometry.size.height))
-//                        .onTapGesture { location in
-//                                print("Tapped at \(location)")
-//                        }
+                        .onTapGesture {
+                            
+                        }
                 }
                 ForEach(0..<numberOfColumns, id: \.self) { index in
                     Rectangle()
@@ -115,9 +123,8 @@ struct TangramGameView: View {
             .onAppear{
                 let size : CGFloat = geometry.size.height * TangramGameView.verticalLineSpacing
                 
-                numberOfLines =  Int((geometry.size.height * TangramGameView.canvasTangramHeight)/size) + 1 //17
-                numberOfColumns = Int((geometry.size.width * TangramGameView.canvasTangramWidth)/size) + 1// Int(geometry.size.width/TangramGameView.verticalLineSpacing) //33
-                print(numberOfLines, numberOfColumns)
+                numberOfLines =  Int((geometry.size.height * TangramGameView.canvasTangramHeight)/size) + 1
+                numberOfColumns = Int((geometry.size.width * TangramGameView.canvasTangramWidth)/size) + 1
             }
             //.edgesIgnoringSafeArea(.all)
         }
@@ -130,36 +137,3 @@ struct TangramGameView_Previews: PreviewProvider {
     }
 }
 
-
-
-struct Background:UIViewRepresentable {
-    var tappedCallback: ((CGPoint) -> Void)
-
-    func makeUIView(context: UIViewRepresentableContext<Background>) -> UIView {
-        let v = UIView(frame: .zero)
-        let gesture = UITapGestureRecognizer(target: context.coordinator,
-                                             action: #selector(Coordinator.tapped))
-        v.addGestureRecognizer(gesture)
-        return v
-    }
-
-    class Coordinator: NSObject {
-        var tappedCallback: ((CGPoint) -> Void)
-        init(tappedCallback: @escaping ((CGPoint) -> Void)) {
-            self.tappedCallback = tappedCallback
-        }
-        @objc func tapped(gesture:UITapGestureRecognizer) {
-            let point = gesture.location(in: gesture.view)
-            self.tappedCallback(point)
-        }
-    }
-
-    func makeCoordinator() -> Background.Coordinator {
-        return Coordinator(tappedCallback:self.tappedCallback)
-    }
-
-    func updateUIView(_ uiView: UIView,
-                       context: UIViewRepresentableContext<Background>) {
-    }
-
-}
