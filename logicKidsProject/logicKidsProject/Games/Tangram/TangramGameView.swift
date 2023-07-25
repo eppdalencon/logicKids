@@ -31,13 +31,13 @@ struct TangramGameView: View {
     @State var numberOfColumns : Int = 0//33
     
     
+    @State var points:[CGPoint] = [CGPoint(x:0,y:0), CGPoint(x:50,y:50)]
+
     var blockList: [BlocksInfos] = [
         BlocksInfos(type: 1, x: 2, y: 3, larg: 2, alt: 3),
         BlocksInfos(type: 1, x: 7, y: 10, larg: 2, alt: 2),
         BlocksInfos(type: 1, x: 2, y: 16, larg: 3, alt: 1),
-        BlocksInfos(type: 1, x: 2, y: 3, larg: 1, alt: 1),
-        BlocksInfos(type: 1, x: 7, y: 10, larg: 1, alt: 1),
-        BlocksInfos(type: 1, x: 2, y: 16, larg: 1, alt: 1),
+
     ]
     
     func positionX(nodo : Int, width : CGFloat, height : CGFloat) -> CGFloat {
@@ -67,11 +67,8 @@ struct TangramGameView: View {
     }
     
     func anchorChangeY(height : Int, sizeBlock : CGFloat) -> CGFloat {
-        print("guxY")
-        print(CGFloat(height), (sizeBlock))
-
-        return(0)
-        //return CGFloat(height) * (sizeBlock / 2)
+        
+        return( CGFloat(height-1) * sizeBlock/2)
     }
 
     var body: some View {
@@ -90,14 +87,15 @@ struct TangramGameView: View {
                     .foregroundColor(.blue)
                     .position(x: geometry.size.width / 2, y: geometry.size.height / 2)
                 ForEach(0..<blockList.count, id: \.self) { index in
-                    Rectangle()
+                    Image("blockteste")
+                        .resizable()
                         .frame(width: geometry.size.height * TangramGameView.verticalLineSpacing * CGFloat(blockList[index].larg),
                                height: geometry.size.height * TangramGameView.verticalLineSpacing * CGFloat(blockList[index].alt))
-                        .foregroundColor(index>=3 ? .red : .purple)
                         .position(x: anchorChangeX(width: blockList[index].larg,sizeBlock: geometry.size.height * TangramGameView.verticalLineSpacing) + positionX(nodo: blockList[index].x, width: geometry.size.width, height: geometry.size.height),
                                   y: anchorChangeY(height: blockList[index].alt, sizeBlock:geometry.size.height * TangramGameView.verticalLineSpacing) + positionY(nodo: blockList[index].y,width: geometry.size.width, height: geometry.size.height))
-                        .offset(CGSize(width: 0, height: 0))
-                        
+//                        .onTapGesture { location in
+//                                print("Tapped at \(location)")
+//                        }
                 }
                 ForEach(0..<numberOfColumns, id: \.self) { index in
                     Rectangle()
@@ -130,4 +128,38 @@ struct TangramGameView_Previews: PreviewProvider {
     static var previews: some View {
         TangramGameView()
     }
+}
+
+
+
+struct Background:UIViewRepresentable {
+    var tappedCallback: ((CGPoint) -> Void)
+
+    func makeUIView(context: UIViewRepresentableContext<Background>) -> UIView {
+        let v = UIView(frame: .zero)
+        let gesture = UITapGestureRecognizer(target: context.coordinator,
+                                             action: #selector(Coordinator.tapped))
+        v.addGestureRecognizer(gesture)
+        return v
+    }
+
+    class Coordinator: NSObject {
+        var tappedCallback: ((CGPoint) -> Void)
+        init(tappedCallback: @escaping ((CGPoint) -> Void)) {
+            self.tappedCallback = tappedCallback
+        }
+        @objc func tapped(gesture:UITapGestureRecognizer) {
+            let point = gesture.location(in: gesture.view)
+            self.tappedCallback(point)
+        }
+    }
+
+    func makeCoordinator() -> Background.Coordinator {
+        return Coordinator(tappedCallback:self.tappedCallback)
+    }
+
+    func updateUIView(_ uiView: UIView,
+                       context: UIViewRepresentableContext<Background>) {
+    }
+
 }
