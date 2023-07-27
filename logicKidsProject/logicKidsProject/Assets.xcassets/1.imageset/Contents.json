@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "Color=Pink,-Variant=Quadrado.png_0003_Color=Pink,-Variant=Quadrado.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

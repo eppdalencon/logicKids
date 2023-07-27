@@ -1,5 +1,5 @@
 //
-//  TangramInstructionView.swift
+//  TangramGameView.swift
 //  logicKidsProject
 //
 //  Created by Eduardo Dalencon on 24/07/23.
@@ -56,6 +56,6 @@ struct TangramInstructionView: View {
 
 struct TangramInstructionView_Previews: PreviewProvider {
     static var previews: some View {
-        TangramInstructionView()
+        TangramGameView()
     }
 }
