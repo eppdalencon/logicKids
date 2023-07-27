@@ -9,7 +9,34 @@ import SwiftUI
 
 struct CompleteModalView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Text("Congratulations!")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+            HStack (spacing: 20){
+                Button(action: {
+                   print("Retry clicado")
+                }) {
+                    
+                    Text("Retry")
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(Color.blue)
+                        .cornerRadius(10)
+                }
+                
+                Button(action: {
+                    print("New game clicado")
+                }) {
+                    
+                    Text("New Game")
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(Color.blue)
+                        .cornerRadius(10)
+                }
+            }
+        }
     }
 }
 
