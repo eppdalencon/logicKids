@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PauseModalView: View {
+    @Binding var show: Bool
     var body: some View {
         HStack(spacing:30){
             VStack{
@@ -31,7 +32,7 @@ struct PauseModalView: View {
             
             VStack{
                 Button(action: {
-                   print("Continue clicado")
+                    show.toggle()
                 }) {
                     
                     Text("Continue")
@@ -64,16 +65,18 @@ struct PauseModalView: View {
             
         }
         .padding(30)
-        .frame(width: 500, height: 250)
+//        .frame(width: 500, height: 250)
         .background(Color.green)
-        .cornerRadius(20)
+//        .cornerRadius(20)
         
     }
     
 }
 
 struct PauseModalView_Previews: PreviewProvider {
+    @Binding var show: Bool
     static var previews: some View {
-        PauseModalView()
+        //PauseModalView(show:show)
+        Text("placeholder")
     }
 }
