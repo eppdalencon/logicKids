@@ -106,7 +106,7 @@ struct TangramGameView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: geometry.size.width * 0.45)
-                    .position(CGPoint(x: geometry.size.width * 0.37,y: geometry.size.height * 0.60))
+                    .position(CGPoint(x: geometry.size.width * 0.37,y: geometry.size.height * 0.56))
                 Image("buttomPause")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
@@ -114,7 +114,7 @@ struct TangramGameView: View {
                     .position(CGPoint(x: geometry.size.width * 0.1, y: geometry.size.height * 0.15))
                 Text("Select the missing part")
                     .font(Font.titleBold)
-                    .position(CGPoint(x: geometry.size.width * 0.45, y: geometry.size.height * 0.15))
+                    .position(CGPoint(x: geometry.size.width * 0.42, y: geometry.size.height * 0.15))
                 VStack {
                     ZStack{
                         Image("backgroundOptions")
