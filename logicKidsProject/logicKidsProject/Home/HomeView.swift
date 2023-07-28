@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @State private var isShowingMenu = false
+    
     var body: some View {
         HStack {
             Text("Nome do Jogo")
@@ -24,13 +27,22 @@ struct HomeView: View {
                     RoundedRectangle(cornerRadius: 20, style: .continuous)
                         .frame(width: 300, height: 100)
                         .foregroundColor(Color(hue: 0.545, saturation: 0.503, brightness: 0.923))
-                    Text("INICIAR")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
+                    
+                    Button(action: {
+                        isShowingMenu.toggle()
+                    }) {
+                        
+                        Text("INICIAR")
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                    }
                 }
             }
         }
         .padding()
+        .fullScreenCover(isPresented: $isShowingMenu) {
+            GameSelectionView()
+        }
     }
 }
 

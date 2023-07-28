@@ -9,11 +9,12 @@ import SwiftUI
 
 struct PauseModalView: View {
     @Binding var show: Bool
+    var dismissGame: (() -> Void)
     var body: some View {
         HStack(spacing:30){
             VStack{
                 Button(action: {
-                   print("Restart clicado")
+                    show.toggle()
                 }) {
                     
                     Text("Restart")
@@ -49,7 +50,7 @@ struct PauseModalView: View {
             
             VStack{
                 Button(action: {
-                   print("Quit clicado")
+                   dismissGame()
                 }) {
                     
                     Text("Quit")

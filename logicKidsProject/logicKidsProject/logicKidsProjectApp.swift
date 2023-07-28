@@ -11,7 +11,7 @@ import SwiftUI
 struct logicKidsProjectApp: App {
     var body: some Scene {
         WindowGroup {
-            TangramGameView()
+            HomeView()
             //ContentView()
         }
         

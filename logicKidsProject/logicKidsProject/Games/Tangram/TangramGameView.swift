@@ -43,6 +43,9 @@ struct AnswerLevelOne {
 
 struct TangramGameView: View {
     
+    @State private var isShowingPause = false
+    var dismissAction: (() -> Void)
+    
     //Lista das pecas que contem o tangram
     var answerLevel: [AnswerLevelOne] = [
         AnswerLevelOne(ans: 0),
@@ -107,11 +110,15 @@ struct TangramGameView: View {
                     .aspectRatio(contentMode: .fit)
                     .frame(width: geometry.size.width * 0.45)
                     .position(CGPoint(x: geometry.size.width * 0.37,y: geometry.size.height * 0.56))
-                Image("buttomPause")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: geometry.size.width * 0.09)
-                    .position(CGPoint(x: geometry.size.width * 0.1, y: geometry.size.height * 0.15))
+                Button(action: {
+                    isShowingPause.toggle()
+                }) {
+                    Image("buttomPause")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: geometry.size.width * 0.09)
+                        .position(CGPoint(x: geometry.size.width * 0.1, y: geometry.size.height * 0.15))
+                }
                 Text("Select the missing part")
                     .font(Font.titleBold)
                     .position(CGPoint(x: geometry.size.width * 0.42, y: geometry.size.height * 0.15))
@@ -155,6 +162,8 @@ struct TangramGameView: View {
             }
         }
         .ignoresSafeArea(.all)
+        .navigationBarBackButtonHidden(true)
+        .popupNavigatopnView(show: $isShowingPause){ PauseModalView(show: $isShowingPause, dismissGame: dismissAction)}
 
     }
 }
@@ -163,6 +172,6 @@ struct TangramGameView: View {
 
 struct TangramGameView_Previews: PreviewProvider {
     static var previews: some View {
-        TangramGameView().previewInterfaceOrientation(.landscapeLeft)
+        TangramGameView(dismissAction: {true}).previewInterfaceOrientation(.landscapeLeft)
     }
 }
