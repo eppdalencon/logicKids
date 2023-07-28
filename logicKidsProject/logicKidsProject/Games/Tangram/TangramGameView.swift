@@ -72,7 +72,7 @@ struct TangramGameView: View {
     
     
     func gerarVetor(n: Int) -> [Int] {
-        let oldList = objectsOptions //a l
+        let oldList = objectsOptions
         
         var vetor = [Int]()
         vetor.append(n)
