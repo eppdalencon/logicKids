@@ -9,7 +9,28 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Text("Nome do Jogo")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .rotationEffect(Angle(degrees: Double(-30)))
+            Spacer()
+            VStack{
+                Image("happy_cell")
+                    .resizable()
+                    .frame(width: 300,height: 200)
+                Spacer()
+                ZStack{
+                    RoundedRectangle(cornerRadius: 20, style: .continuous)
+                        .frame(width: 300, height: 100)
+                        .foregroundColor(Color(hue: 0.545, saturation: 0.503, brightness: 0.923))
+                    Text("INICIAR")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                }
+            }
+        }
+        .padding()
     }
 }
 
