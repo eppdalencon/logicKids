@@ -9,6 +9,8 @@ import SwiftUI
 
 struct TangramInstructionView: View {
     
+    var dismissAction: (() -> Void)
+    
     var body: some View {
 
         NavigationView {
@@ -25,14 +27,12 @@ struct TangramInstructionView: View {
                     .frame(width: geometry.size.width * 0.3)
                     .padding()
                     
-                    
-                    
                     Spacer()
                     
                     VStack {
                         Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.")
                         Spacer()
-                        NavigationLink(destination: TangramGameView()) {
+                        NavigationLink(destination: TangramGameView(dismissAction: dismissAction)) {
                             Text("Iniciar")
                                 .padding()
                                 .foregroundColor(.white)
@@ -56,6 +56,6 @@ struct TangramInstructionView: View {
 
 struct TangramInstructionView_Previews: PreviewProvider {
     static var previews: some View {
-        TangramGameView()
+        TangramInstructionView(dismissAction:  {true})
     }
 }
