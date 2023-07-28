@@ -8,13 +8,75 @@
 import SwiftUI
 
 struct PauseModalView: View {
+    @Binding var show: Bool
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack(spacing:30){
+            VStack{
+                Button(action: {
+                   print("Restart clicado")
+                }) {
+                    
+                    Text("Restart")
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(Color.blue)
+                        .cornerRadius(10)
+                }
+                
+                Image("placeholder")
+                    .resizable()
+                    
+            }
+           
+           
+            
+            VStack{
+                Button(action: {
+                    show.toggle()
+                }) {
+                    
+                    Text("Continue")
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(Color.blue)
+                        .cornerRadius(10)
+                }
+                
+                Image("placeholder")
+                    .resizable()
+            }
+            
+            
+            VStack{
+                Button(action: {
+                   print("Quit clicado")
+                }) {
+                    
+                    Text("Quit")
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(Color.blue)
+                        .cornerRadius(10)
+                }
+                
+                Image("placeholder")
+                    .resizable()
+            }
+            
+        }
+        .padding(30)
+//        .frame(width: 500, height: 250)
+        .background(Color.green)
+//        .cornerRadius(20)
+        
     }
+    
 }
 
 struct PauseModalView_Previews: PreviewProvider {
+    @Binding var show: Bool
     static var previews: some View {
-        PauseModalView()
+        //PauseModalView(show:show)
+        Text("placeholder")
     }
 }
