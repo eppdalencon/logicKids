@@ -44,6 +44,7 @@ struct AnswerLevelOne {
 struct TangramGameView: View {
     
     @State private var isShowingPause = false
+    @State private var isShowingCongratulation = false
     var dismissAction: (() -> Void)
     
     //Lista das pecas que contem o tangram
@@ -73,6 +74,9 @@ struct TangramGameView: View {
     
     @State var questionSelected : Int = 0
     
+    func getNewGame() -> Int {
+         return Int.random(in: 0...questionLevel.count-1)
+    }
     
     func gerarVetor(n: Int) -> [Int] {
         let oldList = objectsOptions
@@ -89,10 +93,15 @@ struct TangramGameView: View {
         if oldList != vetor {
             vetor.shuffle()
             vetor.reverse()
-            
         }
 
         return vetor
+    }
+    
+    func retryGame(){
+        questionSelected = getNewGame()
+        objectsOptions = gerarVetor(n:questionLevel[questionSelected].answerInt)
+        //isShowingCongratulation = false
     }
 
     var body: some View {
@@ -137,12 +146,13 @@ struct TangramGameView: View {
                                     .aspectRatio(contentMode: .fit)
                                     .frame(height: geometry.size.width * 0.10)
                                     .onTapGesture {
-//                                        print("numero da peca clicada: \(answerLevel[objectsOptions[i]].answerInt)")
-//                                        print("questao resposta: \(questionLevel[questionSelected].answerInt)")
-//                                        print("pecas possiveis\(objectsOptions)")
+
                                         if (answerLevel[objectsOptions[i]].answerInt == questionLevel[questionSelected].answerInt) {
+                                            //chamar a tela de congratulation
+                                            isShowingCongratulation = true
                                             print("CERTO")
                                         } else {
+                                            //talvez um sinal sonoro, mas ainda nao decidimos
                                             print("ERRADO")
                                         }
                                         questionSelected = Int.random(in: 0..<questionLevel.count)
@@ -158,7 +168,8 @@ struct TangramGameView: View {
 
             }
             .onAppear(){
-                objectsOptions = gerarVetor(n:questionLevel[questionSelected].answerInt)
+                retryGame()
+                //objectsOptions = gerarVetor(n:questionLevel[questionSelected].answerInt)
             }
         }
         .ignoresSafeArea(.all)
