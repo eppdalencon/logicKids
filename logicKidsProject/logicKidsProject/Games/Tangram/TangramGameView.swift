@@ -155,8 +155,8 @@ struct TangramGameView: View {
                                             //talvez um sinal sonoro, mas ainda nao decidimos
                                             print("ERRADO")
                                         }
-                                        questionSelected = Int.random(in: 0..<questionLevel.count)
-                                        objectsOptions = gerarVetor(n:questionLevel[questionSelected].answerInt)
+//                                        questionSelected = Int.random(in: 0..<questionLevel.count)
+//                                        objectsOptions = gerarVetor(n:questionLevel[questionSelected].answerInt)
                                     }
                             }
                             Spacer()
@@ -176,7 +176,7 @@ struct TangramGameView: View {
         .navigationBarBackButtonHidden(true)
         .popupNavigatopnView(show: $isShowingPause){ PauseModalView(show: $isShowingPause, dismissGame: dismissAction)}
         .popupNavigatopnViewFull(show: $isShowingCongratulation) {
-            CompleteModalView(dismissComplete: {isShowingCongratulation = false}, dismissGame: dismissAction)
+            CompleteModalView(dismissComplete: {isShowingCongratulation = false}, dismissGame: dismissAction, shuffleGame: retryGame)
         }
 
     }
