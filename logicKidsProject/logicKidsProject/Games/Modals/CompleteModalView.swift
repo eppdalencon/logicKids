@@ -3,6 +3,9 @@ import SwiftUI
 struct CompleteModalView: View {
     var dismissComplete: (() -> Void)
     var dismissGame: (() -> Void)
+    var shuffleGame: (() -> Void)
+
+    
     
     var body: some View {
         ZStack {
@@ -13,6 +16,7 @@ struct CompleteModalView: View {
                     .fontWeight(.bold)
                 HStack (spacing: 20){
                     Button(action: {
+                        shuffleGame()
                         dismissComplete()
                     }) {
                         Text("Retry")
@@ -45,6 +49,6 @@ struct CompleteModalView: View {
 
 struct CompleteModalView_Previews: PreviewProvider {
     static var previews: some View {
-        CompleteModalView(dismissComplete: {}, dismissGame: {})
+        CompleteModalView(dismissComplete: {}, dismissGame: {}, shuffleGame: {})
     }
 }
