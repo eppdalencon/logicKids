@@ -49,7 +49,7 @@ struct TangramInstructionView: View {
             }
             
         }
-        .padding()
+        
     }
 }
 

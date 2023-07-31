@@ -175,6 +175,9 @@ struct TangramGameView: View {
         .ignoresSafeArea(.all)
         .navigationBarBackButtonHidden(true)
         .popupNavigatopnView(show: $isShowingPause){ PauseModalView(show: $isShowingPause, dismissGame: dismissAction)}
+        .popupNavigatopnViewFull(show: $isShowingCongratulation) {
+            CompleteModalView(dismissComplete: {isShowingCongratulation = false}, dismissGame: dismissAction)
+        }
 
     }
 }
