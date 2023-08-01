@@ -12,36 +12,39 @@ struct HomeView: View {
     @State private var isShowingMenu = false
     
     var body: some View {
-        HStack {
-            Text("Nome do Jogo")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .rotationEffect(Angle(degrees: Double(-30)))
-            Spacer()
-            VStack{
-                Image("happy_cell")
+        GeometryReader{geometry in
+            ZStack{
+                Image("background_image")
                     .resizable()
-                    .frame(width: 300,height: 200)
-                Spacer()
-                ZStack{
-                    RoundedRectangle(cornerRadius: 20, style: .continuous)
-                        .frame(width: 300, height: 100)
-                        .foregroundColor(Color(hue: 0.545, saturation: 0.503, brightness: 0.923))
+                    .aspectRatio(contentMode: .fill)
+                Image("tans_logo")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: geometry.size.width * 0.45)
+                    .position(CGPoint(x: geometry.size.width * 0.55, y: geometry.size.height * 0.35))
+                Image("characters_home")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: geometry.size.width * 0.95)
                     
-                    Button(action: {
-                        isShowingMenu.toggle()
-                    }) {
-                        
-                        Text("INICIAR")
-                            .font(.largeTitle)
-                            .fontWeight(.bold)
-                    }
+                VStack {
+                    HomeButton(title: "My Achievements", color: Color.orange, largura: geometry.size.width * 0.3, altura: geometry.size.height * 0.12, action: {
+                            isShowingMenu.toggle()
+                    })
+                    Spacer()
+                        .frame(height: geometry.size.height * 0.06)
+                    HomeButton(title: "Start Playing", color: Color.blue, largura: geometry.size.width * 0.3, altura: geometry.size.height * 0.12 ,action: {
+                            isShowingMenu.toggle()
+                    })
                 }
+                .position(CGPoint(x: geometry.size.width * 0.55, y: geometry.size.height * 0.78))
+
             }
-        }
-        .padding()
-        .fullScreenCover(isPresented: $isShowingMenu) {
-            GameSelectionView()
+            .ignoresSafeArea(.all)
+            .fullScreenCover(isPresented: $isShowingMenu) {
+                GameSelectionView()
+            }
+
         }
     }
 }

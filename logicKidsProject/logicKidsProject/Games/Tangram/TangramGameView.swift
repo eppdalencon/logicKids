@@ -129,7 +129,7 @@ struct TangramGameView: View {
                         .position(CGPoint(x: geometry.size.width * 0.1, y: geometry.size.height * 0.15))
                 }
                 Text("Select the missing part")
-                    .font(Font.titleBold)
+                    .font(Font.titleLargeBold)
                     .position(CGPoint(x: geometry.size.width * 0.42, y: geometry.size.height * 0.15))
                 VStack {
                     ZStack{
