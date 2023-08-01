@@ -11,73 +11,97 @@ struct PauseModalView: View {
     @Binding var show: Bool
     var dismissGame: (() -> Void)
     var body: some View {
-        HStack(spacing:30){
-            VStack{
-                Button(action: {
-                    show.toggle()
-                }) {
+        GeometryReader { geometry in
+            ZStack(alignment: .top){
+                
+                VStack{
+                    Spacer().frame(height: geometry.size.height * 0.05)
+                    HStack(spacing:geometry.size.width * 0.05){
+                        VStack{
+                            Button(action: {
+                                dismissGame()
+                            }) {
+                                Image("QuitButton")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: geometry.size.width * 0.1)
+                                    
+                            }
+                            Text("Quit")
+                                .bold()
+                            
+                            
+                        }
+                        
+                        VStack{
+                            Button(action: {
+                                show.toggle()
+                            }) {
+                                Image("ContinueButton")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: geometry.size.width * 0.1)
+                               
+                                    
+                            }
+                            Text("Continue")
+                                .bold()
+                           
+                        }
+                        
+                        VStack{
+                            Button(action: {
+                                show.toggle()
+                            }) {
+                                
+                                Image("RestartButton")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: geometry.size.width * 0.1)
+                                    
+                            }
+                            
+                            
+                            Text("Restart")
+                                .bold()
+                        }
+                        
+                        
+                    }
                     
-                    Text("Restart")
-                        .padding()
-                        .foregroundColor(.white)
-                        .background(Color.blue)
-                        .cornerRadius(10)
+                    .padding(30)
+                    .frame(width: geometry.size.width / 2, height: geometry.size.height / 2.1)
+                    .background(Color("lightBackground"))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 20)
+                            .stroke(Color.teal, lineWidth: 10)
+                    )
+                    .cornerRadius(20)
                 }
                 
-                Image("placeholder")
-                    .resizable()
-                    
-            }
-           
-           
-            
-            VStack{
-                Button(action: {
-                    show.toggle()
-                }) {
-                    
-                    Text("Continue")
-                        .padding()
-                        .foregroundColor(.white)
-                        .background(Color.blue)
-                        .cornerRadius(10)
-                }
                 
-                Image("placeholder")
-                    .resizable()
+                Text("Paused")
+                    .foregroundColor(Color.white)
+                    .bold()
+                    .font(.title3)
+                    .frame(width: geometry.size.width * 0.15, height: geometry.size.height * 0.1)
+                    .background(Color.teal)
+                    .cornerRadius(10)
             }
-            
-            
-            VStack{
-                Button(action: {
-                   dismissGame()
-                }) {
-                    
-                    Text("Quit")
-                        .padding()
-                        .foregroundColor(.white)
-                        .background(Color.blue)
-                        .cornerRadius(10)
-                }
-                
-                Image("placeholder")
-                    .resizable()
-            }
-            
+            .frame(width: geometry.size.width, height: geometry.size.height)
         }
-        .padding(30)
-//        .frame(width: 500, height: 250)
-        .background(Color.green)
-//        .cornerRadius(20)
+        
         
     }
     
 }
 
 struct PauseModalView_Previews: PreviewProvider {
-    @Binding var show: Bool
+    struct PreviewModel {
+        var show: Bool = false
+    }
+    
     static var previews: some View {
-        //PauseModalView(show:show)
-        Text("placeholder")
+        PauseModalView(show: .constant(false), dismissGame: {})
     }
 }

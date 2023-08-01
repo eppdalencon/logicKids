@@ -122,12 +122,24 @@ struct TangramGameView: View {
                 Button(action: {
                     isShowingPause.toggle()
                 }) {
-                    Image("buttomPause")
+                    Image("PauseButton")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: geometry.size.width * 0.09)
+                        .frame(width: geometry.size.width * 0.05)
                         .position(CGPoint(x: geometry.size.width * 0.1, y: geometry.size.height * 0.15))
                 }
+                
+                Button(action: {
+                    isShowingPause.toggle()
+                }) {
+                    Image("InfoButton")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: geometry.size.width * 0.05)
+                        .position(CGPoint(x: geometry.size.width * 0.1, y: geometry.size.height * 0.85))
+                }
+                
+                
                 Text("Select the missing part")
                     .font(Font.titleBold)
                     .position(CGPoint(x: geometry.size.width * 0.42, y: geometry.size.height * 0.15))
