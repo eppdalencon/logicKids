@@ -48,7 +48,7 @@ struct GameSelectionView: View {
         }
         .ignoresSafeArea(.all)
         .fullScreenCover(isPresented: $isShowingGame) {
-            TangramInstructionView(dismissAction: {isShowingGame = false})
+            TangramGameView(dismissAction: {isShowingGame = false})
         }
     }
 }

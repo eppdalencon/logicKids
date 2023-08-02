@@ -20,6 +20,8 @@
 		3088F7AC2A6EFFCB00FD7540 /* CompleteModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3088F7AB2A6EFFCB00FD7540 /* CompleteModalView.swift */; };
 		3088F7AF2A6EFFEB00FD7540 /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3088F7AE2A6EFFEB00FD7540 /* AchievementsView.swift */; };
 		3088F7B42A72E51C00FD7540 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3088F7B32A72E51C00FD7540 /* Extensions.swift */; };
+		309AC15C2A7ADA6200F97285 /* TangramInterrogationModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309AC15B2A7ADA6200F97285 /* TangramInterrogationModal.swift */; };
+		30FCA72D2A7ACEB4009DBFAA /* TangramInstructionModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FCA72C2A7ACEB4009DBFAA /* TangramInstructionModal.swift */; };
 		7BF3E1762A72E3C500482E7E /* fontsExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF3E1752A72E3C500482E7E /* fontsExtention.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +40,8 @@
 		3088F7AB2A6EFFCB00FD7540 /* CompleteModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteModalView.swift; sourceTree = "<group>"; };
 		3088F7AE2A6EFFEB00FD7540 /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
 		3088F7B32A72E51C00FD7540 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		309AC15B2A7ADA6200F97285 /* TangramInterrogationModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TangramInterrogationModal.swift; sourceTree = "<group>"; };
+		30FCA72C2A7ACEB4009DBFAA /* TangramInstructionModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TangramInstructionModal.swift; sourceTree = "<group>"; };
 		7BF3E1752A72E3C500482E7E /* fontsExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fontsExtention.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,6 +127,8 @@
 			children = (
 				3088F7A42A6EFF5C00FD7540 /* TangramGameView.swift */,
 				3088F7A62A6EFF7400FD7540 /* TangramInstructionView.swift */,
+				30FCA72C2A7ACEB4009DBFAA /* TangramInstructionModal.swift */,
+				309AC15B2A7ADA6200F97285 /* TangramInterrogationModal.swift */,
 			);
 			path = Tangram;
 			sourceTree = "<group>";
@@ -231,12 +237,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				309AC15C2A7ADA6200F97285 /* TangramInterrogationModal.swift in Sources */,
 				3088F7A72A6EFF7400FD7540 /* TangramInstructionView.swift in Sources */,
 				3088F7AF2A6EFFEB00FD7540 /* AchievementsView.swift in Sources */,
 				3088F7AA2A6EFFBD00FD7540 /* PauseModalView.swift in Sources */,
 				3088F7A52A6EFF5C00FD7540 /* TangramGameView.swift in Sources */,
 				3088F7AC2A6EFFCB00FD7540 /* CompleteModalView.swift in Sources */,
 				7BF3E1762A72E3C500482E7E /* fontsExtention.swift in Sources */,
+				30FCA72D2A7ACEB4009DBFAA /* TangramInstructionModal.swift in Sources */,
 				3088F79E2A6EFEF600FD7540 /* HomeView.swift in Sources */,
 				3088F7A12A6EFF1600FD7540 /* GameSelectionView.swift in Sources */,
 				3088F7912A6EFC1900FD7540 /* ContentView.swift in Sources */,
@@ -371,7 +379,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"logicKidsProject/Preview Content\"";
-				DEVELOPMENT_TEAM = J7JQJTT8YZ;
+				DEVELOPMENT_TEAM = 793WGVWJ9W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
@@ -404,7 +412,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"logicKidsProject/Preview Content\"";
-				DEVELOPMENT_TEAM = J7JQJTT8YZ;
+				DEVELOPMENT_TEAM = 793WGVWJ9W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
