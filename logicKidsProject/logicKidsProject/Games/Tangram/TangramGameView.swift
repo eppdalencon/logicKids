@@ -109,11 +109,7 @@ struct TangramGameView: View {
             ZStack {
                 Image("background")
                     .resizable()
-                    //.aspectRatio(geometry.size ,contentMode: .fill)
                     .aspectRatio(contentMode: .fit)
-                    //.frame(maxWidth: .infinity, maxHeight: .infinity)
-                    //.scaledToFit()
-                    //.frame(height: geometry.size.height)
                 Image(questionLevel[questionSelected].getQuestion())
                     .resizable()
                     .aspectRatio(contentMode: .fit)

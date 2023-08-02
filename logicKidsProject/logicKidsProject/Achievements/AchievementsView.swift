@@ -9,48 +9,39 @@ import SwiftUI
 
 struct AchievementsView: View {
     var body: some View {
-        HStack{
-            VStack{
-                Spacer()
-                Text("Conquistas")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                Spacer()
-                Image("happy_cell")
+        GeometryReader{ geometry in
+            ZStack{
+                Image("background_image")
                     .resizable()
-                    .frame(width: 300,height: 200)
+                    .aspectRatio(contentMode: .fit)
+                VStack{
+                    Spacer()
+                    HStack{
+                        Image(systemName: "arrow.left")
+                            .font(.largeTitle)
+                        Spacer()
+                        Text("Achievements")
+                            .font(Font.titleLargeBold)
+                        Spacer()
+                    }
+                    VStack{
+                        ScrollView(.horizontal, showsIndicators: false){
+                            HStack{
+                                ForEach(0..<(6)){ i in
+                                    Image("achivements")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: geometry.size.width * 0.25)
+                                }
+                            }
+                        }
+                    }
                 Spacer()
+                }
+                .padding(.horizontal,32)
             }
-            
-            Spacer()
-            
-            ScrollView(.vertical){
-                Spacer()
-                
-                Image("level_one")
-                    .resizable()
-                    .frame(width: 300,height: 100)
-                Spacer()
-                
-                Image("level_two")
-                    .resizable()
-                    .frame(width: 300,height: 100)
-                Spacer()
-                
-                Image("level_three")
-                    .resizable()
-                    .frame(width: 300,height: 100)
-                Spacer()
-                
-                Image("level_four")
-                    .resizable()
-                    .frame(width: 300,height: 100)
-                Spacer()
-            }
-            
-            Spacer()
-            
         }
+        .ignoresSafeArea(.all)
     }
 }
 
