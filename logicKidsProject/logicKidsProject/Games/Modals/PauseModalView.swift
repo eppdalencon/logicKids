@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PauseModalView: View {
     @Binding var show: Bool
+    var shuffleGame: (() -> Void)
     var dismissGame: (() -> Void)
     var body: some View {
         GeometryReader { geometry in
@@ -52,6 +53,7 @@ struct PauseModalView: View {
                         VStack{
                             Button(action: {
                                 show.toggle()
+                                shuffleGame()
                             }) {
                                 
                                 Image("RestartButton")
@@ -102,6 +104,6 @@ struct PauseModalView_Previews: PreviewProvider {
     }
     
     static var previews: some View {
-        PauseModalView(show: .constant(false), dismissGame: {})
+        PauseModalView(show: .constant(false),shuffleGame:{}, dismissGame: {})
     }
 }
