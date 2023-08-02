@@ -49,6 +49,8 @@ struct TangramGameView: View {
     
     @State private var isShowingPause = false
     @State private var isShowingCongratulation = false
+    @State private var isShowingInitialInstructions = true
+    @State private var isShowingInstructions = false
     var dismissAction: (() -> Void)
     
     //Lista das pecas que contem o tangram
@@ -202,17 +204,17 @@ struct TangramGameView: View {
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: geometry.size.width * 0.05)
                         }
-                        .background(Color.red)
+                        
                         Spacer()
                         Button(action: {
-                            isShowingPause.toggle()
+                            isShowingInstructions.toggle()
                         }) {
                             Image("InfoButton")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: geometry.size.width * 0.05)
                         }
-                        .background(Color.green)
+                        
                     }
                     Spacer()
                 }
@@ -265,11 +267,12 @@ struct TangramGameView: View {
         }
         .ignoresSafeArea(.all)
         .navigationBarBackButtonHidden(true)
-        .popupNavigatopnView(show: $isShowingPause){ PauseModalView(show: $isShowingPause, dismissGame: dismissAction)}
+        .popupNavigatopnView(show: $isShowingPause){ PauseModalView(show: $isShowingPause, shuffleGame: retryGame, dismissGame: dismissAction)}
         .popupNavigatopnViewFull(show: $isShowingCongratulation) {
             CompleteModalView(dismissComplete: {isShowingCongratulation = false}, dismissGame: dismissAction, shuffleGame: retryGame)
         }
-
+        .popupNavigatopnView(show: $isShowingInitialInstructions){ TangramInstructionModal(dismissInstruction: {isShowingInitialInstructions = false})}
+        .popupNavigatopnView(show: $isShowingInstructions){ TangramInterrogationModal(dismissInstruction: {isShowingInstructions = false})}
     }
 }
 

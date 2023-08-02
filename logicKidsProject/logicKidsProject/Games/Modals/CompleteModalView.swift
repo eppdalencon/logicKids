@@ -13,33 +13,40 @@ struct CompleteModalView: View {
                 VStack{
                     Spacer().frame(height: geometry.size.height * 0.07)
                     VStack {
-                        Text("Congratulations!")
-                            .font(.largeTitle)
-                            .fontWeight(.bold)
-                        HStack (spacing: 20){
-                            Button(action: {
-                                shuffleGame()
-                                dismissComplete()
-                            }) {
-                                Text("Retry")
-                                    .padding()
-                                    .foregroundColor(.white)
-                                    .background(Color.blue)
-                                    .cornerRadius(10)
-                            }
+                        Spacer()
+                        HStack (spacing: 30){
+                           
                             
-                            Button(action: {
-                                withAnimation {
-                                    dismissGame()
-                                    dismissComplete()
-                                }
-                            }) {
-                                Text("New Game")
-                                    .padding()
-                                    .foregroundColor(.white)
-                                    .background(Color.blue)
-                                    .cornerRadius(10)
-                            }
+                            HomeButton(title: "Quit", color: Color.red, largura: geometry.size.width * 0.2, altura: geometry.size.height * 0.1, action: {
+                                dismissGame();dismissComplete()
+                            })
+                            
+                            HomeButton(title: "Play Again", color: Color.blue, largura: geometry.size.width * 0.2, altura: geometry.size.height * 0.1, action: {
+                                shuffleGame();dismissComplete()
+                            })
+//                            Button(action: {
+//                                withAnimation {
+//                                    dismissGame()
+//                                    dismissComplete()
+//                                }
+//                            }) {
+//                                Text("Quit")
+//                                    .padding()
+//                                    .foregroundColor(.white)
+//                                    .background(Color.blue)
+//                                    .cornerRadius(10)
+//                            }
+//                            
+//                            Button(action: {
+//                                shuffleGame()
+//                                dismissComplete()
+//                            }) {
+//                                Text("Play Again")
+//                                    .padding()
+//                                    .foregroundColor(.white)
+//                                    .background(Color.blue)
+//                                    .cornerRadius(10)
+//                            }
                         }
                     }
                     
