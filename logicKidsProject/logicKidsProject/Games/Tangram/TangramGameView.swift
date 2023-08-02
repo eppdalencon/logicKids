@@ -8,20 +8,24 @@
 import SwiftUI
 
 struct QuestionsLevelOne {
+    var questionInt : Int
     var question : String
-    var answer : String
     var answerInt : Int
+    var answer : String
 
     
-    let questionText : String = "question-0-"
-    
-    init(quest: Int, ans: Int) {
-        self.question = questionText + String(quest)
+    let questionText : String = "game"
+    let answerText : String = "answer0"
+
+    init(quest: Int, opt: Int, ans: Int) {
+        self.questionInt = quest
+        self.question = questionText + String(quest) + String(opt)
         self.answerInt = ans
-        self.answer = questionText + String(ans)
+        self.answer = answerText + String(ans)
     }
     
     func getQuestion() -> String {
+        print(question)
         return String(question)
     }
 }
@@ -29,7 +33,7 @@ struct QuestionsLevelOne {
 struct AnswerLevelOne {
     var answer : String
     var answerInt : Int
-    let answerText : String = "answer-0-"
+    let answerText : String = "answer0"
     
     init(ans: Int) {
         self.answerInt = ans
@@ -49,27 +53,99 @@ struct TangramGameView: View {
     
     //Lista das pecas que contem o tangram
     var answerLevel: [AnswerLevelOne] = [
-        AnswerLevelOne(ans: 0),
         AnswerLevelOne(ans: 1),
         AnswerLevelOne(ans: 2),
         AnswerLevelOne(ans: 3),
         AnswerLevelOne(ans: 4),
-        AnswerLevelOne(ans: 5),
-        AnswerLevelOne(ans: 6)
     ]
     
     //lista de questoes
     var questionLevel: [QuestionsLevelOne] = [
-        QuestionsLevelOne(quest: 0, ans: 1),
-        QuestionsLevelOne(quest: 1, ans: 2),
-        QuestionsLevelOne(quest: 2, ans: 3)
+        QuestionsLevelOne(quest: 0, opt: 1,  ans: 1),
+        QuestionsLevelOne(quest: 0, opt: 2,  ans: 1),
+        QuestionsLevelOne(quest: 0, opt: 3,  ans: 1),
+        QuestionsLevelOne(quest: 0, opt: 4,  ans: 1),
+        QuestionsLevelOne(quest: 0, opt: 5,  ans: 1),
+        QuestionsLevelOne(quest: 0, opt: 6,  ans: 1),
+        QuestionsLevelOne(quest: 0, opt: 7,  ans: 1),
+        QuestionsLevelOne(quest: 0, opt: 8,  ans: 1),
+        
+        QuestionsLevelOne(quest: 1, opt: 1,  ans: 1),
+        QuestionsLevelOne(quest: 1, opt: 2,  ans: 1),
+        QuestionsLevelOne(quest: 1, opt: 3,  ans: 1),
+        QuestionsLevelOne(quest: 1, opt: 4,  ans: 1),
+        QuestionsLevelOne(quest: 1, opt: 5,  ans: 1),
+        QuestionsLevelOne(quest: 1, opt: 6,  ans: 1),
+        
+        QuestionsLevelOne(quest: 2, opt: 1,  ans: 1),
+        QuestionsLevelOne(quest: 2, opt: 2,  ans: 1),
+        QuestionsLevelOne(quest: 2, opt: 3,  ans: 1),
+        QuestionsLevelOne(quest: 2, opt: 4,  ans: 1),
+        QuestionsLevelOne(quest: 2, opt: 5,  ans: 1),
+        QuestionsLevelOne(quest: 2, opt: 6,  ans: 1),
+        QuestionsLevelOne(quest: 2, opt: 7,  ans: 1),
+        QuestionsLevelOne(quest: 2, opt: 8,  ans: 1),
+        
+        QuestionsLevelOne(quest: 3, opt: 1,  ans: 1),
+        QuestionsLevelOne(quest: 3, opt: 2,  ans: 1),
+        QuestionsLevelOne(quest: 3, opt: 3,  ans: 1),
+        QuestionsLevelOne(quest: 3, opt: 4,  ans: 1),
+        QuestionsLevelOne(quest: 3, opt: 5,  ans: 1),
+        QuestionsLevelOne(quest: 3, opt: 6,  ans: 1),
+        
+        QuestionsLevelOne(quest: 4, opt: 1,  ans: 1),
+        QuestionsLevelOne(quest: 4, opt: 2,  ans: 1),
+        QuestionsLevelOne(quest: 4, opt: 3,  ans: 1),
+        QuestionsLevelOne(quest: 4, opt: 4,  ans: 1),
+        QuestionsLevelOne(quest: 4, opt: 5,  ans: 1),
+        QuestionsLevelOne(quest: 4, opt: 6,  ans: 1),
+        QuestionsLevelOne(quest: 4, opt: 7,  ans: 1),
+        
+        QuestionsLevelOne(quest: 5, opt: 1,  ans: 1),
+        QuestionsLevelOne(quest: 5, opt: 2,  ans: 1),
+        QuestionsLevelOne(quest: 5, opt: 3,  ans: 1),
+        QuestionsLevelOne(quest: 5, opt: 4,  ans: 1),
+        QuestionsLevelOne(quest: 5, opt: 5,  ans: 1),
+        QuestionsLevelOne(quest: 5, opt: 6,  ans: 1),
+        QuestionsLevelOne(quest: 5, opt: 7,  ans: 1),
+        
+        QuestionsLevelOne(quest: 6, opt: 1,  ans: 1),
+        QuestionsLevelOne(quest: 6, opt: 2,  ans: 1),
+        QuestionsLevelOne(quest: 6, opt: 3,  ans: 1),
+        QuestionsLevelOne(quest: 6, opt: 4,  ans: 1),
+        QuestionsLevelOne(quest: 6, opt: 5,  ans: 1),
+        QuestionsLevelOne(quest: 6, opt: 6,  ans: 1),
+        QuestionsLevelOne(quest: 6, opt: 7,  ans: 1),
+
+        QuestionsLevelOne(quest: 7, opt: 1,  ans: 1),
+        QuestionsLevelOne(quest: 7, opt: 2,  ans: 1),
+        QuestionsLevelOne(quest: 7, opt: 3,  ans: 1),
+        QuestionsLevelOne(quest: 7, opt: 4,  ans: 1),
+        QuestionsLevelOne(quest: 7, opt: 5,  ans: 1),
+        QuestionsLevelOne(quest: 7, opt: 6,  ans: 1),
+        QuestionsLevelOne(quest: 7, opt: 7,  ans: 1),
+
+        QuestionsLevelOne(quest: 8, opt: 1,  ans: 1),
+        QuestionsLevelOne(quest: 8, opt: 2,  ans: 1),
+        QuestionsLevelOne(quest: 8, opt: 3,  ans: 1),
+        QuestionsLevelOne(quest: 8, opt: 4,  ans: 1),
+        QuestionsLevelOne(quest: 8, opt: 5,  ans: 1),
+        
+        QuestionsLevelOne(quest: 9, opt: 1,  ans: 1),
+        QuestionsLevelOne(quest: 9, opt: 2,  ans: 1),
+        QuestionsLevelOne(quest: 9, opt: 3,  ans: 1),
+        QuestionsLevelOne(quest: 9, opt: 4,  ans: 1),
+        QuestionsLevelOne(quest: 9, opt: 5,  ans: 1),
+        QuestionsLevelOne(quest: 9, opt: 6,  ans: 1),
+        QuestionsLevelOne(quest: 9, opt: 7,  ans: 1),
     ]
     
     //OPCOES DE PECAS A SEREM EXIBIDAS
     @State var objectsOptions: [Int] = [
         1,
-        3,
-        4,
+        2,
+        2,
+        2,
     ]
     
     @State var questionSelected : Int = 0
@@ -83,7 +159,7 @@ struct TangramGameView: View {
         
         var vetor = [Int]()
         vetor.append(n)
-        while vetor.count < 3 {
+        while vetor.count < 4 {
             let num = Int.random(in: 0...answerLevel.count-1)
             if num != n && !vetor.contains(num) {
                 vetor.append(num)
@@ -107,42 +183,47 @@ struct TangramGameView: View {
     var body: some View {
         GeometryReader { geometry in
             ZStack {
-                Image("background")
+                Image("background_image")
                     .resizable()
-                    //.aspectRatio(geometry.size ,contentMode: .fill)
                     .aspectRatio(contentMode: .fit)
-                    //.frame(maxWidth: .infinity, maxHeight: .infinity)
-                    //.scaledToFit()
-                    //.frame(height: geometry.size.height)
                 Image(questionLevel[questionSelected].getQuestion())
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: geometry.size.width * 0.45)
-                    .position(CGPoint(x: geometry.size.width * 0.37,y: geometry.size.height * 0.56))
-                Button(action: {
-                    isShowingPause.toggle()
-                }) {
-                    Image("PauseButton")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: geometry.size.width * 0.05)
-                        .position(CGPoint(x: geometry.size.width * 0.1, y: geometry.size.height * 0.15))
-                }
+                    .frame(height: geometry.size.height * 0.6)
+                    .position(CGPoint(x: geometry.size.width * 0.43,y: geometry.size.height * 0.54))
                 
-                Button(action: {
-                    isShowingPause.toggle()
-                }) {
-                    Image("InfoButton")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: geometry.size.width * 0.05)
-                        .position(CGPoint(x: geometry.size.width * 0.1, y: geometry.size.height * 0.85))
+                HStack{
+                    VStack {
+                        Button(action: {
+                            isShowingPause.toggle()
+                        }) {
+                            Image("PauseButton")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: geometry.size.width * 0.05)
+                        }
+                        .background(Color.red)
+                        Spacer()
+                        Button(action: {
+                            isShowingPause.toggle()
+                        }) {
+                            Image("InfoButton")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: geometry.size.width * 0.05)
+                        }
+                        .background(Color.green)
+                    }
+                    Spacer()
                 }
-                
+                .padding(.vertical,32)
+                .padding(.horizontal,64)
+
+
                 
                 Text("Select the missing part")
                     .font(Font.titleLargeBold)
-                    .position(CGPoint(x: geometry.size.width * 0.42, y: geometry.size.height * 0.15))
+                    .position(CGPoint(x: geometry.size.width * 0.42, y: geometry.size.height * 0.14))
                 VStack {
                     ZStack{
                         Image("backgroundOptions")
@@ -151,16 +232,15 @@ struct TangramGameView: View {
                             .frame(height: geometry.size.height * 0.8)
                             .position(CGPoint(x: geometry.size.width * 0.8, y: geometry.size.height * 0.5))
                         VStack{
-                            Spacer()
                             ForEach(0..<(objectsOptions.count)) { i in
                                 Image(String(answerLevel[objectsOptions[i]].getAnswer()))
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
-                                    .frame(height: geometry.size.width * 0.10)
+                                    .frame(height: geometry.size.height * 0.15)
                                     .onTapGesture {
-
                                         if (answerLevel[objectsOptions[i]].answerInt == questionLevel[questionSelected].answerInt) {
-                                            //chamar a tela de congratulation
+                                            questionSelected = getNewGame()
+                                            
                                             isShowingCongratulation = true
                                             print("CERTO")
                                         } else {
@@ -171,7 +251,6 @@ struct TangramGameView: View {
 //                                        objectsOptions = gerarVetor(n:questionLevel[questionSelected].answerInt)
                                     }
                             }
-                            Spacer()
                         }
                         .position(CGPoint(x: geometry.size.width * 0.8, y: geometry.size.height * 0.5))
 
