@@ -18,38 +18,47 @@ struct GameSelectionView: View {
     
     var body: some View {
         GeometryReader{ geometry in
-            VStack{
-                HStack(){
-                    Image(systemName: "arrow.left")
-                                    .font(.largeTitle)
-                    Text("Select your game")
-                        .font(Font.titleLargeBold)
-                        .position(CGPoint(x: geometry.size.width * 0.5, y: geometry.size.height * 0.15))
-                }
+            ZStack{
+                Image("background_image")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
                 VStack{
-                    ScrollView(.horizontal){
-                        HStack(){
-                            ForEach(0..<(listOfGames.count+10)) { i in
-                                Image(listOfGames[0])
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: geometry.size.width * 0.25)
-                                    .onTapGesture {
-                                        if (i == 0 ){
-                                            isShowingGame.toggle()
+                    Spacer()
+                    HStack(){
+                        Image(systemName: "arrow.left")
+                            .font(.largeTitle)
+                        Spacer()
+                        Text("Select your game")
+                            .font(Font.titleLargeBold)
+                        Spacer()
+                    }
+                    VStack{
+                        ScrollView(.horizontal, showsIndicators: false){
+                            HStack(){
+                                ForEach(0..<(listOfGames.count+3)) { i in
+                                    Image(listOfGames[0])
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: geometry.size.width * 0.25)
+                                        .onTapGesture {
+                                            if (i == 0 ){
+                                                isShowingGame.toggle()
+                                            }
                                         }
-                                    }
+                                }
                             }
                         }
                     }
+                    Spacer()
                 }
+                .padding(.horizontal,32)
             }
-            .padding(.horizontal,32)
         }
         .ignoresSafeArea(.all)
         .fullScreenCover(isPresented: $isShowingGame) {
             TangramInstructionView(dismissAction: {isShowingGame = false})
         }
+        
     }
 }
 
