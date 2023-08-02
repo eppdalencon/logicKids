@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GameSelectionView: View {
     @State private var isShowingGame = false
+    var dismissSelection: (() -> Void)
     
     let listOfGames : [String] = [
         "game1",
@@ -27,6 +28,9 @@ struct GameSelectionView: View {
                     HStack(){
                         Image(systemName: "arrow.left")
                             .font(.largeTitle)
+                            .onTapGesture{
+                                dismissSelection()
+                            }
                         Spacer()
                         Text("Select your game")
                             .font(Font.titleLargeBold)
@@ -64,7 +68,7 @@ struct GameSelectionView: View {
 
 struct GameSelectionView_Previews: PreviewProvider {
     static var previews: some View {
-        GameSelectionView()
+        GameSelectionView(dismissSelection: {true})
     }
 }
 

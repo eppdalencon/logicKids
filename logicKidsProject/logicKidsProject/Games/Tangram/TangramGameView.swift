@@ -241,8 +241,8 @@ struct TangramGameView: View {
                                     .frame(height: geometry.size.height * 0.15)
                                     .onTapGesture {
                                         if (answerLevel[objectsOptions[i]].answerInt == questionLevel[questionSelected].answerInt) {
-                                            questionSelected = getNewGame()
-                                            
+                                            //questionSelected = getNewGame()
+                                            //print(questionLevel[questionSelected].questionInt)
                                             isShowingCongratulation = true
                                             print("CERTO")
                                         } else {
@@ -269,7 +269,7 @@ struct TangramGameView: View {
         .navigationBarBackButtonHidden(true)
         .popupNavigatopnView(show: $isShowingPause){ PauseModalView(show: $isShowingPause, shuffleGame: retryGame, dismissGame: dismissAction)}
         .popupNavigatopnViewFull(show: $isShowingCongratulation) {
-            CompleteModalView(dismissComplete: {isShowingCongratulation = false}, dismissGame: dismissAction, shuffleGame: retryGame)
+            CompleteModalView(dismissComplete: {isShowingCongratulation = false}, dismissGame: dismissAction, shuffleGame: retryGame,gameName: questionLevel[questionSelected].questionInt)
         }
         .popupNavigatopnView(show: $isShowingInitialInstructions){ TangramInstructionModal(dismissInstruction: {isShowingInitialInstructions = false})}
         .popupNavigatopnView(show: $isShowingInstructions){ TangramInterrogationModal(dismissInstruction: {isShowingInstructions = false})}

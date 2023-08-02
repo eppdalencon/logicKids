@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     
     @State private var isShowingMenu = false
+    @State private var isShowingAchievements = false
     
     var body: some View {
         GeometryReader{geometry in
@@ -29,7 +30,7 @@ struct HomeView: View {
                     
                 VStack {
                     HomeButton(title: "My Achievements", color: Color.orange, largura: geometry.size.width * 0.3, altura: geometry.size.height * 0.12, action: {
-                            isShowingMenu.toggle()
+                            isShowingAchievements.toggle()
                     })
                     Spacer()
                         .frame(height: geometry.size.height * 0.06)
@@ -42,7 +43,10 @@ struct HomeView: View {
             }
             .ignoresSafeArea(.all)
             .fullScreenCover(isPresented: $isShowingMenu) {
-                GameSelectionView()
+                GameSelectionView(dismissSelection: {isShowingMenu = false})
+            }
+            .fullScreenCover(isPresented: $isShowingAchievements) {
+               AchievementsView(dismissAchievements: {isShowingAchievements = false})
             }
 
         }
