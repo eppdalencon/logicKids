@@ -21,29 +21,32 @@ struct QuestionsLevelOne {
         self.questionInt = quest
         self.question = questionText + String(quest) + String(opt)
         self.answerInt = ans
-        self.answer = answerText + String(ans)
+        self.answer = answerText + String(quest) + String(ans)
     }
     
     func getQuestion() -> String {
-        print(question)
         return String(question)
-    }
-}
-
-struct AnswerLevelOne {
-    var answer : String
-    var answerInt : Int
-    let answerText : String = "answer0"
-    
-    init(ans: Int) {
-        self.answerInt = ans
-        self.answer = answerText + String(ans)
     }
     
     func getAnswer() -> String {
         return String(answer)
     }
 }
+
+//struct AnswerLevelOne {
+//    var answer : String
+//    var answerInt : Int
+//    let answerText : String = "answer0"
+//
+//    init(ans: Int) {
+//        self.answerInt = ans
+//        self.answer = answerText + String(ans)
+//    }
+//
+//    func getAnswer() -> String {
+//        return String(answer)
+//    }
+//}
 
 struct TangramGameView: View {
     
@@ -54,106 +57,109 @@ struct TangramGameView: View {
     var dismissAction: (() -> Void)
     
     //Lista das pecas que contem o tangram
-    var answerLevel: [AnswerLevelOne] = [
-        AnswerLevelOne(ans: 1),
-        AnswerLevelOne(ans: 2),
-        AnswerLevelOne(ans: 3),
-        AnswerLevelOne(ans: 4),
-    ]
+//    var answerLevel: [AnswerLevelOne] = [
+//        AnswerLevelOne(ans: 1),
+//        AnswerLevelOne(ans: 2),
+//        AnswerLevelOne(ans: 3),
+//        AnswerLevelOne(ans: 4),
+//    ]
+    var numberOfTansForQuest: [Int] = [ 7, 5, 6, 4, 6, 5, 7, 6, 4, 7]
     
     //lista de questoes
     var questionLevel: [QuestionsLevelOne] = [
-        QuestionsLevelOne(quest: 0, opt: 1,  ans: 1),
-        QuestionsLevelOne(quest: 0, opt: 2,  ans: 1),
-        QuestionsLevelOne(quest: 0, opt: 3,  ans: 1),
-        QuestionsLevelOne(quest: 0, opt: 4,  ans: 1),
-        QuestionsLevelOne(quest: 0, opt: 5,  ans: 1),
-        QuestionsLevelOne(quest: 0, opt: 6,  ans: 1),
-        QuestionsLevelOne(quest: 0, opt: 7,  ans: 1),
+        QuestionsLevelOne(quest: 0, opt: 1,  ans: 6),
+        QuestionsLevelOne(quest: 0, opt: 2,  ans: 5),
+        QuestionsLevelOne(quest: 0, opt: 3,  ans: 7),
+        QuestionsLevelOne(quest: 0, opt: 4,  ans: 6),
+        QuestionsLevelOne(quest: 0, opt: 5,  ans: 4),
+        QuestionsLevelOne(quest: 0, opt: 6,  ans: 3),
+        QuestionsLevelOne(quest: 0, opt: 7,  ans: 2),
         QuestionsLevelOne(quest: 0, opt: 8,  ans: 1),
         
         QuestionsLevelOne(quest: 1, opt: 1,  ans: 1),
-        QuestionsLevelOne(quest: 1, opt: 2,  ans: 1),
-        QuestionsLevelOne(quest: 1, opt: 3,  ans: 1),
-        QuestionsLevelOne(quest: 1, opt: 4,  ans: 1),
-        QuestionsLevelOne(quest: 1, opt: 5,  ans: 1),
-        QuestionsLevelOne(quest: 1, opt: 6,  ans: 1),
+        QuestionsLevelOne(quest: 1, opt: 2,  ans: 5),
+        QuestionsLevelOne(quest: 1, opt: 3,  ans: 2),
+        QuestionsLevelOne(quest: 1, opt: 4,  ans: 4),
+        QuestionsLevelOne(quest: 1, opt: 5,  ans: 2),
+        QuestionsLevelOne(quest: 1, opt: 6,  ans: 3),
         
-        QuestionsLevelOne(quest: 2, opt: 1,  ans: 1),
-        QuestionsLevelOne(quest: 2, opt: 2,  ans: 1),
-        QuestionsLevelOne(quest: 2, opt: 3,  ans: 1),
-        QuestionsLevelOne(quest: 2, opt: 4,  ans: 1),
+        QuestionsLevelOne(quest: 2, opt: 1,  ans: 4),
+        QuestionsLevelOne(quest: 2, opt: 2,  ans: 6),
+        QuestionsLevelOne(quest: 2, opt: 3,  ans: 5),
+        QuestionsLevelOne(quest: 2, opt: 4,  ans: 3),
         QuestionsLevelOne(quest: 2, opt: 5,  ans: 1),
-        QuestionsLevelOne(quest: 2, opt: 6,  ans: 1),
-        QuestionsLevelOne(quest: 2, opt: 7,  ans: 1),
-        QuestionsLevelOne(quest: 2, opt: 8,  ans: 1),
-        
+        QuestionsLevelOne(quest: 2, opt: 6,  ans: 2),
+        QuestionsLevelOne(quest: 2, opt: 7,  ans: 2),
+        QuestionsLevelOne(quest: 2, opt: 8,  ans: 2),
+
         QuestionsLevelOne(quest: 3, opt: 1,  ans: 1),
         QuestionsLevelOne(quest: 3, opt: 2,  ans: 1),
-        QuestionsLevelOne(quest: 3, opt: 3,  ans: 1),
+        QuestionsLevelOne(quest: 3, opt: 3,  ans: 2),
         QuestionsLevelOne(quest: 3, opt: 4,  ans: 1),
-        QuestionsLevelOne(quest: 3, opt: 5,  ans: 1),
-        QuestionsLevelOne(quest: 3, opt: 6,  ans: 1),
-        
-        QuestionsLevelOne(quest: 4, opt: 1,  ans: 1),
-        QuestionsLevelOne(quest: 4, opt: 2,  ans: 1),
-        QuestionsLevelOne(quest: 4, opt: 3,  ans: 1),
+        QuestionsLevelOne(quest: 3, opt: 5,  ans: 4),
+        QuestionsLevelOne(quest: 3, opt: 6,  ans: 3),
+
+        QuestionsLevelOne(quest: 4, opt: 1,  ans: 5),
+        QuestionsLevelOne(quest: 4, opt: 2,  ans: 4),
+        QuestionsLevelOne(quest: 4, opt: 3,  ans: 6),
         QuestionsLevelOne(quest: 4, opt: 4,  ans: 1),
         QuestionsLevelOne(quest: 4, opt: 5,  ans: 1),
-        QuestionsLevelOne(quest: 4, opt: 6,  ans: 1),
-        QuestionsLevelOne(quest: 4, opt: 7,  ans: 1),
-        
-        QuestionsLevelOne(quest: 5, opt: 1,  ans: 1),
-        QuestionsLevelOne(quest: 5, opt: 2,  ans: 1),
-        QuestionsLevelOne(quest: 5, opt: 3,  ans: 1),
+        QuestionsLevelOne(quest: 4, opt: 6,  ans: 2),
+        QuestionsLevelOne(quest: 4, opt: 7,  ans: 3),
+
+        QuestionsLevelOne(quest: 5, opt: 1,  ans: 2),
+        QuestionsLevelOne(quest: 5, opt: 2,  ans: 4),
+        QuestionsLevelOne(quest: 5, opt: 3,  ans: 5),
         QuestionsLevelOne(quest: 5, opt: 4,  ans: 1),
-        QuestionsLevelOne(quest: 5, opt: 5,  ans: 1),
+        QuestionsLevelOne(quest: 5, opt: 5,  ans: 3),
         QuestionsLevelOne(quest: 5, opt: 6,  ans: 1),
-        QuestionsLevelOne(quest: 5, opt: 7,  ans: 1),
-        
-        QuestionsLevelOne(quest: 6, opt: 1,  ans: 1),
-        QuestionsLevelOne(quest: 6, opt: 2,  ans: 1),
-        QuestionsLevelOne(quest: 6, opt: 3,  ans: 1),
-        QuestionsLevelOne(quest: 6, opt: 4,  ans: 1),
-        QuestionsLevelOne(quest: 6, opt: 5,  ans: 1),
-        QuestionsLevelOne(quest: 6, opt: 6,  ans: 1),
+        QuestionsLevelOne(quest: 5, opt: 7,  ans: 5),
+
+        QuestionsLevelOne(quest: 6, opt: 1,  ans: 7),
+        QuestionsLevelOne(quest: 6, opt: 2,  ans: 6),
+        QuestionsLevelOne(quest: 6, opt: 3,  ans: 5),
+        QuestionsLevelOne(quest: 6, opt: 4,  ans: 2),
+        QuestionsLevelOne(quest: 6, opt: 5,  ans: 4),
+        QuestionsLevelOne(quest: 6, opt: 6,  ans: 3),
         QuestionsLevelOne(quest: 6, opt: 7,  ans: 1),
 
         QuestionsLevelOne(quest: 7, opt: 1,  ans: 1),
-        QuestionsLevelOne(quest: 7, opt: 2,  ans: 1),
-        QuestionsLevelOne(quest: 7, opt: 3,  ans: 1),
-        QuestionsLevelOne(quest: 7, opt: 4,  ans: 1),
-        QuestionsLevelOne(quest: 7, opt: 5,  ans: 1),
-        QuestionsLevelOne(quest: 7, opt: 6,  ans: 1),
-        QuestionsLevelOne(quest: 7, opt: 7,  ans: 1),
+        QuestionsLevelOne(quest: 7, opt: 2,  ans: 2),
+        QuestionsLevelOne(quest: 7, opt: 3,  ans: 6),
+        QuestionsLevelOne(quest: 7, opt: 4,  ans: 5),
+        QuestionsLevelOne(quest: 7, opt: 5,  ans: 6),
+        QuestionsLevelOne(quest: 7, opt: 6,  ans: 4),
+        QuestionsLevelOne(quest: 7, opt: 7,  ans: 3),
 
-        QuestionsLevelOne(quest: 8, opt: 1,  ans: 1),
-        QuestionsLevelOne(quest: 8, opt: 2,  ans: 1),
-        QuestionsLevelOne(quest: 8, opt: 3,  ans: 1),
-        QuestionsLevelOne(quest: 8, opt: 4,  ans: 1),
+        QuestionsLevelOne(quest: 8, opt: 1,  ans: 3),
+        QuestionsLevelOne(quest: 8, opt: 2,  ans: 4),
+        QuestionsLevelOne(quest: 8, opt: 3,  ans: 5),
+        QuestionsLevelOne(quest: 8, opt: 4,  ans: 2),
         QuestionsLevelOne(quest: 8, opt: 5,  ans: 1),
-        
-        QuestionsLevelOne(quest: 9, opt: 1,  ans: 1),
-        QuestionsLevelOne(quest: 9, opt: 2,  ans: 1),
-        QuestionsLevelOne(quest: 9, opt: 3,  ans: 1),
+
+        QuestionsLevelOne(quest: 9, opt: 1,  ans: 2),
+        QuestionsLevelOne(quest: 9, opt: 2,  ans: 4),
+        QuestionsLevelOne(quest: 9, opt: 3,  ans: 5),
         QuestionsLevelOne(quest: 9, opt: 4,  ans: 1),
-        QuestionsLevelOne(quest: 9, opt: 5,  ans: 1),
-        QuestionsLevelOne(quest: 9, opt: 6,  ans: 1),
-        QuestionsLevelOne(quest: 9, opt: 7,  ans: 1),
+        QuestionsLevelOne(quest: 9, opt: 5,  ans: 6),
+        QuestionsLevelOne(quest: 9, opt: 6,  ans: 3),
+        QuestionsLevelOne(quest: 9, opt: 7,  ans: 7)
     ]
     
     //OPCOES DE PECAS A SEREM EXIBIDAS
     @State var objectsOptions: [Int] = [
         1,
-        2,
-        2,
-        2,
+        1,
+        1,
+        1,
     ]
     
     @State var questionSelected : Int = 0
     
     func getNewGame() -> Int {
-         return Int.random(in: 0...questionLevel.count-1)
+        let randomInt: Int = Int.random(in: 0...questionLevel.count-1)
+        print("novo jogo game\(randomInt)")
+        return randomInt
     }
     
     func gerarVetor(n: Int) -> [Int] {
@@ -162,9 +168,10 @@ struct TangramGameView: View {
         var vetor = [Int]()
         vetor.append(n)
         while vetor.count < 4 {
-            let num = Int.random(in: 0...answerLevel.count-1)
+            let num = Int.random(in: 1...numberOfTansForQuest[questionLevel[questionSelected].questionInt])
             if num != n && !vetor.contains(num) {
                 vetor.append(num)
+                print(num)
             }
         }
         
@@ -179,6 +186,7 @@ struct TangramGameView: View {
     func retryGame(){
         questionSelected = getNewGame()
         objectsOptions = gerarVetor(n:questionLevel[questionSelected].answerInt)
+        print("NEW OPTIONS: \(objectsOptions)")
         //isShowingCongratulation = false
     }
 
@@ -235,22 +243,17 @@ struct TangramGameView: View {
                             .position(CGPoint(x: geometry.size.width * 0.8, y: geometry.size.height * 0.5))
                         VStack{
                             ForEach(0..<(objectsOptions.count)) { i in
-                                Image(String(answerLevel[objectsOptions[i]].getAnswer()))
+                                Image("answer\(questionLevel[questionSelected].questionInt)\(objectsOptions[i])")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .frame(height: geometry.size.height * 0.15)
                                     .onTapGesture {
-                                        if (answerLevel[objectsOptions[i]].answerInt == questionLevel[questionSelected].answerInt) {
-                                            //questionSelected = getNewGame()
-                                            //print(questionLevel[questionSelected].questionInt)
+                                        if ((questionLevel[questionSelected].answerInt) == (objectsOptions[i])) {
                                             isShowingCongratulation = true
-                                            print("CERTO")
+                                            //print("CERTO")
                                         } else {
-                                            //talvez um sinal sonoro, mas ainda nao decidimos
-                                            print("ERRADO")
+                                            //print("ERRADO")
                                         }
-//                                        questionSelected = Int.random(in: 0..<questionLevel.count)
-//                                        objectsOptions = gerarVetor(n:questionLevel[questionSelected].answerInt)
                                     }
                             }
                         }
