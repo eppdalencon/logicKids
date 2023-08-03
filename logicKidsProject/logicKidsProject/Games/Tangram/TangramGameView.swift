@@ -65,6 +65,8 @@ struct TangramGameView: View {
 //    ]
     var numberOfTansForQuest: [Int] = [ 7, 5, 6, 4, 6, 5, 7, 6, 4, 7]
     
+    @State private var selectedImageIndex: Int? = nil
+    
     //lista de questoes
     var questionLevel: [QuestionsLevelOne] = [
         QuestionsLevelOne(quest: 0, opt: 1,  ans: 6),
@@ -156,7 +158,7 @@ struct TangramGameView: View {
     
     @State var questionSelected : Int = 0
     
-    func getNewGame() -> Int {
+    func getNewGame() -> Int { //tirar os gets e sets
         let randomInt: Int = Int.random(in: 0...questionLevel.count-1)
         print("novo jogo game\(randomInt)")
         return randomInt
@@ -201,7 +203,7 @@ struct TangramGameView: View {
                     .aspectRatio(contentMode: .fit)
                     .frame(height: geometry.size.height * 0.6)
                     .position(CGPoint(x: geometry.size.width * 0.43,y: geometry.size.height * 0.54))
-                
+            // MARK: - Buttons
                 HStack{
                     VStack {
                         Button(action: {
@@ -230,7 +232,8 @@ struct TangramGameView: View {
                 .padding(.horizontal,64)
 
 
-                
+                // MARK: - Game
+
                 Text("Select the missing part")
                     .font(Font.titleLargeBold)
                     .position(CGPoint(x: geometry.size.width * 0.42, y: geometry.size.height * 0.14))
@@ -247,13 +250,23 @@ struct TangramGameView: View {
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .frame(height: geometry.size.height * 0.15)
+                                    .saturation(selectedImageIndex == i ? 0.0 : 1.0)
                                     .onTapGesture {
                                         if ((questionLevel[questionSelected].answerInt) == (objectsOptions[i])) {
                                             isShowingCongratulation = true
                                             //print("CERTO")
                                         } else {
                                             //print("ERRADO")
+                                            selectedImageIndex = i // Store the selected image index
+                                                        
+                                            // Delay the color change for 2 seconds using DispatchQueue
+                                            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                                selectedImageIndex = nil // Reset the selected image index after 2 seconds
+                                            }
+                                            
                                         }
+                                        
+                                        
                                     }
                             }
                         }

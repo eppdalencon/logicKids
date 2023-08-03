@@ -29,18 +29,16 @@ struct TangramInstructionModal: View {
                                         .frame(width: geometry.size.width * 0.45)
                                     
                                     Text("You need to find the missing piece and fit it into the dotted space.")
+                                        .font(Font.titleMiddleBold)
                                         .foregroundColor(.white)
-                                        .bold()
                                         .padding(30)
                                 }
-                                
                             }
-                            
+
                             Spacer().frame(height:geometry.size.height * 0.06)
                             
                             Text("Tap to continue")
-                                .font(.title3)
-                                .bold()
+                                .font(Font.titleNormalBold)
                         }
                         .padding(30)
                         .frame(width: geometry.size.width / 1.5, height: geometry.size.height / 1.5)
@@ -53,7 +51,7 @@ struct TangramInstructionModal: View {
                         
                     }
                     
-                    
+                
                     Text("How to play")
                         .foregroundColor(Color.white)
                         .bold()

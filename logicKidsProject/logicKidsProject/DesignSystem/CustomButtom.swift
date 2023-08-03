@@ -24,8 +24,6 @@ struct HomeButton: View{
         .frame(width: largura, height: altura)
         .background(self.color)
         .cornerRadius(9.0)
-        .shadow(color: color.opacity(0.5),radius: 0.0, x: 10, y: 10)
-        
-        
+        .shadow(color: color.opacity(0.5),radius: 0.0, x: 6, y: 6)
     }
 }

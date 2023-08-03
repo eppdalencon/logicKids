@@ -11,6 +11,15 @@ struct AchievementsView: View {
     
     var dismissAchievements: (() -> Void)
     
+    let listOfAchievements : [String] = [
+        "achivementsoff",
+        "achivementsoff",
+        "achivementsoff",
+        "achivementsoff",
+        "achivementsoff",
+        "achivementsoff"
+    ]
+    
     var body: some View {
         GeometryReader{ geometry in
             ZStack{
@@ -26,15 +35,17 @@ struct AchievementsView: View {
                                 dismissAchievements()
                             }
                         Spacer()
-                        Text("Achievements")
+                        Text("My Achievements")
                             .font(Font.titleLargeBold)
                         Spacer()
                     }
+                    .padding(.horizontal, 64)
                     VStack{
                         ScrollView(.horizontal, showsIndicators: false){
                             HStack{
-                                ForEach(0..<(6)){ i in
-                                    Image("achivements")
+                                Spacer(minLength: 64)
+                                ForEach(0..<(listOfAchievements.count-1)){ i in
+                                    Image(listOfAchievements[i])
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
                                         .frame(width: geometry.size.width * 0.25)
@@ -42,9 +53,9 @@ struct AchievementsView: View {
                             }
                         }
                     }
-                Spacer()
+                    Spacer()
                 }
-                .padding(.horizontal,32)
+                //.padding(.leading,64)
             }
         }
         .ignoresSafeArea(.all)
