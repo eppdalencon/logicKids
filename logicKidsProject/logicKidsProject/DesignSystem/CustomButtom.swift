@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct HomeButton: View{
-    
     var title: String
     var color: Color
     var largura : CGFloat
@@ -25,6 +24,5 @@ struct HomeButton: View{
         .background(self.color)
         .cornerRadius(9.0)
         .shadow(color: color.opacity(0.5),radius: 0.0, x: 6, y: 6)
-        .vibrateOnPress()
     }
 }

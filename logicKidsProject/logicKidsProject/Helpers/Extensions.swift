@@ -98,34 +98,3 @@ extension View {
             }
     }
 }
-
-
-//VIBRATION
-
-extension View {
-    func vibrateOnPress() -> some View {
-        modifier(VibrationModifier())
-    }
-}
-
-struct VibrationModifier: ViewModifier {
-    @State private var impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .medium)
-    
-    func body(content: Content) -> some View {
-        content
-            .gesture(
-                TapGesture()
-                    .onEnded { _ in
-                        self.performVibration()
-                    }
-            )
-    }
-    
-    private func performVibration() {
-        // Prepara o gerador para a vibração
-        impactFeedbackgenerator.prepare()
-        
-        // Gera a vibração
-        impactFeedbackgenerator.impactOccurred()
-    }
-}

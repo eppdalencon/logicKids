@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State private var impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .medium)
     
     @State private var isShowingMenu = false
     @State private var isShowingAchievements = false
@@ -30,12 +31,14 @@ struct HomeView: View {
                     
                 VStack {
                     HomeButton(title: "My Achievements", color: Color("orangeTan"), largura: geometry.size.width * 0.3, altura: geometry.size.height * 0.12, action: {
+                        self.hapticFeedback()
                             isShowingAchievements.toggle()
                     })
                     Spacer()
                         .frame(height: geometry.size.height * 0.06)
-                    HomeButton(title: "Start Playing", color: Color("blueTan"), largura: geometry.size.width * 0.3, altura: geometry.size.height * 0.12 ,action: {
-                            isShowingMenu.toggle()
+                    HomeButton(title: "Start Playing", color: Color("blueTan"), largura: geometry.size.width * 0.3, altura: geometry.size.height * 0.12, action: {
+                        self.hapticFeedback()
+                        isShowingMenu.toggle()
                     })
                 }
                 .position(CGPoint(x: geometry.size.width * 0.55, y: geometry.size.height * 0.75))
@@ -48,8 +51,12 @@ struct HomeView: View {
             .fullScreenCover(isPresented: $isShowingAchievements) {
                AchievementsView(dismissAchievements: {isShowingAchievements = false})
             }
-
         }
+    }
+    
+    private func hapticFeedback() {
+        self.impactFeedbackgenerator.prepare()
+        self.impactFeedbackgenerator.impactOccurred()
     }
 }
 
