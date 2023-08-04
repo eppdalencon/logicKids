@@ -1,0 +1,19 @@
+//
+//  fontsExtention.swift
+//  logicKidsProject
+//
+//  Created by Gustavo Diefenbach on 27/07/23.
+//
+
+import Foundation
+import SwiftUI
+
+public extension Font {
+    
+    static let titleLarge = Font.system(.largeTitle, design: .rounded, weight: .regular)
+    static let titleLargeBold = titleLarge.bold()
+    
+    static let titleNormal = Font.system(.title3, design: .rounded, weight: .regular)
+    static let titleNormalBold = titleNormal.bold()
+    
+}
