@@ -24,11 +24,9 @@ struct TangramInterrogationModal: View {
                                     .frame(height: geometry.size.width)
                                     
                                 Text("Tap to return")
-                                    .font(.title3)
-                                    .bold()
+                                    .font(Font.titleNormalBold)
                                     .padding(.top, geometry.size.height * 0.5)
                             }
-                            
                             
                             
                             Spacer().frame(height:geometry.size.height * 0.06)

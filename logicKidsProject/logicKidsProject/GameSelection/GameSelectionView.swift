@@ -13,8 +13,11 @@ struct GameSelectionView: View {
     
     let listOfGames : [String] = [
         "game1",
-        "game2",
-        "game3"
+        "gameoff",
+        "gameoff",
+        "gameoff",
+        "gameoff",
+        "gameoff"
     ]
     
     var body: some View {
@@ -23,6 +26,7 @@ struct GameSelectionView: View {
                 Image("background_image")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
+                
                 VStack{
                     Spacer()
                     HStack(){
@@ -32,15 +36,17 @@ struct GameSelectionView: View {
                                 dismissSelection()
                             }
                         Spacer()
-                        Text("Select your game")
+                        Text("Select a game")
                             .font(Font.titleLargeBold)
                         Spacer()
                     }
+                    .padding(.horizontal,64)
                     VStack{
                         ScrollView(.horizontal, showsIndicators: false){
-                            HStack(){
-                                ForEach(0..<(listOfGames.count+3)) { i in
-                                    Image(listOfGames[0])
+                            HStack{
+                                Spacer(minLength: 64)
+                                ForEach(0..<(listOfGames.count)) { i in
+                                    Image(listOfGames[i])
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
                                         .frame(width: geometry.size.width * 0.25)
@@ -55,7 +61,6 @@ struct GameSelectionView: View {
                     }
                     Spacer()
                 }
-                .padding(.horizontal,32)
             }
         }
         .ignoresSafeArea(.all)

@@ -29,17 +29,17 @@ struct HomeView: View {
                     .frame(width: geometry.size.width * 0.95)
                     
                 VStack {
-                    HomeButton(title: "My Achievements", color: Color.orange, largura: geometry.size.width * 0.3, altura: geometry.size.height * 0.12, action: {
+                    HomeButton(title: "My Achievements", color: Color("orangeTan"), largura: geometry.size.width * 0.3, altura: geometry.size.height * 0.12, action: {
                             isShowingAchievements.toggle()
                     })
                     Spacer()
                         .frame(height: geometry.size.height * 0.06)
-                    HomeButton(title: "Start Playing", color: Color.blue, largura: geometry.size.width * 0.3, altura: geometry.size.height * 0.12 ,action: {
+                    HomeButton(title: "Start Playing", color: Color("blueTan"), largura: geometry.size.width * 0.3, altura: geometry.size.height * 0.12 ,action: {
                             isShowingMenu.toggle()
                     })
                 }
-                .position(CGPoint(x: geometry.size.width * 0.55, y: geometry.size.height * 0.78))
-
+                .position(CGPoint(x: geometry.size.width * 0.55, y: geometry.size.height * 0.75))
+                
             }
             .ignoresSafeArea(.all)
             .fullScreenCover(isPresented: $isShowingMenu) {

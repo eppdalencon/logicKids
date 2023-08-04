@@ -12,8 +12,10 @@ struct logicKidsProjectApp: App {
     var body: some Scene {
         WindowGroup {
             HomeView()
+                .foregroundColor(Color.black) //PRECISA MUDAR SE UM DIA TIVER DARK MODE
             //ContentView()
         }
+        
         
     }
 }

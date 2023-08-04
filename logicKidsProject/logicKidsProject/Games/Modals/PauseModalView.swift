@@ -26,28 +26,12 @@ struct PauseModalView: View {
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .frame(width: geometry.size.width * 0.1)
-                                    
+                                    .bold()
                             }
+                            .foregroundColor(Color("redTan"))
                             Text("Quit")
-                                .bold()
+                                .font(Font.titleMiddleBold)
                             
-                            
-                        }
-                        
-                        VStack{
-                            Button(action: {
-                                show.toggle()
-                            }) {
-                                Image("ContinueButton")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: geometry.size.width * 0.1)
-                               
-                                    
-                            }
-                            Text("Continue")
-                                .bold()
-                           
                         }
                         
                         VStack{
@@ -60,12 +44,31 @@ struct PauseModalView: View {
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .frame(width: geometry.size.width * 0.1)
+                                    .bold()
                                     
                             }
-                            
+                            .foregroundColor(Color("orangeTan"))
+
                             
                             Text("Restart")
-                                .bold()
+                                .font(Font.titleMiddleBold)
+                        }
+                        
+                        VStack{
+                            Button(action: {
+                                show.toggle()
+                            }) {
+                                Image("ContinueButton")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: geometry.size.width * 0.1)
+                                    .bold()
+                                    
+                            }
+                            .foregroundColor(Color("greenTan"))
+                            Text("Continue")
+                                .font(Font.titleMiddleBold)
+
                         }
                         
                         
