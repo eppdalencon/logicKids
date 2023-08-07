@@ -23,14 +23,10 @@ struct GameSelectionView: View {
     var body: some View {
         GeometryReader{ geometry in
             ZStack{
-                Image("background_image")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                
                 VStack{
                     Spacer()
                     HStack(){
-                        Image(systemName: "arrow.left")
+                        Image(systemName: "xmark")
                             .font(.largeTitle)
                             .onTapGesture{
                                 dismissSelection()
@@ -49,7 +45,7 @@ struct GameSelectionView: View {
                                     Image(listOfGames[i])
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
-                                        .frame(width: geometry.size.width * 0.25)
+                                        .frame(height: geometry.size.height * 0.6)
                                         .onTapGesture {
                                             if (i == 0 ){
                                                 isShowingGame.toggle()
