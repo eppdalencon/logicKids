@@ -7,12 +7,6 @@
 
 import SwiftUI
 
-//struct VisualEffectView: UIViewRepresentable {
-//    var effect: UIVisualEffect?
-//    func makeUIView(context: UIViewRepresentableContext<Self>) -> UIVisualEffectView { UIVisualEffectView() }
-//    func updateUIView(_ uiView: UIVisualEffectView, context: UIViewRepresentableContext<Self>) { uiView.effect = effect }
-//}
-
 struct BackdropView: UIViewRepresentable {
 
     func makeUIView(context: Context) -> UIVisualEffectView {
@@ -57,14 +51,12 @@ extension View {
                         
                         ZStack{
                             BackdropBlurView(radius: 6)
-//                            VisualEffectView(effect: UIBlurEffect(style: .light))
-//                                .edgesIgnoringSafeArea(.all)
                             content()
                         }
                         .frame(width: size.width , height: size.height, alignment: .center)
                         .cornerRadius(15)
                         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
-                        .background(Color.black.opacity(0.0))
+                        .background(Color.black.opacity(0.25))
                         
                     }
                 }
@@ -84,15 +76,13 @@ extension View {
                         
                         ZStack{
                             BackdropBlurView(radius: 6)
-//                            VisualEffectView(effect: UIBlurEffect(style: .dark))
                             content()
                         }
                      
                         .frame(width: size.width, height: size.height, alignment: .center)
                         .cornerRadius(15)
                         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
-                        .background(Color.black.opacity(0.0))
-                        
+                        .background(Color.black.opacity(0.25))
                     }
                 }
             }

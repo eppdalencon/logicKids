@@ -195,9 +195,6 @@ struct TangramGameView: View {
     var body: some View {
         GeometryReader { geometry in
             ZStack {
-                Image("background_image")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
                 Image(questionLevel[questionSelected].getQuestion())
                     .resizable()
                     .aspectRatio(contentMode: .fit)
@@ -228,11 +225,9 @@ struct TangramGameView: View {
                     }
                     Spacer()
                 }
-                .padding(.vertical,32)
+                //.padding(.vertical,32) //IPHONE GSTV
+                .padding(.vertical, 90) //IPAD GSTV
                 .padding(.horizontal,64)
-
-
-                // MARK: - Game
 
                 Text("Select the missing part")
                     .font(Font.titleLargeBold)

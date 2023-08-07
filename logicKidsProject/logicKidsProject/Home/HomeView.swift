@@ -16,9 +16,7 @@ struct HomeView: View {
     var body: some View {
         GeometryReader{geometry in
             ZStack{
-                Image("background_image")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
+                Color.white
                 Image("tans_logo")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
