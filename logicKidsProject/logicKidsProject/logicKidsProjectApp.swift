@@ -11,7 +11,10 @@ import SwiftUI
 struct logicKidsProjectApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
+            //ContentView()
         }
+        
+        
     }
 }

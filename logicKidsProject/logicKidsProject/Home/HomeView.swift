@@ -8,8 +8,53 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State private var impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .medium)
+    
+    @State private var isShowingMenu = false
+    @State private var isShowingAchievements = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        GeometryReader{geometry in
+            ZStack{
+                Color.white
+                Image("tans_logo")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: geometry.size.width * 0.45)
+                    .position(CGPoint(x: geometry.size.width * 0.55, y: geometry.size.height * 0.35))
+                Image("characters_home")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: geometry.size.width * 0.95)
+                    
+                VStack {
+                    HomeButton(title: "My Achievements", color: Color("orangeTan"), largura: geometry.size.width * 0.3, altura: geometry.size.height * 0.12, action: {
+                        self.hapticFeedback()
+                            isShowingAchievements.toggle()
+                    })
+                    Spacer()
+                        .frame(height: geometry.size.height * 0.06)
+                    HomeButton(title: "Start Playing", color: Color("blueTan"), largura: geometry.size.width * 0.3, altura: geometry.size.height * 0.12, action: {
+                        self.hapticFeedback()
+                        isShowingMenu.toggle()
+                    })
+                }
+                .position(CGPoint(x: geometry.size.width * 0.55, y: geometry.size.height * 0.75))
+                
+            }
+            .ignoresSafeArea(.all)
+            .fullScreenCover(isPresented: $isShowingMenu) {
+                GameSelectionView(dismissSelection: {isShowingMenu = false})
+            }
+            .fullScreenCover(isPresented: $isShowingAchievements) {
+               AchievementsView(dismissAchievements: {isShowingAchievements = false})
+            }
+        }
+    }
+    
+    private func hapticFeedback() {
+        self.impactFeedbackgenerator.prepare()
+        self.impactFeedbackgenerator.impactOccurred()
     }
 }
 

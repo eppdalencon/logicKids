@@ -8,13 +8,59 @@
 import SwiftUI
 
 struct AchievementsView: View {
+    
+    var dismissAchievements: (() -> Void)
+    
+    let listOfAchievements : [String] = [
+        "achivementsoff",
+        "achivementsoff",
+        "achivementsoff",
+        "achivementsoff",
+        "achivementsoff",
+        "achivementsoff"
+    ]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        GeometryReader{ geometry in
+            ZStack{
+                VStack{
+                    Spacer()
+                    HStack{
+                        Image(systemName: "xmark")
+                            .font(.largeTitle)
+                            .onTapGesture{
+                                dismissAchievements()
+                            }
+                        Spacer()
+                        Text("My Achievements")
+                            .font(Font.titleLargeBold)
+                        Spacer()
+                    }
+                    .padding(.horizontal, 64)
+                    VStack{
+                        ScrollView(.horizontal, showsIndicators: false){
+                            HStack{
+                                Spacer(minLength: 64)
+                                ForEach(0..<(listOfAchievements.count-1)){ i in
+                                    Image(listOfAchievements[i])
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(height: geometry.size.height * 0.6)
+                                }
+                            }
+                        }
+                    }
+                    Spacer()
+                }
+                //.padding(.leading,64)
+            }
+        }
+        .ignoresSafeArea(.all)
     }
 }
 
 struct AchievementsView_Previews: PreviewProvider {
     static var previews: some View {
-        AchievementsView()
+        AchievementsView(dismissAchievements: {true})
     }
 }
