@@ -193,7 +193,6 @@ struct TangramGameView: View {
     }
 
     var body: some View {
-        @Environment(\.horizontalSizeClass) var horizontalSizeClass
 
         GeometryReader { geometry in
             HStack {

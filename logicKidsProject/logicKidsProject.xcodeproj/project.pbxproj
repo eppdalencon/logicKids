@@ -24,6 +24,9 @@
 		3088F7AF2A6EFFEB00FD7540 /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3088F7AE2A6EFFEB00FD7540 /* AchievementsView.swift */; };
 		3088F7B42A72E51C00FD7540 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3088F7B32A72E51C00FD7540 /* Extensions.swift */; };
 		309AC15C2A7ADA6200F97285 /* TangramInterrogationModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309AC15B2A7ADA6200F97285 /* TangramInterrogationModal.swift */; };
+		30CEA72F2A81885D003098A5 /* TrueFalseGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CEA72E2A81885D003098A5 /* TrueFalseGameView.swift */; };
+		30CEA7312A841946003098A5 /* TrueFalseInstructionModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CEA7302A841946003098A5 /* TrueFalseInstructionModal.swift */; };
+		30CEA7332A8419EB003098A5 /* TrueFalseInterrogationModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CEA7322A8419EB003098A5 /* TrueFalseInterrogationModal.swift */; };
 		30FCA72D2A7ACEB4009DBFAA /* TangramInstructionModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FCA72C2A7ACEB4009DBFAA /* TangramInstructionModal.swift */; };
 		7BF3E1762A72E3C500482E7E /* fontsExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF3E1752A72E3C500482E7E /* fontsExtention.swift */; };
 /* End PBXBuildFile section */
@@ -47,6 +50,9 @@
 		3088F7AE2A6EFFEB00FD7540 /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
 		3088F7B32A72E51C00FD7540 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		309AC15B2A7ADA6200F97285 /* TangramInterrogationModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TangramInterrogationModal.swift; sourceTree = "<group>"; };
+		30CEA72E2A81885D003098A5 /* TrueFalseGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrueFalseGameView.swift; sourceTree = "<group>"; };
+		30CEA7302A841946003098A5 /* TrueFalseInstructionModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrueFalseInstructionModal.swift; sourceTree = "<group>"; };
+		30CEA7322A8419EB003098A5 /* TrueFalseInterrogationModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrueFalseInterrogationModal.swift; sourceTree = "<group>"; };
 		30FCA72C2A7ACEB4009DBFAA /* TangramInstructionModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TangramInstructionModal.swift; sourceTree = "<group>"; };
 		7BF3E1752A72E3C500482E7E /* fontsExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fontsExtention.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,6 +138,7 @@
 		3088F7A22A6EFF3000FD7540 /* Games */ = {
 			isa = PBXGroup;
 			children = (
+				30CEA72D2A818830003098A5 /* TrueFalse */,
 				098EC3462A82D8AE00CE780F /* Game2 */,
 				3088F7A82A6EFFA300FD7540 /* Modals */,
 				3088F7A32A6EFF3600FD7540 /* Tangram */,
@@ -173,6 +180,16 @@
 				3088F7B32A72E51C00FD7540 /* Extensions.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		30CEA72D2A818830003098A5 /* TrueFalse */ = {
+			isa = PBXGroup;
+			children = (
+				30CEA72E2A81885D003098A5 /* TrueFalseGameView.swift */,
+				30CEA7302A841946003098A5 /* TrueFalseInstructionModal.swift */,
+				30CEA7322A8419EB003098A5 /* TrueFalseInterrogationModal.swift */,
+			);
+			path = TrueFalse;
 			sourceTree = "<group>";
 		};
 		7BF3E1742A72E3AC00482E7E /* DesignSystem */ = {
@@ -259,6 +276,7 @@
 				3088F7A72A6EFF7400FD7540 /* TangramInstructionView.swift in Sources */,
 				3088F7AF2A6EFFEB00FD7540 /* AchievementsView.swift in Sources */,
 				3088F7AA2A6EFFBD00FD7540 /* PauseModalView.swift in Sources */,
+				30CEA7312A841946003098A5 /* TrueFalseInstructionModal.swift in Sources */,
 				099A11E82A840607008C84A0 /* BiggerSmallerInstructionModal.swift in Sources */,
 				3088F7A52A6EFF5C00FD7540 /* TangramGameView.swift in Sources */,
 				3088F7AC2A6EFFCB00FD7540 /* CompleteModalView.swift in Sources */,
@@ -267,8 +285,10 @@
 				3088F79E2A6EFEF600FD7540 /* HomeView.swift in Sources */,
 				099A11EA2A8406FD008C84A0 /* BiggerSmallerInterrogationModal.swift in Sources */,
 				3088F7A12A6EFF1600FD7540 /* GameSelectionView.swift in Sources */,
+				30CEA7332A8419EB003098A5 /* TrueFalseInterrogationModal.swift in Sources */,
 				3088F7912A6EFC1900FD7540 /* ContentView.swift in Sources */,
 				3088F7B42A72E51C00FD7540 /* Extensions.swift in Sources */,
+				30CEA72F2A81885D003098A5 /* TrueFalseGameView.swift in Sources */,
 				3088F78F2A6EFC1900FD7540 /* logicKidsProjectApp.swift in Sources */,
 				09DEA6332A79704E00B72928 /* CustomButtom.swift in Sources */,
 			);
