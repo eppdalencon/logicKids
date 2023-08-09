@@ -1,0 +1,35 @@
+/* 
+  Localizable.strings
+  logicKidsProject
+
+  Created by Gustavo Diefenbach on 09/08/23.
+  
+*/
+//MARK: - Home View
+"HomeButtonAchievements" = "Minhas Conquistas";
+"HomeButtonSelectGame" = "Selecione um jogo";
+
+
+//MARK: - Achievements
+"AchievementsTitle" = "Minhas Conquistas";
+
+//MARK: - Select a game
+"SelectGameTitle" = "Selecione um jogo";
+
+//MARK: - Game 01 - tangram
+
+"GameOneTitle" = "Selecione a peça faltante";
+"SelectGameCongratulationButtonPlayAgain" = "Jogar Novamente";
+"SelectGameCongratulationButtonQuit" = "Sair";
+
+"GameOneInstructionTitleHowToPlay" = "Como jogar";
+"GameOneInstructionTextHowToPlay" = "Você precisa encontrar a peça que esta faltando no espaço tracejado.";
+"GameOneInstructionTapToContinue" = "Toque para continuar";
+"GameOneInstructionTapToReturn" = "Toque para retornar";
+
+
+//MARK: - Modal Paused Game
+"PausedTitle" = "Pausado";
+"RestartButton" = "Recomeçar";
+"ContinueButton" = "Continuar";
+"QuitButton" = "Sair";

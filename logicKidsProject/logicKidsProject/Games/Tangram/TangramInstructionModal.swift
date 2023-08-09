@@ -28,7 +28,7 @@ struct TangramInstructionModal: View {
                                         .aspectRatio(contentMode: .fit)
                                         .frame(width: geometry.size.width * 0.45)
                                     
-                                    Text("You need to find the missing piece and fit it into the dotted space.")
+                                    Text(String(localized: "GameOneInstructionTextHowToPlay"))
                                         .font(Font.titleMiddleBold)
                                         .foregroundColor(.white)
                                         .padding(30)
@@ -37,7 +37,7 @@ struct TangramInstructionModal: View {
 
                             Spacer().frame(height:geometry.size.height * 0.06)
                             
-                            Text("Tap to continue")
+                            Text(String(localized: "GameOneInstructionTapToContinue"))
                                 .font(Font.titleNormalBold)
                         }
                         .padding(30)
@@ -48,11 +48,8 @@ struct TangramInstructionModal: View {
                                 .stroke(Color.teal, lineWidth: 10)
                         )
                         .cornerRadius(20)
-                        
                     }
-                    
-                
-                    Text("How to play")
+                    Text(String(localized: "GameOneInstructionTitleHowToPlay"))
                         .foregroundColor(Color.white)
                         .bold()
                         .font(.title2)

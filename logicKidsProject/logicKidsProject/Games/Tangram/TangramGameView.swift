@@ -193,9 +193,17 @@ struct TangramGameView: View {
     }
 
     var body: some View {
-
         GeometryReader { geometry in
-            HStack {
+            ZStack {
+                Image("background_image")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                Image(questionLevel[questionSelected].getQuestion())
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(height: geometry.size.height * 0.6)
+                    .position(CGPoint(x: geometry.size.width * 0.43,y: geometry.size.height * 0.54))
+            // MARK: - Buttons
                 HStack{
                     VStack {
                         Button(action: {
@@ -218,25 +226,24 @@ struct TangramGameView: View {
                         }
                         
                     }
-                }
-                Spacer()
-                VStack(){
-                    Text("Select the missing part")
-                        .font(Font.titleLargeBold)
-                    Spacer()
-                    Image(questionLevel[questionSelected].getQuestion())
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(height: geometry.size.height * 0.6)
                     Spacer()
                 }
-                Spacer()
+                .padding(.vertical,32)
+                .padding(.horizontal,64)
+
+
+                // MARK: - Game
+
+                Text(String(localized: "GameOneTitle"))
+                    .font(Font.titleLargeBold)
+                    .position(CGPoint(x: geometry.size.width * 0.42, y: geometry.size.height * 0.14))
                 VStack {
                     ZStack{
                         Image("backgroundOptions")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(height: geometry.size.height * 0.8)
+                            .position(CGPoint(x: geometry.size.width * 0.8, y: geometry.size.height * 0.5))
                         VStack{
                             ForEach(0..<(objectsOptions.count)) { i in
                                 Image("answer\(questionLevel[questionSelected].questionInt)\(objectsOptions[i])")
@@ -263,18 +270,18 @@ struct TangramGameView: View {
                                     }
                             }
                         }
+                        .position(CGPoint(x: geometry.size.width * 0.8, y: geometry.size.height * 0.5))
 
                     }
                 }
 
             }
-            .padding(.horizontal,64)
-            .padding(.vertical, 32)
             .onAppear(){
                 retryGame()
                 //objectsOptions = gerarVetor(n:questionLevel[questionSelected].answerInt)
             }
         }
+        .ignoresSafeArea(.all)
         .navigationBarBackButtonHidden(true)
         .popupNavigatopnView(show: $isShowingPause){ PauseModalView(show: $isShowingPause, shuffleGame: retryGame, dismissGame: dismissAction)}
         .popupNavigatopnViewFull(show: $isShowingCongratulation) {

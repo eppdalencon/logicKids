@@ -1,0 +1,39 @@
+/* 
+  Localizable.strings
+  logicKidsProject
+
+  Created by Gustavo Diefenbach on 09/08/23.
+  
+*/
+//"key" = "traducao";
+
+
+//MARK: - Home View
+"HomeButtonAchievements" = "My Achievements";
+"HomeButtonSelectGame" = "Select a game";
+
+
+//MARK: - Achievements
+"AchievementsTitle" = "My Achievements";
+
+//MARK: - Select a game
+"SelectGameTitle" = "Select a game";
+
+//MARK: - Game 01 - tangram
+
+"GameOneTitle" = "Select the missing part";
+"SelectGameCongratulationButtonPlayAgain" = "Play Again";
+"SelectGameCongratulationButtonQuit" = "Quit";
+
+"GameOneInstructionTitleHowToPlay" = "How to play";
+"GameOneInstructionTextHowToPlay" = "You need to find the missing piece and fit it into the dotted space.";
+"GameOneInstructionTapToContinue" = "Tap to continue";
+"GameOneInstructionTapToReturn" = "Tap to return";
+
+
+//MARK: - Modal Paused Game
+"PausedTitle" = "Paused";
+"RestartButton" = "Restart";
+"ContinueButton" = "Continue";
+"QuitButton" = "Quit";
+

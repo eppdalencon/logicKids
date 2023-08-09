@@ -15,7 +15,6 @@ public extension Font {
     
     static let titleMiddle = Font.system(.body, design: .rounded, weight: .regular)
     static let titleMiddleBold = titleMiddle.bold()
-
     
     static let titleNormal = Font.system(.title3, design: .rounded, weight: .regular)
     static let titleNormalBold = titleNormal.bold()
