@@ -10,6 +10,7 @@ import SwiftUI
 struct GameSelectionView: View {
     @State private var isShowingGame1 = false
     @State private var isShowingGame2 = false
+    @State private var isShowingGame3 = false
     var dismissSelection: (() -> Void)
     
     let listOfGames : [String] = [
@@ -60,12 +61,12 @@ struct GameSelectionView: View {
                                         isShowingGame2.toggle()
                                     }
                                 
-                                Image(listOfGames[1])
+                                Image(listOfGames[0])
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .frame(height: geometry.size.height * 0.6)
                                     .onTapGesture {
-                                        
+                                        isShowingGame3.toggle()
                                     }
                                 
                                 Image(listOfGames[1])
@@ -96,7 +97,11 @@ struct GameSelectionView: View {
             TangramGameView(dismissAction: {isShowingGame1 = false})
         }
         .fullScreenCover(isPresented: $isShowingGame2) {
-            BiggerSmallerGameView(dismissAction: {isShowingGame2 = false})
+            TrueFalseGameView(dismissAction: {isShowingGame2 = false})
+        }
+        
+        .fullScreenCover(isPresented: $isShowingGame3) {
+            BiggerSmallerGameView(dismissAction: {isShowingGame3 = false})
         }
         
     }
