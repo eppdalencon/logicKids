@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct GameSelectionView: View {
-    @State private var isShowingGame = false
+    @State private var isShowingGame1 = false
+    @State private var isShowingGame2 = false
+    @State private var isShowingGame3 = false
     var dismissSelection: (() -> Void)
     
     let listOfGames : [String] = [
@@ -23,14 +25,10 @@ struct GameSelectionView: View {
     var body: some View {
         GeometryReader{ geometry in
             ZStack{
-                Image("background_image")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                
                 VStack{
                     Spacer()
                     HStack(){
-                        Image(systemName: "arrow.left")
+                        Image(systemName: "xmark")
                             .font(.largeTitle)
                             .onTapGesture{
                                 dismissSelection()
@@ -40,32 +38,70 @@ struct GameSelectionView: View {
                             .font(Font.titleLargeBold)
                         Spacer()
                     }
-                    .padding(.horizontal,64)
+                    .padding(.horizontal,32)
+                    Spacer()
                     VStack{
                         ScrollView(.horizontal, showsIndicators: false){
                             HStack{
                                 Spacer(minLength: 64)
-                                ForEach(0..<(listOfGames.count)) { i in
-                                    Image(listOfGames[i])
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .frame(width: geometry.size.width * 0.25)
-                                        .onTapGesture {
-                                            if (i == 0 ){
-                                                isShowingGame.toggle()
-                                            }
-                                        }
-                                }
+                                
+                                Image(listOfGames[0])
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(height: geometry.size.height * 0.6)
+                                    .onTapGesture {
+                                        isShowingGame1.toggle()
+                                    }
+                                
+                                Image(listOfGames[0])
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(height: geometry.size.height * 0.6)
+                                    .onTapGesture {
+                                        isShowingGame2.toggle()
+                                    }
+                                
+                                Image(listOfGames[0])
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(height: geometry.size.height * 0.6)
+                                    .onTapGesture {
+                                        isShowingGame3.toggle()
+                                    }
+                                
+                                Image(listOfGames[1])
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(height: geometry.size.height * 0.6)
+                                    .onTapGesture {
+                                        
+                                    }
+                                
+                                Image(listOfGames[1])
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(height: geometry.size.height * 0.6)
+                                    .onTapGesture {
+                                      
+                                    }
                             }
                         }
                     }
                     Spacer()
                 }
+                
             }
         }
         .ignoresSafeArea(.all)
-        .fullScreenCover(isPresented: $isShowingGame) {
-            TangramGameView(dismissAction: {isShowingGame = false})
+        .fullScreenCover(isPresented: $isShowingGame1) {
+            TangramGameView(dismissAction: {isShowingGame1 = false})
+        }
+        .fullScreenCover(isPresented: $isShowingGame2) {
+            TrueFalseGameView(dismissAction: {isShowingGame2 = false})
+        }
+        
+        .fullScreenCover(isPresented: $isShowingGame3) {
+            BiggerSmallerGameView(dismissAction: {isShowingGame3 = false})
         }
         
     }
