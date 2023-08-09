@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct GameSelectionView: View {
-    @State private var isShowingGame = false
+    @State private var isShowingGame1 = false
+    @State private var isShowingGame2 = false
     var dismissSelection: (() -> Void)
     
     let listOfGames : [String] = [
@@ -41,17 +42,46 @@ struct GameSelectionView: View {
                         ScrollView(.horizontal, showsIndicators: false){
                             HStack{
                                 Spacer(minLength: 64)
-                                ForEach(0..<(listOfGames.count)) { i in
-                                    Image(listOfGames[i])
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .frame(height: geometry.size.height * 0.6)
-                                        .onTapGesture {
-                                            if (i == 0 ){
-                                                isShowingGame.toggle()
-                                            }
-                                        }
-                                }
+                                
+                                Image(listOfGames[0])
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(height: geometry.size.height * 0.6)
+                                    .onTapGesture {
+                                        isShowingGame1.toggle()
+                                    }
+                                
+                                Image(listOfGames[0])
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(height: geometry.size.height * 0.6)
+                                    .onTapGesture {
+                                        isShowingGame2.toggle()
+                                    }
+                                
+                                Image(listOfGames[1])
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(height: geometry.size.height * 0.6)
+                                    .onTapGesture {
+                                        
+                                    }
+                                
+                                Image(listOfGames[1])
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(height: geometry.size.height * 0.6)
+                                    .onTapGesture {
+                                        
+                                    }
+                                
+                                Image(listOfGames[1])
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(height: geometry.size.height * 0.6)
+                                    .onTapGesture {
+                                      
+                                    }
                             }
                         }
                     }
@@ -60,8 +90,11 @@ struct GameSelectionView: View {
             }
         }
         .ignoresSafeArea(.all)
-        .fullScreenCover(isPresented: $isShowingGame) {
-            TangramGameView(dismissAction: {isShowingGame = false})
+        .fullScreenCover(isPresented: $isShowingGame1) {
+            TangramGameView(dismissAction: {isShowingGame1 = false})
+        }
+        .fullScreenCover(isPresented: $isShowingGame2) {
+            BiggerSmallerGameView(dismissAction: {isShowingGame2 = false})
         }
         
     }
