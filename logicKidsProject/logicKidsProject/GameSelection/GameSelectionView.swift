@@ -36,11 +36,12 @@ struct GameSelectionView: View {
                             .font(Font.titleLargeBold)
                         Spacer()
                     }
-                    .padding(.horizontal,64)
+                    .padding(.horizontal,32)
+                    Spacer()
                     VStack{
                         ScrollView(.horizontal, showsIndicators: false){
                             HStack{
-                                Spacer(minLength: 64)
+                                Spacer(minLength: 32)
                                 ForEach(0..<(listOfGames.count)) { i in
                                     Image(listOfGames[i])
                                         .resizable()
@@ -57,9 +58,9 @@ struct GameSelectionView: View {
                     }
                     Spacer()
                 }
+                
             }
         }
-        .ignoresSafeArea(.all)
         .fullScreenCover(isPresented: $isShowingGame) {
             TangramGameView(dismissAction: {isShowingGame = false})
         }
