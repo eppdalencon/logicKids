@@ -37,7 +37,8 @@ struct GameSelectionView: View {
                             .font(Font.titleLargeBold)
                         Spacer()
                     }
-                    .padding(.horizontal,64)
+                    .padding(.horizontal,32)
+                    Spacer()
                     VStack{
                         ScrollView(.horizontal, showsIndicators: false){
                             HStack{
@@ -87,6 +88,7 @@ struct GameSelectionView: View {
                     }
                     Spacer()
                 }
+                
             }
         }
         .ignoresSafeArea(.all)

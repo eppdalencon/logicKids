@@ -36,11 +36,11 @@ struct AchievementsView: View {
                             .font(Font.titleLargeBold)
                         Spacer()
                     }
-                    .padding(.horizontal, 64)
+                    .padding(.horizontal, 32)
                     VStack{
                         ScrollView(.horizontal, showsIndicators: false){
                             HStack{
-                                Spacer(minLength: 64)
+                                Spacer(minLength: 32)
                                 ForEach(0..<(listOfAchievements.count-1)){ i in
                                     Image(listOfAchievements[i])
                                         .resizable()
@@ -55,7 +55,6 @@ struct AchievementsView: View {
                 //.padding(.leading,64)
             }
         }
-        .ignoresSafeArea(.all)
     }
 }
 
