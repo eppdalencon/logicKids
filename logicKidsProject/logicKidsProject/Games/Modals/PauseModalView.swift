@@ -29,7 +29,7 @@ struct PauseModalView: View {
                                     .bold()
                             }
                             .foregroundColor(Color("redTan"))
-                            Text("Quit")
+                            Text(String(localized: "QuitButton"))
                                 .font(Font.titleMiddleBold)
                             
                         }
@@ -50,7 +50,7 @@ struct PauseModalView: View {
                             .foregroundColor(Color("orangeTan"))
 
                             
-                            Text("Restart")
+                            Text(String(localized: "RestartButton"))
                                 .font(Font.titleMiddleBold)
                         }
                         
@@ -66,7 +66,7 @@ struct PauseModalView: View {
                                     
                             }
                             .foregroundColor(Color("greenTan"))
-                            Text("Continue")
+                            Text(String(localized: "ContinueButton"))
                                 .font(Font.titleMiddleBold)
 
                         }
@@ -85,7 +85,7 @@ struct PauseModalView: View {
                 }
                 
                 
-                Text("Paused")
+                Text(String(localized: "PausedTitle"))
                     .foregroundColor(Color.white)
                     .bold()
                     .font(.title3)

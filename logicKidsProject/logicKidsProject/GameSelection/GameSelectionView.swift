@@ -36,7 +36,7 @@ struct GameSelectionView: View {
                                 dismissSelection()
                             }
                         Spacer()
-                        Text("Select a game")
+                        Text(String(localized: "SelectGameTitle"))
                             .font(Font.titleLargeBold)
                         Spacer()
                     }

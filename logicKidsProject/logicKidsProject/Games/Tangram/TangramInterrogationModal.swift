@@ -23,7 +23,7 @@ struct TangramInterrogationModal: View {
                                     .aspectRatio(contentMode: .fit)
                                     .frame(height: geometry.size.width)
                                     
-                                Text("Tap to return")
+                                Text(String(localized: "GameOneInstructionTapToReturn"))
                                     .font(Font.titleNormalBold)
                                     .padding(.top, geometry.size.height * 0.5)
                             }
@@ -47,7 +47,7 @@ struct TangramInterrogationModal: View {
                     }
                     
                     
-                    Text("How to play")
+                    Text(String(localized: "GameOneInstructionTitleHowToPlay"))
                         .foregroundColor(Color.white)
                         .bold()
                         .font(.title2)

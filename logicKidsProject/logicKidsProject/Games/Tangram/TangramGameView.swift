@@ -234,7 +234,7 @@ struct TangramGameView: View {
 
                 // MARK: - Game
 
-                Text("Select the missing part")
+                Text(String(localized: "GameOneTitle"))
                     .font(Font.titleLargeBold)
                     .position(CGPoint(x: geometry.size.width * 0.42, y: geometry.size.height * 0.14))
                 VStack {

@@ -30,13 +30,13 @@ struct HomeView: View {
                     .frame(width: geometry.size.width * 0.95)
                     
                 VStack {
-                    HomeButton(title: "My Achievements", color: Color("orangeTan"), largura: geometry.size.width * 0.3, altura: geometry.size.height * 0.12, action: {
+                    HomeButton(title: "HomeButtonAchievements", color: Color("orangeTan"), largura: geometry.size.width * 0.3, altura: geometry.size.height * 0.12, action: {
                         self.hapticFeedback()
                             isShowingAchievements.toggle()
                     })
                     Spacer()
                         .frame(height: geometry.size.height * 0.06)
-                    HomeButton(title: "Start Playing", color: Color("blueTan"), largura: geometry.size.width * 0.3, altura: geometry.size.height * 0.12, action: {
+                    HomeButton(title: "HomeButtonSelectGame", color: Color("blueTan"), largura: geometry.size.width * 0.3, altura: geometry.size.height * 0.12, action: {
                         self.hapticFeedback()
                         isShowingMenu.toggle()
                     })

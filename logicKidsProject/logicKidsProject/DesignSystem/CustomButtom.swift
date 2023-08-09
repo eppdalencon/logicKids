@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeButton: View{
-    var title: String
+    var title: LocalizedStringKey
     var color: Color
     var largura : CGFloat
     var altura: CGFloat

@@ -35,7 +35,7 @@ struct AchievementsView: View {
                                 dismissAchievements()
                             }
                         Spacer()
-                        Text("My Achievements")
+                        Text(String(localized: "AchievementsTitle"))
                             .font(Font.titleLargeBold)
                         Spacer()
                     }
