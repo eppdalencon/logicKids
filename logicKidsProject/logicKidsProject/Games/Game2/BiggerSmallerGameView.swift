@@ -12,9 +12,14 @@ struct BiggerSmallerGameView: View {
     @State private var isShowingPause = false
     @State private var isShowingInstructions = false
     @State private var isShowingInitialInstructions = true
+    @State private var isShowingCongratulation = false
+
     var dismissAction: (() -> Void)
     
     @State private var option : [Int] = [ 3, 9]
+    @State private var topOption: Bool = false
+    @State private var bottomOption: Bool = false
+
     
     func generateRandomValues() -> [Int] {
         let minValue = 3
@@ -29,6 +34,10 @@ struct BiggerSmallerGameView: View {
         }
 
         return [randomNumber1, randomNumber2]
+    }
+    
+    func retry(){
+        
     }
     
     
@@ -80,14 +89,21 @@ struct BiggerSmallerGameView: View {
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .frame(height: geometry.size.height * 0.2)
-                                Image("Shapes\(option[1])")                                    .resizable()
+                                Image("Shapes\(option[1])")               .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .frame(height: geometry.size.height * 0.2)
                             }
+                            .saturation(topOption ? 0 : 1.0)
                             .onTapGesture {
                                 if(option[0]>option[1]) {
+                                    isShowingCongratulation = true
                                     option = generateRandomValues()
                                     print("certa")
+                                } else {
+                                    topOption = true
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                        topOption = false // Reset the selected image index after 2 seconds
+                                    }
                                 }
                             }
                             Spacer()
@@ -103,26 +119,35 @@ struct BiggerSmallerGameView: View {
                                     .aspectRatio(contentMode: .fit)
                                     .frame(height: geometry.size.height * 0.2)
                             }
+                            .saturation(bottomOption ? 0.0 : 1.0)
                             .onTapGesture {
                                 if(option[0]<option[1]) {
+                                    isShowingCongratulation = true
                                     option = generateRandomValues()
-                                    print("certa")
+                                } else {
+                                    bottomOption = true
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                        bottomOption = false // Reset the selected image index after 2 seconds
+                                    }
                                 }
                             }
                             Spacer()
                         }
                         Spacer()
-
                     }
                 }
             }
-            .padding()
+            .padding(.vertical,32)
+            .padding(.horizontal,64)
         }
         .onAppear(){
             option = generateRandomValues()
         }
         .ignoresSafeArea(.all)
         .popupNavigatopnView(show: $isShowingPause){ PauseModalView(show: $isShowingPause, shuffleGame: {option = generateRandomValues()}, dismissGame: dismissAction)}
+        .popupNavigatopnViewFull(show: $isShowingCongratulation) {
+            BiggerSmallerCongratulationModal(dismissComplete: {isShowingCongratulation = false}, dismissGame: dismissAction, shuffleGame: retry)
+        }
         .popupNavigatopnView(show: $isShowingInitialInstructions){ BiggerSmallerInstructionModal(dismissInstruction: {isShowingInitialInstructions = false})}
         .popupNavigatopnView(show: $isShowingInstructions){ BiggerSmallerInterrogationModal(dismissInstruction: {isShowingInstructions = false})}
     }
