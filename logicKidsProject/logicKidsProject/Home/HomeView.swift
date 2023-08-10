@@ -16,20 +16,19 @@ struct HomeView: View {
     var body: some View {
         GeometryReader{geometry in
             ZStack{
-                Image("background_image")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                Image("tans_logo")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: geometry.size.width * 0.45)
-                    .position(CGPoint(x: geometry.size.width * 0.55, y: geometry.size.height * 0.35))
                 Image("characters_home")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: geometry.size.width * 0.95)
+                    .frame(width: geometry.size.width)
                     
                 VStack {
+                    Spacer()
+
+                    Image("tans_logo")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: geometry.size.width * 0.4)
+                    Spacer()
                     HomeButton(title: "HomeButtonAchievements", color: Color("orangeTan"), largura: geometry.size.width * 0.3, altura: geometry.size.height * 0.12, action: {
                         self.hapticFeedback()
                             isShowingAchievements.toggle()
@@ -40,11 +39,10 @@ struct HomeView: View {
                         self.hapticFeedback()
                         isShowingMenu.toggle()
                     })
+                    Spacer()
+
                 }
-                .position(CGPoint(x: geometry.size.width * 0.55, y: geometry.size.height * 0.75))
-                
             }
-            .ignoresSafeArea(.all)
             .fullScreenCover(isPresented: $isShowingMenu) {
                 GameSelectionView(dismissSelection: {isShowingMenu = false})
             }
