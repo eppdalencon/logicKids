@@ -37,7 +37,7 @@ struct BiggerSmallerGameView: View {
     }
     
     func retry(){
-        
+        option = generateRandomValues()
     }
     
     
@@ -65,13 +65,16 @@ struct BiggerSmallerGameView: View {
                     }
                 }
                 VStack{
-                    Text("Selecione a opção verdadeira:")
-                        .font(Font.titleLargeBold)
+                    HStack{
+                        Text("Selecione a opção verdadeira:")
+                            .font(Font.titleLargeBold)
+                    }
+
                     HStack{
                         Spacer()
                         VStack{
                             Spacer()
-                            Image("GreenTan")
+                            Image("TanGame3")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: geometry.size.width * 0.2)
@@ -80,25 +83,33 @@ struct BiggerSmallerGameView: View {
                         Spacer()
                         VStack{
                             Spacer()
-                            HStack{
-                                Image("Shapes\(option[0])")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(height: geometry.size.height * 0.2)
-                                Image("GreaterSymbol")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(height: geometry.size.height * 0.2)
-                                Image("Shapes\(option[1])")               .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(height: geometry.size.height * 0.2)
+                            VStack{
+                                Spacer().frame(height: geometry.size.width * 0.01)
+                                HStack{
+                                    Spacer().frame(width: geometry.size.width * 0.03)
+                                    Image("Shapes\(option[0])")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(height: geometry.size.height * 0.2)
+                                    Image("GreaterSymbol")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(height: geometry.size.height * 0.15)
+                                    Image("Shapes\(option[1])")               .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(height: geometry.size.height * 0.2)
+                                    Spacer().frame(width: geometry.size.width * 0.03)
+                                }
+                                Spacer().frame(height: geometry.size.width * 0.01)
                             }
+                            .background(Color.white)
+                            .cornerRadius(10)
+                            .shadow(color: Color.black.opacity(0.2), radius: 20)
                             .saturation(topOption ? 0 : 1.0)
                             .onTapGesture {
                                 if(option[0]>option[1]) {
                                     isShowingCongratulation = true
-                                    option = generateRandomValues()
-                                    print("certa")
+                                    //option = generateRandomValues()
                                 } else {
                                     topOption = true
                                     DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
@@ -107,23 +118,32 @@ struct BiggerSmallerGameView: View {
                                 }
                             }
                             Spacer()
-                            HStack{
-                                Image("Shapes\(option[0])")                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(height: geometry.size.height * 0.2)
-                                Image("MinorSymbol")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(height: geometry.size.height * 0.2)
-                                Image("Shapes\(option[1])")                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(height: geometry.size.height * 0.2)
+                            VStack{
+                                Spacer().frame(height: geometry.size.width * 0.01)
+                                HStack{
+                                    Spacer().frame(width: geometry.size.width * 0.03)
+                                    Image("Shapes\(option[0])")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(height: geometry.size.height * 0.2)
+                                    Image("LesserSymbol")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(height: geometry.size.height * 0.15)
+                                    Image("Shapes\(option[1])")                   .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(height: geometry.size.height * 0.2)
+                                    Spacer().frame(width: geometry.size.width * 0.03)
+                                }
+                                Spacer().frame(height: geometry.size.width * 0.01)
                             }
-                            .saturation(bottomOption ? 0.0 : 1.0)
+                            .background(Color.white)
+                            .cornerRadius(10)
+                            .shadow(color: Color.black.opacity(0.2), radius: 20)                            .saturation(bottomOption ? 0.0 : 1.0)
                             .onTapGesture {
                                 if(option[0]<option[1]) {
                                     isShowingCongratulation = true
-                                    option = generateRandomValues()
+//                                    option = generateRandomValues()
                                 } else {
                                     bottomOption = true
                                     DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
@@ -144,9 +164,11 @@ struct BiggerSmallerGameView: View {
             option = generateRandomValues()
         }
         .ignoresSafeArea(.all)
+        .background(Color("backgroundColor"))
         .popupNavigatopnView(show: $isShowingPause){ PauseModalView(show: $isShowingPause, shuffleGame: {option = generateRandomValues()}, dismissGame: dismissAction)}
         .popupNavigatopnViewFull(show: $isShowingCongratulation) {
-            BiggerSmallerCongratulationModal(dismissComplete: {isShowingCongratulation = false}, dismissGame: dismissAction, shuffleGame: retry)
+            BiggerSmallerCongratulationModal(dismissComplete: {isShowingCongratulation = false}, dismissGame: dismissAction, shuffleGame: retry,
+                                             numberShow: option)
         }
         .popupNavigatopnView(show: $isShowingInitialInstructions){ BiggerSmallerInstructionModal(dismissInstruction: {isShowingInitialInstructions = false})}
         .popupNavigatopnView(show: $isShowingInstructions){ BiggerSmallerInterrogationModal(dismissInstruction: {isShowingInstructions = false})}

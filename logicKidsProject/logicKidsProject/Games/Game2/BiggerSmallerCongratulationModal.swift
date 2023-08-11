@@ -14,6 +14,7 @@ struct BiggerSmallerCongratulationModal: View {
     var dismissComplete: (() -> Void)
     var dismissGame: (() -> Void)
     var shuffleGame: (() -> Void)
+    var numberShow: [Int] = [1,1]
     
     var body: some View {
         
@@ -25,6 +26,30 @@ struct BiggerSmallerCongratulationModal: View {
                     VStack {
                         ZStack{
                             VStack{
+                                Spacer()
+                                VStack{
+                                    VStack{
+                                        Spacer().frame(height: geometry.size.width * 0.01)
+                                        HStack{
+                                            Spacer().frame(width: geometry.size.width * 0.03)
+                                            Image("Shapes\(numberShow[0])")
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fit)
+                                                .frame(height: geometry.size.height * 0.2)
+                                            Image(numberShow[0]>numberShow[1] ? "GreaterSymbol" : "LesserSymbol")
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fit)
+                                                .frame(height: geometry.size.height * 0.15)
+                                            Image("Shapes\(numberShow[1])")               .resizable()
+                                                .aspectRatio(contentMode: .fit)
+                                                .frame(height: geometry.size.height * 0.2)
+                                            Spacer().frame(width: geometry.size.width * 0.03)
+                                        }
+                                        Spacer().frame(height: geometry.size.width * 0.01)
+                                    }
+                                    .background(Color.white)
+                                    .cornerRadius(10)
+                                    .shadow(color: Color.black.opacity(0.2), radius: 20)                   }
                                 Spacer()
                                 HStack (spacing: 30){
                                    

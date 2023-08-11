@@ -18,17 +18,17 @@ struct BiggerSmallerInstructionModal: View {
                             Spacer().frame(height: geometry.size.height * 0.07)
 
                             HStack{
-                                Image("GreenTan")
+                                Image("TanInstruction")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .frame(width: geometry.size.width * 0.12)
                                 ZStack{
-                                    Image("PurpleBubble")
+                                    Image("InstructionGame3")
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
                                         .frame(width: geometry.size.width * 0.45)
                                     
-                                    Text("You need to find the missing piece and fit it into the dotted space.")
+                                    Text("Tan always open his arms to hug the side that has a bigger quantity.")
                                         .font(Font.titleMiddleBold)
                                         .foregroundColor(.white)
                                         .padding(30)

@@ -29,11 +29,11 @@ struct HomeView: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(width: geometry.size.width * 0.4)
                     Spacer()
-                    HomeButton(title: "HomeButtonAchievements", color: Color("orangeTan"), largura: geometry.size.width * 0.3, altura: geometry.size.height * 0.12, action: {
-                        self.hapticFeedback()
-                            isShowingAchievements.toggle()
-                    })
-                    Spacer()
+//                    HomeButton(title: "HomeButtonAchievements", color: Color("orangeTan"), largura: geometry.size.width * 0.3, altura: geometry.size.height * 0.12, action: {
+//                        self.hapticFeedback()
+//                            isShowingAchievements.toggle()
+//                    })
+//                    Spacer()
                         .frame(height: geometry.size.height * 0.06)
                     HomeButton(title: "HomeButtonSelectGame", color: Color("blueTan"), largura: geometry.size.width * 0.3, altura: geometry.size.height * 0.12, action: {
                         self.hapticFeedback()
@@ -43,6 +43,7 @@ struct HomeView: View {
 
                 }
             }
+            .background(Color("backgroundColor"))
             .fullScreenCover(isPresented: $isShowingMenu) {
                 GameSelectionView(dismissSelection: {isShowingMenu = false})
             }
