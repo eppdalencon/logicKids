@@ -154,3 +154,11 @@
 "TapToReturn" = "Toque para fechar";
 "TrueFalseInitial" = "Leia as frases e escolha o que é certo ou errado.";
 "Lessons" = "Mas não se preocupe! Não há respostas erradas, apenas novos aprendizados!";
+
+
+//MARK: - GAME 3
+
+"WhichSideHasABiggerQuantity" = "Qual o lado que tem mais quantidade?";
+"GameThreeInstructionTextHowToPlay" = "O tan abre os braços para abraçar o lado com mais quantidade.";
+"Bigger" = "é maior que";
+"Smaller" = "é menor que";

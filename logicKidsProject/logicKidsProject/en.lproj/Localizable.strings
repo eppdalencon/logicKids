@@ -158,3 +158,8 @@
 "Lessons" = "But don't worry! There are no wrong answers, only new lessons!";
 
 
+//MARK: - GAME 3
+"WhichSideHasABiggerQuantity" = "Which side has a bigger quantity?";
+"GameThreeInstructionTextHowToPlay" = "Tan always open his arms to hug the side that has a bigger quantity.";
+"Bigger" = "is greater than";
+"Smaller" = "is less than";

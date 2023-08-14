@@ -30,7 +30,7 @@ struct BiggerSmallerInterrogationModal: View {
                             
                             Spacer().frame(height:geometry.size.height * 0.06)
                             
-                            Text("Tap to continue")
+                            Text(String(localized: "GameOneInstructionTapToContinue"))
                                 .font(.title3)
                                 .bold()
                         }
@@ -46,7 +46,7 @@ struct BiggerSmallerInterrogationModal: View {
                     }
                     
                     
-                    Text("How to play")
+                    Text(String(localized: "GameOneInstructionTitleHowToPlay"))
                         .foregroundColor(Color.white)
                         .bold()
                         .font(.title2)
