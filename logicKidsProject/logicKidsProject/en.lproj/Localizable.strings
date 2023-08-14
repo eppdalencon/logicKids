@@ -7,6 +7,8 @@
 */
 //"key" = "traducao";
 
+"language" = "EN";
+
 
 //MARK: - Home View
 "HomeButtonAchievements" = "My Achievements";
@@ -36,4 +38,123 @@
 "RestartButton" = "Restart";
 "ContinueButton" = "Continue";
 "QuitButton" = "Quit";
+
+
+//MARK: - Game 02 - TRUE FALSE
+
+"SelectTrueOrFalse" = "Select what is true or false";
+
+"DavidIsATriangle" = "David is a triangle";
+"DavidIsAParallelogram" = "David is a parallelogram";
+"DavidIsAngry" = "David is angry";
+"DavidIsHappy" = "David is happy";
+"DavidIsWearingAHat" = "David is wearing a hat";
+"DavidIsWearingAFlower" = "David is wearing a flower";
+
+
+"TaylorIsATriangle" = "Taylor is a triangle";
+"TaylorIsASquare" = "Taylor is a square";
+"TaylorIsAngry" = "Taylor is angry";
+"TaylorIsSleeping" = "Taylor is sleeping";
+"TaylorIsWearingACrown" = "Taylor is wearing a crown";
+"TaylorIsWearingACap" = "Taylor is wearing a cap";
+
+
+"JonhIsASquare" = "Jonh is a square";
+"JonhIsATriangle" = "Jonh is a triangle";
+"JonhIsHappy" = "Jonh is happy";
+"JonhIsAngry" = "Jonh is angry";
+"JonhIsWearingAHat" = "Jonh is wearing a hat";
+"JonhIsWearingGlasses" = "Jonh is wearing glasses";
+
+
+"SarahIsASquare" = "Sarah is a square";
+"SarahIsACircle" = "Sarah is a circle";
+"SarahIsHappy" = "Sarah is angry";
+"SarahIsWinking" = "Sarah is winking";
+"SarahIsWearingGlasses" = "Sarah is wearing glasses";
+"SarahIsWearingAHat" = "Sarah is wearing a hat";
+
+
+"ChrisIsASquare" = "Chris is a square";
+"ChrisIsAHexagon" = "Chris is a hexagon";
+"ChrisIsHappy" = "Chris is happy";
+"ChrisIsWinking" = "Chris is winking";
+"ChrisIsWearingSunglasses" = "Chris is wearing sunglasses";
+"ChrisIsWearingACap" = "Chris is wearing a cap";
+
+
+"SkylerIsATriangle" = "Skyler is a triangle";
+"SkylerIsASquare" = "Skyler is a square";
+"SkylerIsSleeping" = "Skyler is sleeping";
+"SkylerIsAngry" = "Skyler is angry";
+"SkylerIsWearingAFlower" = "Skyler is wearing a flower";
+"SkylerIsWearingAHat" = "Skyler is wearing a hat";
+
+
+"DaveIsAParallelogram" = "Dave is a parallelogram";
+"DaveIsATriangle" = "Dave is a triangle";
+"DaveIsSleeping" = "Dave is sleeping";
+"DaveIsSurprised" = "Dave is surprised";
+"DaveIsWearingACap" = "Dave is wearing a cap";
+"DaveIsWearingAFlower" = "Dave is wearing a flower";
+
+
+"JennIsATriangle" = "Jenn is a triangle";
+"JennIsACircle" = "Jenn is a circle";
+"JennIsSurprised" = "Jenn is surprised";
+"JennIsHappy" = "Jenn is happy";
+"JennIsWearingAFlower" = "Jenn is wearing a flower";
+"JennIsWearingGlasses" = "Jenn is wearing glasses";
+
+
+"MikeIsATriangle" = "Mike is a triangle";
+"MikeIsSquare" = "Mike is square";
+"MikeIsSurprised" = "Mike is surprised";
+"MikeIsAngry" = "Mike is angry";
+"MikeIsWearingACap" = "Mike is wearing a cap";
+"MikeIsWearingACrown" = "Mike is wearing a crown";
+
+
+"GregIsATriangle" = "Greg is a triangle";
+"GregIsAParallelogram" = "Greg is a parallelogram";
+"GregIsSurprised" = "Greg is surprised";
+"GregIsSleeping" = "Greg is sleeping";
+"GregIsWearingGlasses" = "Greg is wearing glasses";
+"GregIsWearingAHat" = "Greg is wearing a hat";
+
+
+"LindaIsAParallelogram" = "Linda is a parallelogram";
+"LindaIsATriangle" = "Linda is a triangle";
+"LindaIsWinking" = "Linda is winking";
+"LindaIsSurprised" = "Linda is surprised";
+"LindaIsWearingAFlower" = "Linda is wearing a flower";
+"LindaIsWearingGlasses" = "Linda is wearing glasses";
+
+
+"AlexIsATriangle" = "Alex is a triangle";
+"AlexIsAPentagon" = "Alex is a pentagon";
+"AlexIsWinking" = "Alex is winking";
+"AlexIsAngry" = "Alex is angry";
+"AlexIsWearingACrown" = "Alex is wearing a crown";
+"AlexIsWearingSunglasses" = "Alex is wearing sunglasses";
+
+"SendAnswer" = "Send my answer";
+
+"True" = "true";
+"False" = "false";
+
+
+//Modal
+"Congrats!" = "Congrats!";
+"TryAgain" = "Try again";
+"Quit" = "Quit";
+"PlayAgain" = "Play again";
+"Congratulations" = "Woo hoo! You've proven your skills like a superstar!";
+"HowToPlay" = "How to play";
+"TapToContinue" = "Tap to continue";
+"TapToReturn" = "Tap to clone";
+"TrueFalseInitial" = "Read the sentences and choose which are true or false.";
+"Lessons" = "But don't worry! There are no wrong answers, only new lessons!";
+
 

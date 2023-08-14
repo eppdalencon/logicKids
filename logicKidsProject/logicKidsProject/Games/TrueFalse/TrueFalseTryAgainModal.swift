@@ -1,12 +1,12 @@
 import SwiftUI
 
-struct TrueFalseInstructionModal: View {
-    var dismissInstruction: (() -> Void)
+struct TrueFalseTryAgainModal: View {
+    var dismissTryAgain: (() -> Void)
     
     var body: some View {
         
         Button(action: {
-            dismissInstruction()
+            dismissTryAgain()
        
         }) {
             GeometryReader { geometry in
@@ -17,25 +17,9 @@ struct TrueFalseInstructionModal: View {
                         VStack {
                             Spacer().frame(height: geometry.size.height * 0.07)
 
-                            HStack{
-                                Image("purpleTriangle")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: geometry.size.width * 0.12)
-                                ZStack{
-                                    Image("PinkBubble")
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .frame(width: geometry.size.width * 0.4)
-                                    
-                                    Text("TrueFalseInitial")
-                                        .bold()
-                                        .font(Font.titleMiddleBold)
-                                        .foregroundColor(.white)
-                                        .padding(30)
-                                        .padding(.leading, 10)
-                                }
-                            }
+                            Text("Lessons")
+                                .bold()
+                                .font(.title2)
 
                             Spacer().frame(height:geometry.size.height * 0.06)
                             
@@ -43,7 +27,7 @@ struct TrueFalseInstructionModal: View {
                                 .font(Font.titleNormalBold)
                         }
                         .padding(30)
-                        .frame(width: geometry.size.width / 1.5, height: geometry.size.height / 1.5)
+                        .frame(width: geometry.size.width / 1.5, height: geometry.size.height / 1.8)
                         .background(Color("lightBackground"))
                         .overlay(
                             RoundedRectangle(cornerRadius: 20)
@@ -54,11 +38,11 @@ struct TrueFalseInstructionModal: View {
                     }
                     
                 
-                    Text("HowToPlay")
+                    Text("TryAgain")
                         .foregroundColor(Color.white)
                         .bold()
                         .font(.title2)
-                        .frame(width: geometry.size.width * 0.2, height: geometry.size.height * 0.14)
+                        .frame(width: geometry.size.width * 0.24, height: geometry.size.height * 0.14)
                         .background(Color.teal)
                         .cornerRadius(10)
                 }
@@ -73,9 +57,9 @@ struct TrueFalseInstructionModal: View {
     }
 }
 
-struct TrueFalseInstructionModal_Previews: PreviewProvider {
+struct TrueFalseTryAgainModal_Previews: PreviewProvider {
     static var previews: some View {
-        TrueFalseInstructionModal(dismissInstruction: {})
+        TrueFalseTryAgainModal(dismissTryAgain: {})
     }
 }
 

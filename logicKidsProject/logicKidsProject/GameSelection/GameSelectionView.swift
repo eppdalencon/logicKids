@@ -11,15 +11,21 @@ struct GameSelectionView: View {
     @State private var isShowingGame1 = false
     @State private var isShowingGame2 = false
     @State private var isShowingGame3 = false
+    var language: String = String(localized: "language")
     var dismissSelection: (() -> Void)
     
     let listOfGames : [String] = [
-        "game1",
-        "gameoff",
-        "gameoff",
-        "gameoff",
-        "gameoff",
-        "gameoff"
+        "Game1Cover",
+        "Game2Cover",
+        "Game3Cover",
+        "SoonCover"
+    ]
+    
+    let listaJogos : [String] = [
+        "Game1Capa",
+        "Game2Capa",
+        "Game3Capa",
+        "BreveCapa"
     ]
     
     var body: some View {
@@ -45,45 +51,75 @@ struct GameSelectionView: View {
                             HStack{
                                 Spacer(minLength: 64)
                                 
-                                Image(listOfGames[0])
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(height: geometry.size.height * 0.6)
-                                    .onTapGesture {
-                                        isShowingGame1.toggle()
-                                    }
+                                if(language == "EN"){
+                                    Image(listOfGames[0])
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(height: geometry.size.height * 0.6)
+                                        .onTapGesture {
+                                            isShowingGame1.toggle()
+                                        }
+                                    
+                                    Image(listOfGames[1])
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(height: geometry.size.height * 0.6)
+                                        .onTapGesture {
+                                            isShowingGame2.toggle()
+                                        }
+                                    
+                                    Image(listOfGames[2])
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(height: geometry.size.height * 0.6)
+                                        .onTapGesture {
+                                            isShowingGame3.toggle()
+                                        }
+                                    
+                                    Image(listOfGames[3])
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(height: geometry.size.height * 0.6)
+                                        .onTapGesture {
+                                            
+                                        }
+                                    
+                                 
+                                } else {
+                                    Image(listaJogos[0])
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(height: geometry.size.height * 0.6)
+                                        .onTapGesture {
+                                            isShowingGame1.toggle()
+                                        }
+                                    
+                                    Image(listaJogos[1])
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(height: geometry.size.height * 0.6)
+                                        .onTapGesture {
+                                            isShowingGame2.toggle()
+                                        }
+                                    
+                                    Image(listaJogos[2])
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(height: geometry.size.height * 0.6)
+                                        .onTapGesture {
+                                            isShowingGame3.toggle()
+                                        }
+                                    
+                                    Image(listaJogos[3])
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(height: geometry.size.height * 0.6)
+                                        .onTapGesture {
+                                            
+                                        }
+                                    
+                                }
                                 
-                                Image(listOfGames[0])
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(height: geometry.size.height * 0.6)
-                                    .onTapGesture {
-                                        isShowingGame2.toggle()
-                                    }
-                                
-                                Image(listOfGames[0])
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(height: geometry.size.height * 0.6)
-                                    .onTapGesture {
-                                        isShowingGame3.toggle()
-                                    }
-                                
-                                Image(listOfGames[1])
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(height: geometry.size.height * 0.6)
-                                    .onTapGesture {
-                                        
-                                    }
-                                
-                                Image(listOfGames[1])
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(height: geometry.size.height * 0.6)
-                                    .onTapGesture {
-                                      
-                                    }
                             }
                         }
                     }
