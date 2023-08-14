@@ -5,6 +5,9 @@
   Created by Gustavo Diefenbach on 09/08/23.
   
 */
+
+"language" = "PT";
+
 //MARK: - Home View
 "HomeButtonAchievements" = "Minhas Conquistas";
 "HomeButtonSelectGame" = "Selecione um jogo";
@@ -33,3 +36,121 @@
 "RestartButton" = "Recomeçar";
 "ContinueButton" = "Continuar";
 "QuitButton" = "Sair";
+
+
+
+
+"SelectTrueOrFalse" = "Selecione o que é certo ou errado";
+
+"DavidIsATriangle" = "Davi é um triângulo";
+"DavidIsAParallelogram" = "Davi é um paralelogramo";
+"DavidIsAngry" = "David está com raiva";
+"DavidIsHappy" = "Davi está feliz";
+"DavidIsWearingAHat" = "David usa um chapéu";
+"DavidIsWearingAFlower" = "Davi usa uma flor";
+
+
+"TaylorIsATriangle" = "Tiago é um triângulo";
+"TaylorIsASquare" = "Tiago é um quadrado";
+"TaylorIsAngry" = "Tiago está com raiva";
+"TaylorIsSleeping" = "Tiago está com sono";
+"TaylorIsWearingACrown" = "Tiago usa uma coroa";
+"TaylorIsWearingACap" = "Tiago usa uma touca";
+
+
+"JonhIsASquare" = "João é um quadrado";
+"JonhIsATriangle" = "João é um triângulo";
+"JonhIsHappy" = "João é feliz";
+"JonhIsAngry" = "João está com raiva";
+"JonhIsWearingAHat" = "João usa um chapéu";
+"JonhIsWearingGlasses" = "João usa óculos";
+
+
+"SarahIsASquare" = "Sara é um quadrado";
+"SarahIsACircle" = "Sara é um círculo";
+"SarahIsHappy" = "Sara está com raiva";
+"SarahIsWinking" = "Sara está piscando";
+"SarahIsWearingGlasses" = "Sara usa óculos";
+"SarahIsWearingAHat" = "Sara usa um chapéu";
+
+
+"ChrisIsASquare" = "Gus é um quadrado";
+"ChrisIsAHexagon" = "Gus é um hexágono";
+"ChrisIsHappy" = "Gus está feliz";
+"ChrisIsWinking" = "Gus está piscando";
+"ChrisIsWearingSunglasses" = "Gus usa óculos escuros";
+"ChrisIsWearingACap" = "Gus usa touca";
+
+
+"SkylerIsATriangle" = "Mel é um triângulo";
+"SkylerIsASquare" = "Mel é um quadrado";
+"SkylerIsSleeping" = "Mel está dormindo";
+"SkylerIsAngry" = "Mel está com raiva";
+"SkylerIsWearingAFlower" = "Mel usa uma flor";
+"SkylerIsWearingAHat" = "Mel usa um chapéu";
+
+
+"DaveIsAParallelogram" = "Dudu é um paralelogramo";
+"DaveIsATriangle" = "Dudu é um triângulo";
+"DaveIsSleeping" = "Dudu está dormindo";
+"DaveIsSurprised" = "Dudu está surpreso";
+"DaveIsWearingACap" = "Dudu usa uma touca";
+"DaveIsWearingAFlower" = "Dudu usa uma flor";
+
+
+"JennIsATriangle" = "Julia é um triângulo";
+"JennIsACircle" = "Julia é um cícrculo";
+"JennIsSurprised" = "Júlia está surpresa";
+"JennIsHappy" = "Julia está feliz";
+"JennIsWearingAFlower" = "Julia está usando uma flor";
+"JennIsWearingGlasses" = "Julia está usando óculos";
+
+
+"MikeIsATriangle" = "Pedro é um triângulo";
+"MikeIsSquare" = "Pedro é um quadrado";
+"MikeIsSurprised" = "Pedro está surpreso";
+"MikeIsAngry" = "Pedro está com raiva";
+"MikeIsWearingACap" = "Pedro está usando uma touca";
+"MikeIsWearingACrown" = "Pedro está usando uma coroa";
+
+
+"GregIsATriangle" = "Jarbas é um triângulo";
+"GregIsAParallelogram" = "Jarbas é um paralelogramo";
+"GregIsSurprised" = "Jarbas está surpreso";
+"GregIsSleeping" = "Jarbas está dormindo";
+"GregIsWearingGlasses" = "Jarbas está usando óculos";
+"GregIsWearingAHat" = "Jarbas está usando chapéu";
+
+
+"LindaIsAParallelogram" = "Linda é um paralelogramo";
+"LindaIsATriangle" = "Linda é um triângulo";
+"LindaIsWinking" = "Linda está piscando";
+"LindaIsSurprised" = "Linda está surpresa";
+"LindaIsWearingAFlower" = "Linda está usando uma flor";
+"LindaIsWearingGlasses" = "Linda está usando óculos";
+
+
+"AlexIsATriangle" = "Cris é um triângulo";
+"AlexIsAPentagon" = "Cris é um pentágono";
+"AlexIsWinking" = "Cris está piscando";
+"AlexIsAngry" = "Cris está com raiva";
+"AlexIsWearingACrown" = "Cris está usando uma coroa";
+"AlexIsWearingSunglasses" = "Cris está usando óculos escuros";
+
+"SendAnswer" = "Enviar resposta";
+
+"True" = "certo";
+"False" = "errado";
+
+//Modal
+
+"Congrats!" = "Parabéns!";
+"TryAgain" = "Tente novamente";
+"Quit" = "Sair";
+"PlayAgain" = "Jogar novamente";
+"Congratulations" = "Woo hoo! Você provou suas habilidades como um superstar!";
+"HowToPlay" = "Como jogar";
+"TapToContinue" = "Toque para continuar";
+"TapToReturn" = "Toque para fechar";
+"TrueFalseInitial" = "Leia as frases e escolha o que é certo ou errado.";
+"Lessons" = "Mas não se preocupe! Não há respostas erradas, apenas novos aprendizados!";
