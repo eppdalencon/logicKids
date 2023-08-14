@@ -19,4 +19,7 @@ public extension Font {
     static let titleNormal = Font.system(.title3, design: .rounded, weight: .regular)
     static let titleNormalBold = titleNormal.bold()
     
+    static let titleNormal1 = Font.system(.title, design: .rounded, weight: .regular)
+    static let titleNormalBold1 = titleNormal1.bold()
+    
 }

@@ -53,7 +53,6 @@ struct BiggerSmallerGameView: View {
                             .aspectRatio(contentMode: .fit)
                             .frame(width: geometry.size.width * 0.05)
                     }
-                    
                     Spacer()
                     Button(action: {
                         isShowingInstructions.toggle()
@@ -66,10 +65,9 @@ struct BiggerSmallerGameView: View {
                 }
                 VStack{
                     HStack{
-                        Text("Selecione a opção verdadeira:")
+                        Text(String(localized: "WhichSideHasABiggerQuantity"))
                             .font(Font.titleLargeBold)
                     }
-
                     HStack{
                         Spacer()
                         VStack{
@@ -90,14 +88,14 @@ struct BiggerSmallerGameView: View {
                                     Image("Shapes\(option[0])")
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
-                                        .frame(height: geometry.size.height * 0.2)
+                                        .frame(height: geometry.size.height * 0.23)
                                     Image("GreaterSymbol")
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
                                         .frame(height: geometry.size.height * 0.15)
                                     Image("Shapes\(option[1])")               .resizable()
                                         .aspectRatio(contentMode: .fit)
-                                        .frame(height: geometry.size.height * 0.2)
+                                        .frame(height: geometry.size.height * 0.23)
                                     Spacer().frame(width: geometry.size.width * 0.03)
                                 }
                                 Spacer().frame(height: geometry.size.width * 0.01)
@@ -125,14 +123,14 @@ struct BiggerSmallerGameView: View {
                                     Image("Shapes\(option[0])")
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
-                                        .frame(height: geometry.size.height * 0.2)
+                                        .frame(height: geometry.size.height * 0.23)
                                     Image("LesserSymbol")
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
                                         .frame(height: geometry.size.height * 0.15)
                                     Image("Shapes\(option[1])")                   .resizable()
                                         .aspectRatio(contentMode: .fit)
-                                        .frame(height: geometry.size.height * 0.2)
+                                        .frame(height: geometry.size.height * 0.23)
                                     Spacer().frame(width: geometry.size.width * 0.03)
                                 }
                                 Spacer().frame(height: geometry.size.width * 0.01)

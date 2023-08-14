@@ -26,7 +26,6 @@ struct BiggerSmallerCongratulationModal: View {
                     VStack {
                         ZStack{
                             VStack{
-                                Spacer()
                                 VStack{
                                     VStack{
                                         Spacer().frame(height: geometry.size.width * 0.01)
@@ -35,32 +34,32 @@ struct BiggerSmallerCongratulationModal: View {
                                             Image("Shapes\(numberShow[0])")
                                                 .resizable()
                                                 .aspectRatio(contentMode: .fit)
-                                                .frame(height: geometry.size.height * 0.2)
-                                            Image(numberShow[0]>numberShow[1] ? "GreaterSymbol" : "LesserSymbol")
+                                                .frame(height: geometry.size.height * 0.35)
+                                            Image(numberShow[0] > numberShow[1] ? "GreaterSymbol" : "LesserSymbol")
                                                 .resizable()
                                                 .aspectRatio(contentMode: .fit)
-                                                .frame(height: geometry.size.height * 0.15)
+                                                .frame(height: geometry.size.height * 0.25)
                                             Image("Shapes\(numberShow[1])")               .resizable()
                                                 .aspectRatio(contentMode: .fit)
-                                                .frame(height: geometry.size.height * 0.2)
+                                                .frame(height: geometry.size.height * 0.35)
                                             Spacer().frame(width: geometry.size.width * 0.03)
                                         }
                                         Spacer().frame(height: geometry.size.width * 0.01)
                                     }
-                                    .background(Color.white)
-                                    .cornerRadius(10)
-                                    .shadow(color: Color.black.opacity(0.2), radius: 20)                   }
-                                Spacer()
+                                    Text("\(numberShow[0]) \(numberShow[0]>numberShow[1] ? String(localized: "Bigger") : String(localized: "Smaller")) \(numberShow[1])")
+                                        .font(Font.titleNormalBold1)
+//                                    .background(Color.white)
+//                                    .cornerRadius(10)
+//                                    .shadow(color: Color.black.opacity(0.2), radius: 20)
+                                    Spacer().frame(height: geometry.size.width * 0.03)
+                                }
                                 HStack (spacing: 30){
-                                   
                                     HomeButton(title: "Quit", color: Color.red, largura: geometry.size.width * 0.2, altura: geometry.size.height * 0.1, action: {
                                         dismissGame();dismissComplete()
                                     })
-
                                     HomeButton(title: "Play Again", color: Color.blue, largura: geometry.size.width * 0.2, altura: geometry.size.height * 0.1, action: {
                                         shuffleGame();dismissComplete()
                                     })
-   
                                 }
                                 .padding(.bottom,geometry.size.height * 0.0)
                             }
@@ -82,7 +81,7 @@ struct BiggerSmallerCongratulationModal: View {
                 }
                 
                 
-                Text("Congrats!")
+                Text(String(localized: "Congrats!"))
                     .foregroundColor(Color.white)
                     .bold()
                     .font(.title2)

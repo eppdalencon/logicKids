@@ -28,7 +28,7 @@ struct BiggerSmallerInstructionModal: View {
                                         .aspectRatio(contentMode: .fit)
                                         .frame(width: geometry.size.width * 0.45)
                                     
-                                    Text("Tan always open his arms to hug the side that has a bigger quantity.")
+                                    Text(String(localized: "GameThreeInstructionTextHowToPlay"))
                                         .font(Font.titleMiddleBold)
                                         .foregroundColor(.white)
                                         .padding(30)
@@ -37,7 +37,7 @@ struct BiggerSmallerInstructionModal: View {
 
                             Spacer().frame(height:geometry.size.height * 0.06)
                             
-                            Text("Tap to continue")
+                            Text(String(localized: "GameOneInstructionTapToContinue"))
                                 .font(Font.titleNormalBold)
                         }
                         .padding(30)
@@ -52,7 +52,7 @@ struct BiggerSmallerInstructionModal: View {
                     }
                     
                 
-                    Text("How to play")
+                    Text(String(localized: "GameOneInstructionTitleHowToPlay"))
                         .foregroundColor(Color.white)
                         .bold()
                         .font(.title2)
