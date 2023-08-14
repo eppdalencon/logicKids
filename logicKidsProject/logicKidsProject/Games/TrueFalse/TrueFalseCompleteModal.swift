@@ -1,10 +1,10 @@
 import SwiftUI
 
-struct CompleteModalView: View {
+struct TrueFalseCompleteModalView: View {
     var dismissComplete: (() -> Void)
     var dismissGame: (() -> Void)
     var shuffleGame: (() -> Void)
-    var gameName: Int
+    var gameName: String
     
     var body: some View {
         
@@ -15,11 +15,21 @@ struct CompleteModalView: View {
                     Spacer().frame(height: geometry.size.height * 0.07)
                     VStack {
                         ZStack{
-                            Image("game\(gameName)0")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(height: geometry.size.height * 0.5)
-                                .padding(.bottom,geometry.size.height * 0.08)
+                            HStack(spacing:0){
+                                Image("\(gameName)_star")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(height: geometry.size.height * 0.4)
+                                    .padding(.bottom,geometry.size.height * 0.08)
+                                
+                                
+                                Text("Congratulations")
+                                    .padding(.bottom, 40)
+                                    .bold()
+                                    .font(.title2)
+                                
+                            }
+                            
                             
                             
                             VStack{
@@ -35,29 +45,7 @@ struct CompleteModalView: View {
                                     HomeButton(title: "PlayAgain", color: Color.blue, largura: geometry.size.width * 0.22, altura: geometry.size.height * 0.12, action: {
                                         shuffleGame();dismissComplete()
                                     })
-        //                            Button(action: {
-        //                                withAnimation {
-        //                                    dismissGame()
-        //                                    dismissComplete()
-        //                                }
-        //                            }) {
-        //                                Text("Quit")
-        //                                    .padding()
-        //                                    .foregroundColor(.white)
-        //                                    .background(Color.blue)
-        //                                    .cornerRadius(10)
-        //                            }
         //
-        //                            Button(action: {
-        //                                shuffleGame()
-        //                                dismissComplete()
-        //                            }) {
-        //                                Text("Play Again")
-        //                                    .padding()
-        //                                    .foregroundColor(.white)
-        //                                    .background(Color.blue)
-        //                                    .cornerRadius(10)
-        //                            }
                                 }
                                 .padding(.bottom,geometry.size.height * 0.0)
                             }
@@ -69,7 +57,7 @@ struct CompleteModalView: View {
                     }
                     
                     .padding(30)
-                    .frame(width: geometry.size.width / 1.5, height: geometry.size.height / 1.3)
+                    .frame(width: geometry.size.width / 1.4, height: geometry.size.height / 1.4)
                     .background(Color("lightBackground"))
                     .overlay(
                         RoundedRectangle(cornerRadius: 20)
@@ -94,8 +82,9 @@ struct CompleteModalView: View {
     }
 }
 
-struct CompleteModalView_Previews: PreviewProvider {
+struct TrueFalseCompleteModalView_Previews: PreviewProvider {
     static var previews: some View {
-        CompleteModalView(dismissComplete: {}, dismissGame: {}, shuffleGame: {}, gameName: 0)
+        TrueFalseCompleteModalView(dismissComplete: {}, dismissGame: {}, shuffleGame: {}, gameName: "happy1")
     }
 }
+

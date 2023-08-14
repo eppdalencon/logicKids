@@ -36,17 +36,17 @@ struct TrueFalseGameView: View {
                                                        
        QuestionTF(imageName: "happy1", colorTrue: "JonhIsASquare", colorFalse: "JonhIsATriangle", moodTrue: "JonhIsHappy", moodFalse: "JonhIsAngry", accessoryTrue: "JonhIsWearingAHat", accessoryFalse: "JonhIsWearingGlasses"),
                                                        
-       QuestionTF(imageName: "angry2", colorTrue: "SarahIsASquare", colorFalse: "SarahIsASquare", moodTrue: "SarahIsHappy", moodFalse: "SarahIsWinking", accessoryTrue: "SarahIsWearingGlasses", accessoryFalse: "SarahIsWearingAHat"),
+       QuestionTF(imageName: "angry2", colorTrue: "SarahIsATriangle", colorFalse: "SarahIsASquare", moodTrue: "SarahIsHappy", moodFalse: "SarahIsWinking", accessoryTrue: "SarahIsWearingGlasses", accessoryFalse: "SarahIsWearingAHat"),
                                                        
        QuestionTF(imageName: "happy3", colorTrue: "ChrisIsASquare", colorFalse: "ChrisIsAHexagon", moodTrue: "ChrisIsHappy", moodFalse: "ChrisIsWinking", accessoryTrue: "ChrisIsWearingSunglasses", accessoryFalse: "ChrisIsWearingACap"),
                                                        
        QuestionTF(imageName: "sleeping1", colorTrue: "SkylerIsATriangle", colorFalse: "SkylerIsASquare", moodTrue: "SkylerIsSleeping", moodFalse: "SkylerIsAngry", accessoryTrue: "SkylerIsWearingAFlower", accessoryFalse: "SkylerIsWearingAHat"),
                                                        
-       QuestionTF(imageName: "sleeping2", colorTrue: "DaveIsAParallelogram", colorFalse: "DaveIsAParallelogram", moodTrue: "DaveIsSleeping", moodFalse: "DaveIsSurprised", accessoryTrue: "DaveIsWearingACap", accessoryFalse: "DaveIsWearingAFlower"),
+       QuestionTF(imageName: "sleeping2", colorTrue: "DaveIsAParallelogram", colorFalse: "DaveIsATriangle", moodTrue: "DaveIsSleeping", moodFalse: "DaveIsSurprised", accessoryTrue: "DaveIsWearingACap", accessoryFalse: "DaveIsWearingAFlower"),
                                                        
        QuestionTF(imageName: "surprised1", colorTrue: "JennIsATriangle", colorFalse: "JennIsACircle", moodTrue: "JennIsSurprised", moodFalse: "JennIsHappy", accessoryTrue: "JennIsWearingAFlower", accessoryFalse: "JennIsWearingGlasses"),
                                                        
-       QuestionTF(imageName: "surprised2", colorTrue: "MikeIsATriangle", colorFalse: "MikeIsSquare", moodTrue: "TMikeIsSurprised", moodFalse: "MikeIsAngry", accessoryTrue: "MikeIsWearingACap", accessoryFalse: "MikeIsWearingACrown"),
+       QuestionTF(imageName: "surprised2", colorTrue: "MikeIsATriangle", colorFalse: "MikeIsSquare", moodTrue: "MikeIsSurprised", moodFalse: "MikeIsAngry", accessoryTrue: "MikeIsWearingACap", accessoryFalse: "MikeIsWearingACrown"),
                                                        
        QuestionTF(imageName: "surprised3", colorTrue: "GregIsATriangle", colorFalse: "GregIsAParallelogram", moodTrue: "GregIsSurprised", moodFalse: "GregIsSleeping", accessoryTrue: "GregIsWearingGlasses", accessoryFalse: "GregIsWearingAHat"),
                                                        
@@ -68,8 +68,9 @@ struct TrueFalseGameView: View {
     
     @State private var isShowingPause = false
     @State private var isShowingCongratulation = false
-    @State private var isShowingInitialInstructions = false
+    @State private var isShowingInitialInstructions = true
     @State private var isShowingInstructions = false
+    @State private var isShowingTryAgain = false
     var dismissAction: (() -> Void)
     
     var numberOfTansForQuest: [Int] = [ 7, 5, 6, 4, 6, 5, 7, 6, 4, 7]
@@ -128,7 +129,7 @@ struct TrueFalseGameView: View {
                 //.background(Color.green)
                 
                 VStack(spacing:0){
-                    Text("Select what is true or false")
+                    Text("SelectTrueOrFalse")
                         .font(Font.titleLargeBold)
                         .frame(width:geometry.size.width * 0.85 ,height: geometry.size.height * 0.08)
                         .padding(.top,10)
@@ -159,27 +160,27 @@ struct TrueFalseGameView: View {
                                     Button(action: {
                                         answer1 = 1
                                     }) {
-                                       Text("true")
+                                       Text("True")
                                             .frame(width:geometry.size.width * 0.06, height: geometry.size.height * 0.08)
                                             .foregroundColor(Color.white)
                                             .padding(5)
                                             .padding(.horizontal, 10)
-                                            .background(answer1 == 1 ? Color.green : Color.gray )
-                                            
-                                            .cornerRadius(10)
+                                            .background(answer1 == 1 ? Color.green : Color("systemGray") )
+                                            .roundedCorner(10, corners: [.bottomLeft, .topLeft])
                                     }
                                     
                                     Button(action: {
                                         answer1 = 0
                                     }) {
-                                       Text("false")
+                                       Text("False")
                                             .frame(width:geometry.size.width * 0.06, height: geometry.size.height * 0.08)
                                             .foregroundColor(Color.white)
                                             .padding(5)
                                             .padding(.horizontal, 10)
-                                            .background(answer1 == 0 ? Color.red : Color.gray )
-                                            .cornerRadius(10)
+                                            .background(answer1 == 0 ? Color.red : Color("systemGray") )
+                                            .roundedCorner(10, corners: [.bottomRight, .topRight])
                                     }
+                                  
                                 }
                             }
                             .frame(width: geometry.size.width * 0.47)
@@ -197,13 +198,13 @@ struct TrueFalseGameView: View {
                                     Button(action: {
                                         answer2 = 1
                                     }) {
-                                       Text("true")
+                                       Text("True")
                                             .frame(width:geometry.size.width * 0.06, height: geometry.size.height * 0.08)
                                             .foregroundColor(Color.white)
                                             .padding(5)
                                             .padding(.horizontal, 10)
-                                            .background(answer2 == 1 ? Color.green : Color.gray )
-                                            .cornerRadius(10)
+                                            .background(answer2 == 1 ? Color.green : Color("systemGray") )
+                                            .roundedCorner(10, corners: [.bottomLeft, .topLeft])
                                             
                                     
                                     }
@@ -211,13 +212,13 @@ struct TrueFalseGameView: View {
                                     Button(action: {
                                         answer2 = 0
                                     }) {
-                                       Text("false")
+                                       Text("False")
                                             .frame(width:geometry.size.width * 0.06, height: geometry.size.height * 0.08)
                                             .foregroundColor(Color.white)
                                             .padding(5)
                                             .padding(.horizontal, 10)
-                                            .background(answer2 == 0 ? Color.red : Color.gray )
-                                            .cornerRadius(10)
+                                            .background(answer2 == 0 ? Color.red : Color("systemGray") )
+                                            .roundedCorner(10, corners: [.bottomRight, .topRight])
                                     }
                                 }
                             }
@@ -237,13 +238,13 @@ struct TrueFalseGameView: View {
                                     Button(action: {
                                         answer3 = 1
                                     }) {
-                                       Text("true")
+                                       Text("True")
                                             .frame(width:geometry.size.width * 0.06, height: geometry.size.height * 0.08)
                                             .foregroundColor(Color.white)
                                             .padding(5)
                                             .padding(.horizontal, 10)
-                                            .background(answer3 == 1 ? Color.green : Color.gray )
-                                            .cornerRadius(10)
+                                            .background(answer3 == 1 ? Color.green : Color("systemGray") )
+                                            .roundedCorner(10, corners: [.bottomLeft, .topLeft])
                                             
                                     
                                     }
@@ -251,13 +252,13 @@ struct TrueFalseGameView: View {
                                     Button(action: {
                                         answer3 = 0
                                     }) {
-                                       Text("false")
+                                       Text("False")
                                             .frame(width:geometry.size.width * 0.06, height: geometry.size.height * 0.08)
                                             .foregroundColor(Color.white)
                                             .padding(5)
                                             .padding(.horizontal, 10)
-                                            .background(answer3 == 0 ? Color.red : Color.gray )
-                                            .cornerRadius(10)
+                                            .background(answer3 == 0 ? Color.red : Color("systemGray") )
+                                            .roundedCorner(10, corners: [.bottomRight, .topRight])
                                     
                                     }
                                     
@@ -277,21 +278,22 @@ struct TrueFalseGameView: View {
                             Button(action: {
                                 if (answer1 != nil && answer2 != nil && answer3 != nil){
                                     if([answer1, answer2, answer3] == answerArray){
-                                        print("Respostas corretas")
+                                        isShowingCongratulation = true
                                     } else {
-                                        print("Resposta errada")
+                                        isShowingTryAgain = true
                                     }
                                 } else {
                                     print("Preencha todas as respostas")
                                 }
                             }) {
-                               Text("Send my answer")
+                               Text("SendAnswer")
                                     .bold()
                                     .frame(width: geometry.size.width * 0.47, height: geometry.size.height * 0.08)
                                     .padding(10)
                                     .foregroundColor(Color.white)
-                                    .background((answer1 != nil && answer2 != nil && answer3 != nil) ? Color.orange : Color.gray)
+                                    .background((answer1 != nil && answer2 != nil && answer3 != nil) ? Color("blueTan") : Color("systemGray"))
                                     .cornerRadius(10)
+                                    .shadow(color: (answer1 != nil && answer2 != nil && answer3 != nil) ? Color("blueTan").opacity(0.5) : Color("systemGray").opacity(0.5),radius: 0.0, x: 6, y: 6)
                                     
                             
                             }
@@ -324,10 +326,11 @@ struct TrueFalseGameView: View {
         .navigationBarBackButtonHidden(true)
         .popupNavigatopnView(show: $isShowingPause){ PauseModalView(show: $isShowingPause, shuffleGame: newGame, dismissGame: dismissAction)}
         .popupNavigatopnViewFull(show: $isShowingCongratulation) {
-           // CompleteModalView(dismissComplete: {isShowingCongratulation = false}, dismissGame: dismissAction, shuffleGame: retryGame,gameName: questionLevel[questionSelected].questionInt)
+            TrueFalseCompleteModalView(dismissComplete: {isShowingCongratulation = false}, dismissGame: dismissAction, shuffleGame: newGame,gameName: questionsArray[questionNumber].imageName.components(separatedBy: ".").first!)
         }
         .popupNavigatopnView(show: $isShowingInitialInstructions){ TrueFalseInstructionModal(dismissInstruction: {isShowingInitialInstructions = false})}
         .popupNavigatopnView(show: $isShowingInstructions){ TrueFalseInterrogationModal(dismissInstruction: {isShowingInstructions = false})}
+        .popupNavigatopnView(show: $isShowingTryAgain){ TrueFalseTryAgainModal(dismissTryAgain: {isShowingTryAgain = false})}
     }
 }
 

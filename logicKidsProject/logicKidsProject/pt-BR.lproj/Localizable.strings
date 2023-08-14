@@ -5,6 +5,9 @@
   Created by Gustavo Diefenbach on 09/08/23.
   
 */
+
+"language" = "PT";
+
 //MARK: - Home View
 "HomeButtonAchievements" = "Minhas Conquistas";
 "HomeButtonSelectGame" = "Selecione um jogo";
@@ -37,6 +40,8 @@
 
 
 
+"SelectTrueOrFalse" = "Selecione o que é certo ou errado";
+
 "DavidIsATriangle" = "Davi é um triângulo";
 "DavidIsAParallelogram" = "Davi é um paralelogramo";
 "DavidIsAngry" = "David está com raiva";
@@ -63,7 +68,7 @@
 
 "SarahIsASquare" = "Sara é um quadrado";
 "SarahIsACircle" = "Sara é um círculo";
-"SarahIsHappy" = "Sara está feliz";
+"SarahIsHappy" = "Sara está com raiva";
 "SarahIsWinking" = "Sara está piscando";
 "SarahIsWearingGlasses" = "Sara usa óculos";
 "SarahIsWearingAHat" = "Sara usa um chapéu";
@@ -131,3 +136,21 @@
 "AlexIsAngry" = "Cris está com raiva";
 "AlexIsWearingACrown" = "Cris está usando uma coroa";
 "AlexIsWearingSunglasses" = "Cris está usando óculos escuros";
+
+"SendAnswer" = "Enviar resposta";
+
+"True" = "certo";
+"False" = "errado";
+
+//Modal
+
+"Congrats!" = "Parabéns!";
+"TryAgain" = "Tente novamente";
+"Quit" = "Sair";
+"PlayAgain" = "Jogar novamente";
+"Congratulations" = "Woo hoo! Você provou suas habilidades como um superstar!";
+"HowToPlay" = "Como jogar";
+"TapToContinue" = "Toque para continuar";
+"TapToReturn" = "Toque para fechar";
+"TrueFalseInitial" = "Leia as frases e escolha o que é certo ou errado.";
+"Lessons" = "Mas não se preocupe! Não há respostas erradas, apenas novos aprendizados!";

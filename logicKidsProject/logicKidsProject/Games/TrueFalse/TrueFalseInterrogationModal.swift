@@ -23,7 +23,7 @@ struct TrueFalseInterrogationModal: View {
                                     .aspectRatio(contentMode: .fit)
                                     .frame(height: geometry.size.width)
                                     
-                                Text("Tap to return")
+                                Text("TapToReturn")
                                     .font(Font.titleNormalBold)
                                     .padding(.top, geometry.size.height * 0.5)
                             }
@@ -31,7 +31,7 @@ struct TrueFalseInterrogationModal: View {
                             
                             Spacer().frame(height:geometry.size.height * 0.06)
                             
-                            Text("Tap to continue")
+                            Text("TapToContinue")
                                 .font(.title3)
                                 .bold()
                         }
@@ -47,7 +47,7 @@ struct TrueFalseInterrogationModal: View {
                     }
                     
                     
-                    Text("How to play")
+                    Text("HowToPlay")
                         .foregroundColor(Color.white)
                         .bold()
                         .font(.title2)

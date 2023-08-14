@@ -7,6 +7,8 @@
 */
 //"key" = "traducao";
 
+"language" = "EN";
+
 
 //MARK: - Home View
 "HomeButtonAchievements" = "My Achievements";
@@ -39,6 +41,9 @@
 
 
 //MARK: - Game 02 - TRUE FALSE
+
+"SelectTrueOrFalse" = "Select what is true or false";
+
 "DavidIsATriangle" = "David is a triangle";
 "DavidIsAParallelogram" = "David is a parallelogram";
 "DavidIsAngry" = "David is angry";
@@ -65,7 +70,7 @@
 
 "SarahIsASquare" = "Sarah is a square";
 "SarahIsACircle" = "Sarah is a circle";
-"SarahIsHappy" = "Sarah is happy";
+"SarahIsHappy" = "Sarah is angry";
 "SarahIsWinking" = "Sarah is winking";
 "SarahIsWearingGlasses" = "Sarah is wearing glasses";
 "SarahIsWearingAHat" = "Sarah is wearing a hat";
@@ -133,3 +138,23 @@
 "AlexIsAngry" = "Alex is angry";
 "AlexIsWearingACrown" = "Alex is wearing a crown";
 "AlexIsWearingSunglasses" = "Alex is wearing sunglasses";
+
+"SendAnswer" = "Send my answer";
+
+"True" = "true";
+"False" = "false";
+
+
+//Modal
+"Congrats!" = "Congrats!";
+"TryAgain" = "Try again";
+"Quit" = "Quit";
+"PlayAgain" = "Play again";
+"Congratulations" = "Woo hoo! You've proven your skills like a superstar!";
+"HowToPlay" = "How to play";
+"TapToContinue" = "Tap to continue";
+"TapToReturn" = "Tap to clone";
+"TrueFalseInitial" = "Read the sentences and choose which are true or false.";
+"Lessons" = "But don't worry! There are no wrong answers, only new lessons!";
+
+

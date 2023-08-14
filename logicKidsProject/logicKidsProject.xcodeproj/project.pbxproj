@@ -11,6 +11,8 @@
 		099A11EA2A8406FD008C84A0 /* BiggerSmallerInterrogationModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099A11E92A8406FD008C84A0 /* BiggerSmallerInterrogationModal.swift */; };
 		09D8AA7E2A82AFE700739913 /* BiggerSmallerGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D8AA7D2A82AFE700739913 /* BiggerSmallerGameView.swift */; };
 		09DEA6332A79704E00B72928 /* CustomButtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DEA6322A79704E00B72928 /* CustomButtom.swift */; };
+		3060AC9D2A86A81E002292BE /* TrueFalseTryAgainModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060AC9C2A86A81E002292BE /* TrueFalseTryAgainModal.swift */; };
+		3060AC9F2A86BAD4002292BE /* TrueFalseCompleteModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060AC9E2A86BAD4002292BE /* TrueFalseCompleteModal.swift */; };
 		3088F78F2A6EFC1900FD7540 /* logicKidsProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3088F78E2A6EFC1900FD7540 /* logicKidsProjectApp.swift */; };
 		3088F7912A6EFC1900FD7540 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3088F7902A6EFC1900FD7540 /* ContentView.swift */; };
 		3088F7932A6EFC1900FD7540 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3088F7922A6EFC1900FD7540 /* Assets.xcassets */; };
@@ -37,6 +39,8 @@
 		099A11E92A8406FD008C84A0 /* BiggerSmallerInterrogationModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiggerSmallerInterrogationModal.swift; sourceTree = "<group>"; };
 		09D8AA7D2A82AFE700739913 /* BiggerSmallerGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiggerSmallerGameView.swift; sourceTree = "<group>"; };
 		09DEA6322A79704E00B72928 /* CustomButtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtom.swift; sourceTree = "<group>"; };
+		3060AC9C2A86A81E002292BE /* TrueFalseTryAgainModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrueFalseTryAgainModal.swift; sourceTree = "<group>"; };
+		3060AC9E2A86BAD4002292BE /* TrueFalseCompleteModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrueFalseCompleteModal.swift; sourceTree = "<group>"; };
 		3088F78B2A6EFC1900FD7540 /* logicKidsProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = logicKidsProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3088F78E2A6EFC1900FD7540 /* logicKidsProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logicKidsProjectApp.swift; sourceTree = "<group>"; };
 		3088F7902A6EFC1900FD7540 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -192,6 +196,8 @@
 				30CEA72E2A81885D003098A5 /* TrueFalseGameView.swift */,
 				30CEA7302A841946003098A5 /* TrueFalseInstructionModal.swift */,
 				30CEA7322A8419EB003098A5 /* TrueFalseInterrogationModal.swift */,
+				3060AC9C2A86A81E002292BE /* TrueFalseTryAgainModal.swift */,
+				3060AC9E2A86BAD4002292BE /* TrueFalseCompleteModal.swift */,
 			);
 			path = TrueFalse;
 			sourceTree = "<group>";
@@ -280,12 +286,14 @@
 				309AC15C2A7ADA6200F97285 /* TangramInterrogationModal.swift in Sources */,
 				09D8AA7E2A82AFE700739913 /* BiggerSmallerGameView.swift in Sources */,
 				3088F7A72A6EFF7400FD7540 /* TangramInstructionView.swift in Sources */,
+				3060AC9D2A86A81E002292BE /* TrueFalseTryAgainModal.swift in Sources */,
 				3088F7AF2A6EFFEB00FD7540 /* AchievementsView.swift in Sources */,
 				3088F7AA2A6EFFBD00FD7540 /* PauseModalView.swift in Sources */,
 				30CEA7312A841946003098A5 /* TrueFalseInstructionModal.swift in Sources */,
 				099A11E82A840607008C84A0 /* BiggerSmallerInstructionModal.swift in Sources */,
 				3088F7A52A6EFF5C00FD7540 /* TangramGameView.swift in Sources */,
 				3088F7AC2A6EFFCB00FD7540 /* CompleteModalView.swift in Sources */,
+				3060AC9F2A86BAD4002292BE /* TrueFalseCompleteModal.swift in Sources */,
 				7BF3E1762A72E3C500482E7E /* fontsExtention.swift in Sources */,
 				30FCA72D2A7ACEB4009DBFAA /* TangramInstructionModal.swift in Sources */,
 				3088F79E2A6EFEF600FD7540 /* HomeView.swift in Sources */,
