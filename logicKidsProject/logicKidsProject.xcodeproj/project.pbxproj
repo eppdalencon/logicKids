@@ -31,6 +31,7 @@
 		30CEA7332A8419EB003098A5 /* TrueFalseInterrogationModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CEA7322A8419EB003098A5 /* TrueFalseInterrogationModal.swift */; };
 		30FCA72D2A7ACEB4009DBFAA /* TangramInstructionModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FCA72C2A7ACEB4009DBFAA /* TangramInstructionModal.swift */; };
 		7B6884B62A840F9500B1C30B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B6884B82A840F9500B1C30B /* Localizable.strings */; };
+		7BCABD7E2A85590D009C5E0B /* BiggerSmallerCongratulationModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCABD7D2A85590D009C5E0B /* BiggerSmallerCongratulationModal.swift */; };
 		7BF3E1762A72E3C500482E7E /* fontsExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF3E1752A72E3C500482E7E /* fontsExtention.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		30FCA72C2A7ACEB4009DBFAA /* TangramInstructionModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TangramInstructionModal.swift; sourceTree = "<group>"; };
 		7B6884B72A840F9500B1C30B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7B6884B92A840F9A00B1C30B /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		7BCABD7D2A85590D009C5E0B /* BiggerSmallerCongratulationModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiggerSmallerCongratulationModal.swift; sourceTree = "<group>"; };
 		7BF3E1752A72E3C500482E7E /* fontsExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fontsExtention.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,6 +83,7 @@
 				09D8AA7D2A82AFE700739913 /* BiggerSmallerGameView.swift */,
 				099A11E72A840607008C84A0 /* BiggerSmallerInstructionModal.swift */,
 				099A11E92A8406FD008C84A0 /* BiggerSmallerInterrogationModal.swift */,
+				7BCABD7D2A85590D009C5E0B /* BiggerSmallerCongratulationModal.swift */,
 			);
 			path = Game2;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				30CEA7312A841946003098A5 /* TrueFalseInstructionModal.swift in Sources */,
 				099A11E82A840607008C84A0 /* BiggerSmallerInstructionModal.swift in Sources */,
 				3088F7A52A6EFF5C00FD7540 /* TangramGameView.swift in Sources */,
+				7BCABD7E2A85590D009C5E0B /* BiggerSmallerCongratulationModal.swift in Sources */,
 				3088F7AC2A6EFFCB00FD7540 /* CompleteModalView.swift in Sources */,
 				3060AC9F2A86BAD4002292BE /* TrueFalseCompleteModal.swift in Sources */,
 				7BF3E1762A72E3C500482E7E /* fontsExtention.swift in Sources */,

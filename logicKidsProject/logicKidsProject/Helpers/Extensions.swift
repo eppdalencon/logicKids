@@ -51,6 +51,7 @@ extension View {
                         
                         ZStack{
                             BackdropBlurView(radius: 6)
+                            Color.black.opacity(0.5)
                             content()
                         }
                         .frame(width: size.width , height: size.height, alignment: .center)
@@ -76,6 +77,7 @@ extension View {
                         
                         ZStack{
                             BackdropBlurView(radius: 6)
+                            Color.black.opacity(0.5)
                             content()
                         }
                      

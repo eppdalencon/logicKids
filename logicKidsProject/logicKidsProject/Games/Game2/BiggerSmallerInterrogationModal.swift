@@ -18,11 +18,10 @@ struct BiggerSmallerInterrogationModal: View {
                             Spacer().frame(height: geometry.size.height * 0.07)
 
                             ZStack{
-                                Image("InstructionImage")
+                                Image("HowToPlayGame3")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
-                                    .frame(height: geometry.size.width)
-                                    
+                                    .frame(width: geometry.size.width * 0.45)
                                 Text("Tap to return")
                                     .font(Font.titleNormalBold)
                                     .padding(.top, geometry.size.height * 0.5)

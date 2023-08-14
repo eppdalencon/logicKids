@@ -282,6 +282,7 @@ struct TangramGameView: View {
             }
         }
         .ignoresSafeArea(.all)
+        .background(Color("backgroundColor"))
         .navigationBarBackButtonHidden(true)
         .popupNavigatopnView(show: $isShowingPause){ PauseModalView(show: $isShowingPause, shuffleGame: retryGame, dismissGame: dismissAction)}
         .popupNavigatopnViewFull(show: $isShowingCongratulation) {
@@ -290,6 +291,7 @@ struct TangramGameView: View {
         .popupNavigatopnView(show: $isShowingInitialInstructions){ TangramInstructionModal(dismissInstruction: {isShowingInitialInstructions = false})}
         .popupNavigatopnView(show: $isShowingInstructions){ TangramInterrogationModal(dismissInstruction: {isShowingInstructions = false})}
     }
+    
 }
 
 

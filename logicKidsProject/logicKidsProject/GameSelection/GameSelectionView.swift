@@ -129,6 +129,7 @@ struct GameSelectionView: View {
             }
         }
         .ignoresSafeArea(.all)
+        .background(Color("backgroundColor"))
         .fullScreenCover(isPresented: $isShowingGame1) {
             TangramGameView(dismissAction: {isShowingGame1 = false})
         }
