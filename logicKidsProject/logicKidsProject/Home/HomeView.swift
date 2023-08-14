@@ -22,19 +22,12 @@ struct HomeView: View {
                     .frame(width: geometry.size.width)
                     
                 VStack {
-                    Spacer()
-
+                    Spacer().frame(height: geometry.size.height * 0.25)
                     Image("tans_logo")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: geometry.size.width * 0.4)
-                    Spacer()
-//                    HomeButton(title: "HomeButtonAchievements", color: Color("orangeTan"), largura: geometry.size.width * 0.3, altura: geometry.size.height * 0.12, action: {
-//                        self.hapticFeedback()
-//                            isShowingAchievements.toggle()
-//                    })
-//                    Spacer()
-                        .frame(height: geometry.size.height * 0.06)
+                    Spacer().frame(height: geometry.size.height * 0.06)
                     HomeButton(title: "HomeButtonSelectGame", color: Color("blueTan"), largura: geometry.size.width * 0.3, altura: geometry.size.height * 0.12, action: {
                         self.hapticFeedback()
                         isShowingMenu.toggle()
