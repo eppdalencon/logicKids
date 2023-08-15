@@ -21,19 +21,20 @@
 
 //MARK: - Game 01 - tangram
 
-"GameOneTitle" = "Selecione a peça faltante";
+"GameOneTitle" = "Toque na peça faltante";
 "SelectGameCongratulationButtonPlayAgain" = "Jogar Novamente";
 "SelectGameCongratulationButtonQuit" = "Sair";
 
 "GameOneInstructionTitleHowToPlay" = "Como jogar";
-"GameOneInstructionTextHowToPlay" = "Você precisa encontrar a peça que esta faltando no espaço tracejado.";
+"GameOneInstructionTextHowToPlay" = "Procure a peça faltante e coloque no local em pontilhado.";
 "GameOneInstructionTapToContinue" = "Toque para continuar";
 "GameOneInstructionTapToReturn" = "Toque para retornar";
+"GameOneInstructionTapToClose" = "Toque para fechar";
 
 
 //MARK: - Modal Paused Game
 "PausedTitle" = "Pausado";
-"RestartButton" = "Recomeçar";
+"RestartButton" = "Reiniciar";
 "ContinueButton" = "Continuar";
 "QuitButton" = "Sair";
 
@@ -65,7 +66,7 @@
 "JonhIsWearingAHat" = "João usa um chapéu";
 "JonhIsWearingGlasses" = "João usa óculos";
 
-
+"SarahIsATriangle" = "Sara é um triângulo";
 "SarahIsASquare" = "Sara é um quadrado";
 "SarahIsACircle" = "Sara é um círculo";
 "SarahIsHappy" = "Sara está com raiva";

@@ -19,16 +19,15 @@ struct HomeView: View {
                 Image("characters_home")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: geometry.size.width)
                     
                 VStack {
-                    Spacer().frame(height: geometry.size.height * 0.25)
+                    Spacer().frame(height: geometry.size.height * 0.30)
                     Image("tans_logo")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: geometry.size.width * 0.4)
+                        .frame(width: geometry.size.width * 0.5)
                     Spacer().frame(height: geometry.size.height * 0.06)
-                    HomeButton(title: "HomeButtonSelectGame", color: Color("blueTan"), largura: geometry.size.width * 0.3, altura: geometry.size.height * 0.12, action: {
+                    HomeButton(title: "HomeButtonSelectGame", color: Color("blueTan"), largura: geometry.size.width * 0.35, altura: geometry.size.height * 0.12, action: {
                         self.hapticFeedback()
                         isShowingMenu.toggle()
                     })
@@ -36,6 +35,7 @@ struct HomeView: View {
 
                 }
             }
+            .ignoresSafeArea(.all)
             .background(Color("backgroundColor"))
             .fullScreenCover(isPresented: $isShowingMenu) {
                 GameSelectionView(dismissSelection: {isShowingMenu = false})
