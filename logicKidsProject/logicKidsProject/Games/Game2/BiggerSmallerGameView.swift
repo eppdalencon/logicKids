@@ -18,6 +18,8 @@ struct BiggerSmallerGameView: View {
     
     @State private var option : [Int] = [ 3, 9]
     @State private var topOption: Bool = false
+    @State private var colorOption1 : Bool = false
+    @State private var colorOption2 : Bool = false
     @State private var bottomOption: Bool = false
 
     
@@ -25,7 +27,7 @@ struct BiggerSmallerGameView: View {
         let minValue = 3
         let maxValue = 9
 
-        var randomNumber1 = Int.random(in: minValue...maxValue)
+        let randomNumber1 = Int.random(in: minValue...maxValue)
         var randomNumber2 = Int.random(in: minValue...maxValue)
 
         // Certifique-se de que os números são diferentes
@@ -89,7 +91,7 @@ struct BiggerSmallerGameView: View {
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
                                         .frame(height: geometry.size.height * 0.23)
-                                    Image("GreaterSymbol")
+                                    Image(colorOption1 ? "GreaterWhite" : "Greater")
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
                                         .frame(height: geometry.size.height * 0.15)
@@ -100,17 +102,21 @@ struct BiggerSmallerGameView: View {
                                 }
                                 Spacer().frame(height: geometry.size.width * 0.01)
                             }
-                            .background(Color.white)
+                            .background(colorOption1 ? Color("blueTan") : Color.white)
                             .cornerRadius(10)
                             .shadow(color: Color.black.opacity(0.2), radius: 20)
                             .saturation(topOption ? 0 : 1.0)
                             .onTapGesture {
                                 if(option[0]>option[1]) {
-                                    isShowingCongratulation = true
-                                    //option = generateRandomValues()
+                                    colorOption1 = true
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                        colorOption1 = false // Reset the selected image index after 2 seconds
+                                        isShowingCongratulation = true
+                                    }
                                 } else {
+                                    colorOption1 = false // Reset the selected image index after 2 seconds
                                     topOption = true
-                                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                         topOption = false // Reset the selected image index after 2 seconds
                                     }
                                 }
@@ -124,7 +130,7 @@ struct BiggerSmallerGameView: View {
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
                                         .frame(height: geometry.size.height * 0.23)
-                                    Image("LesserSymbol")
+                                    Image(colorOption2 ? "LesserWhite" : "Lesser")
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
                                         .frame(height: geometry.size.height * 0.15)
@@ -135,17 +141,21 @@ struct BiggerSmallerGameView: View {
                                 }
                                 Spacer().frame(height: geometry.size.width * 0.01)
                             }
-                            .background(Color.white)
+                            .background(colorOption2 ? Color("blueTan") : Color.white)
                             .cornerRadius(10)
                             .shadow(color: Color.black.opacity(0.2), radius: 20)                            .saturation(bottomOption ? 0.0 : 1.0)
                             .onTapGesture {
                                 if(option[0]<option[1]) {
-                                    isShowingCongratulation = true
-//                                    option = generateRandomValues()
+                                    colorOption2 = true
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                        colorOption2 = false // Reset the selected image index after 2 seconds
+                                        isShowingCongratulation = true
+                                    }
                                 } else {
+                                    colorOption2 = false // Reset the selected image index after 2 seconds
                                     bottomOption = true
-                                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                                        bottomOption = false // Reset the selected image index after 2 seconds
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                        bottomOption = false // Reset the sel   ected image index after 2 seconds
                                     }
                                 }
                             }

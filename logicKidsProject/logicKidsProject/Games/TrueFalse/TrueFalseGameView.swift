@@ -36,7 +36,7 @@ struct TrueFalseGameView: View {
                                                        
        QuestionTF(imageName: "happy1", colorTrue: "JonhIsASquare", colorFalse: "JonhIsATriangle", moodTrue: "JonhIsHappy", moodFalse: "JonhIsAngry", accessoryTrue: "JonhIsWearingAHat", accessoryFalse: "JonhIsWearingGlasses"),
                                                        
-       QuestionTF(imageName: "angry2", colorTrue: "SarahIsATriangle", colorFalse: "SarahIsASquare", moodTrue: "SarahIsHappy", moodFalse: "SarahIsWinking", accessoryTrue: "SarahIsWearingGlasses", accessoryFalse: "SarahIsWearingAHat"),
+       QuestionTF(imageName: "angry2", colorTrue: "SarahIsATriangle", colorFalse: "SarahIsASquare", moodTrue: "SarahIsHappy", moodFalse: "SarahIsWinking", accessoryTrue: "SarahIsWearingCrown", accessoryFalse: "SarahIsWearingAHat"),
                                                        
        QuestionTF(imageName: "happy3", colorTrue: "ChrisIsASquare", colorFalse: "ChrisIsAHexagon", moodTrue: "ChrisIsHappy", moodFalse: "ChrisIsWinking", accessoryTrue: "ChrisIsWearingSunglasses", accessoryFalse: "ChrisIsWearingACap"),
                                                        

@@ -19,7 +19,7 @@ struct BiggerSmallerInterrogationModal: View {
                             GifImage("gameinstruction3")
                                 .frame(width: geometry.size.width * 0.45, height: geometry.size.height * 0.40)
                             Spacer()//.frame(height:geometry.size.height * 0.01)
-                            Text(String(localized: "GameOneInstructionTapToContinue"))
+                            Text(String(localized: "GameOneInstructionTapToClose"))
                                 .font(.title3)
                                 .bold()
                         }

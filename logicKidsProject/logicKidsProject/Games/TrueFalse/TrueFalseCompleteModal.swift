@@ -10,7 +10,6 @@ struct TrueFalseCompleteModalView: View {
         
         GeometryReader { geometry in
             ZStack(alignment: .top){
-                
                 VStack{
                     Spacer().frame(height: geometry.size.height * 0.07)
                     VStack {
@@ -27,7 +26,6 @@ struct TrueFalseCompleteModalView: View {
                                     .padding(.bottom, 40)
                                     .bold()
                                     .font(.title2)
-                                
                             }
                             
                             

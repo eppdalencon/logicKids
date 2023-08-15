@@ -20,7 +20,7 @@ struct TangramInterrogationModal: View {
                                 .frame(width: geometry.size.width * 0.35, height: geometry.size.height * 0.45)
                             Spacer().frame(height:geometry.size.height * 0.02)
                             
-                            Text("Tap to continue")
+                            Text(String(localized: "GameOneInstructionTapToClose"))
                                 .font(.title3)
                                 .bold()
                         }

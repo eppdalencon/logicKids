@@ -31,7 +31,7 @@
 "GameOneInstructionTextHowToPlay" = "You need to find the missing piece and fit it into the dotted space.";
 "GameOneInstructionTapToContinue" = "Tap to continue";
 "GameOneInstructionTapToReturn" = "Tap to return";
-
+"GameOneInstructionTapToClose" = "Tap to close";
 
 //MARK: - Modal Paused Game
 "PausedTitle" = "Paused";
@@ -60,19 +60,19 @@
 "TaylorIsWearingACap" = "Taylor is wearing a cap";
 
 
-"JonhIsASquare" = "Jonh is a square";
-"JonhIsATriangle" = "Jonh is a triangle";
-"JonhIsHappy" = "Jonh is happy";
-"JonhIsAngry" = "Jonh is angry";
-"JonhIsWearingAHat" = "Jonh is wearing a hat";
-"JonhIsWearingGlasses" = "Jonh is wearing glasses";
+"JonhIsASquare" = "John is a square";
+"JonhIsATriangle" = "John is a triangle";
+"JonhIsHappy" = "John is happy";
+"JonhIsAngry" = "John is angry";
+"JonhIsWearingAHat" = "John is wearing a hat";
+"JonhIsWearingGlasses" = "John is wearing glasses";
 
-
+"SarahIsATriangle" = "Sarah is a triangle";
 "SarahIsASquare" = "Sarah is a square";
 "SarahIsACircle" = "Sarah is a circle";
 "SarahIsHappy" = "Sarah is angry";
 "SarahIsWinking" = "Sarah is winking";
-"SarahIsWearingGlasses" = "Sarah is wearing glasses";
+"SarahIsWearingCrown" = "Sarah is wearing a crown";
 "SarahIsWearingAHat" = "Sarah is wearing a hat";
 
 
