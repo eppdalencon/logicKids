@@ -12,6 +12,7 @@ struct logicKidsProjectApp: App {
     var body: some Scene {
         WindowGroup {
             HomeView()
+                .foregroundColor(Color.black)
             //ContentView()
         }
         

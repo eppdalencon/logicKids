@@ -30,6 +30,11 @@
 		30CEA7312A841946003098A5 /* TrueFalseInstructionModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CEA7302A841946003098A5 /* TrueFalseInstructionModal.swift */; };
 		30CEA7332A8419EB003098A5 /* TrueFalseInterrogationModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CEA7322A8419EB003098A5 /* TrueFalseInterrogationModal.swift */; };
 		30FCA72D2A7ACEB4009DBFAA /* TangramInstructionModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FCA72C2A7ACEB4009DBFAA /* TangramInstructionModal.swift */; };
+		7B29832B2A8AB0E000047C14 /* GifWebKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B29832A2A8AB0E000047C14 /* GifWebKit.swift */; };
+		7B29832D2A8AC2FF00047C14 /* gifTeste.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7B29832C2A8AC2FF00047C14 /* gifTeste.gif */; };
+		7B2983312A8AED9A00047C14 /* gameinstruction1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7B29832E2A8AED9A00047C14 /* gameinstruction1.gif */; };
+		7B2983322A8AED9A00047C14 /* gameinstruction3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7B29832F2A8AED9A00047C14 /* gameinstruction3.gif */; };
+		7B2983332A8AED9A00047C14 /* gameinstruction2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7B2983302A8AED9A00047C14 /* gameinstruction2.gif */; };
 		7B6884B62A840F9500B1C30B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B6884B82A840F9500B1C30B /* Localizable.strings */; };
 		7BCABD7E2A85590D009C5E0B /* BiggerSmallerCongratulationModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCABD7D2A85590D009C5E0B /* BiggerSmallerCongratulationModal.swift */; };
 		7BF3E1762A72E3C500482E7E /* fontsExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF3E1752A72E3C500482E7E /* fontsExtention.swift */; };
@@ -60,6 +65,11 @@
 		30CEA7302A841946003098A5 /* TrueFalseInstructionModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrueFalseInstructionModal.swift; sourceTree = "<group>"; };
 		30CEA7322A8419EB003098A5 /* TrueFalseInterrogationModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrueFalseInterrogationModal.swift; sourceTree = "<group>"; };
 		30FCA72C2A7ACEB4009DBFAA /* TangramInstructionModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TangramInstructionModal.swift; sourceTree = "<group>"; };
+		7B29832A2A8AB0E000047C14 /* GifWebKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifWebKit.swift; sourceTree = "<group>"; };
+		7B29832C2A8AC2FF00047C14 /* gifTeste.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gifTeste.gif; sourceTree = "<group>"; };
+		7B29832E2A8AED9A00047C14 /* gameinstruction1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gameinstruction1.gif; sourceTree = "<group>"; };
+		7B29832F2A8AED9A00047C14 /* gameinstruction3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gameinstruction3.gif; sourceTree = "<group>"; };
+		7B2983302A8AED9A00047C14 /* gameinstruction2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gameinstruction2.gif; sourceTree = "<group>"; };
 		7B6884B72A840F9500B1C30B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7B6884B92A840F9A00B1C30B /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		7BCABD7D2A85590D009C5E0B /* BiggerSmallerCongratulationModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiggerSmallerCongratulationModal.swift; sourceTree = "<group>"; };
@@ -107,6 +117,7 @@
 		3088F78D2A6EFC1900FD7540 /* logicKidsProject */ = {
 			isa = PBXGroup;
 			children = (
+				7B2983292A8AB06300047C14 /* Gifs */,
 				7BF3E1742A72E3AC00482E7E /* DesignSystem */,
 				3088F7B02A72E4D000FD7540 /* Helpers */,
 				3088F7AD2A6EFFD700FD7540 /* Achievements */,
@@ -205,6 +216,18 @@
 			path = TrueFalse;
 			sourceTree = "<group>";
 		};
+		7B2983292A8AB06300047C14 /* Gifs */ = {
+			isa = PBXGroup;
+			children = (
+				7B29832C2A8AC2FF00047C14 /* gifTeste.gif */,
+				7B29832E2A8AED9A00047C14 /* gameinstruction1.gif */,
+				7B2983302A8AED9A00047C14 /* gameinstruction2.gif */,
+				7B29832F2A8AED9A00047C14 /* gameinstruction3.gif */,
+				7B29832A2A8AB0E000047C14 /* GifWebKit.swift */,
+			);
+			path = Gifs;
+			sourceTree = "<group>";
+		};
 		7BF3E1742A72E3AC00482E7E /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
@@ -275,7 +298,11 @@
 			files = (
 				3088F7962A6EFC1900FD7540 /* Preview Assets.xcassets in Resources */,
 				7B6884B62A840F9500B1C30B /* Localizable.strings in Resources */,
+				7B2983332A8AED9A00047C14 /* gameinstruction2.gif in Resources */,
+				7B29832D2A8AC2FF00047C14 /* gifTeste.gif in Resources */,
 				3088F7932A6EFC1900FD7540 /* Assets.xcassets in Resources */,
+				7B2983322A8AED9A00047C14 /* gameinstruction3.gif in Resources */,
+				7B2983312A8AED9A00047C14 /* gameinstruction1.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +318,7 @@
 				3088F7A72A6EFF7400FD7540 /* TangramInstructionView.swift in Sources */,
 				3060AC9D2A86A81E002292BE /* TrueFalseTryAgainModal.swift in Sources */,
 				3088F7AF2A6EFFEB00FD7540 /* AchievementsView.swift in Sources */,
+				7B29832B2A8AB0E000047C14 /* GifWebKit.swift in Sources */,
 				3088F7AA2A6EFFBD00FD7540 /* PauseModalView.swift in Sources */,
 				30CEA7312A841946003098A5 /* TrueFalseInstructionModal.swift in Sources */,
 				099A11E82A840607008C84A0 /* BiggerSmallerInstructionModal.swift in Sources */,
@@ -447,7 +475,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"logicKidsProject/Preview Content\"";
 				DEVELOPMENT_TEAM = J7JQJTT8YZ;
 				ENABLE_PREVIEWS = YES;
@@ -456,6 +484,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeRight;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -481,7 +510,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"logicKidsProject/Preview Content\"";
 				DEVELOPMENT_TEAM = J7JQJTT8YZ;
 				ENABLE_PREVIEWS = YES;
@@ -490,6 +519,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeRight;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;

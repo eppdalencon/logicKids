@@ -35,7 +35,7 @@ struct BiggerSmallerCongratulationModal: View {
                                                 .resizable()
                                                 .aspectRatio(contentMode: .fit)
                                                 .frame(height: geometry.size.height * 0.35)
-                                            Image(numberShow[0] > numberShow[1] ? "GreaterSymbol" : "LesserSymbol")
+                                            Image(numberShow[0] > numberShow[1] ? "Greater" : "Lesser")
                                                 .resizable()
                                                 .aspectRatio(contentMode: .fit)
                                                 .frame(height: geometry.size.height * 0.25)
@@ -57,7 +57,7 @@ struct BiggerSmallerCongratulationModal: View {
                                     HomeButton(title: "Quit", color: Color.red, largura: geometry.size.width * 0.2, altura: geometry.size.height * 0.1, action: {
                                         dismissGame();dismissComplete()
                                     })
-                                    HomeButton(title: "Play Again", color: Color.blue, largura: geometry.size.width * 0.2, altura: geometry.size.height * 0.1, action: {
+                                    HomeButton(title: "PlayAgain", color: Color.blue, largura: geometry.size.width * 0.2, altura: geometry.size.height * 0.1, action: {
                                         shuffleGame();dismissComplete()
                                     })
                                 }

@@ -15,22 +15,11 @@ struct BiggerSmallerInterrogationModal: View {
                     VStack{
                         Spacer().frame(height: geometry.size.height * 0.07)
                         VStack {
-                            Spacer().frame(height: geometry.size.height * 0.07)
-
-                            ZStack{
-                                Image("HowToPlayGame3")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: geometry.size.width * 0.45)
-                                Text("Tap to return")
-                                    .font(Font.titleNormalBold)
-                                    .padding(.top, geometry.size.height * 0.5)
-                            }
-                            
-                            
-                            Spacer().frame(height:geometry.size.height * 0.06)
-                            
-                            Text(String(localized: "GameOneInstructionTapToContinue"))
+                            Spacer()//.frame(height: geometry.size.height * 0.2)
+                            GifImage("gameinstruction3")
+                                .frame(width: geometry.size.width * 0.45, height: geometry.size.height * 0.40)
+                            Spacer()//.frame(height:geometry.size.height * 0.01)
+                            Text(String(localized: "GameOneInstructionTapToClose"))
                                 .font(.title3)
                                 .bold()
                         }

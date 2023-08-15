@@ -229,7 +229,7 @@ struct TangramGameView: View {
                     Spacer()
                 }
                 .padding(.vertical,32)
-                .padding(.horizontal,64)
+                .padding(.horizontal,32)
 
 
                 // MARK: - Game
