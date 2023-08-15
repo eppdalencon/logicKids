@@ -13,23 +13,12 @@ struct TangramInterrogationModal: View {
                 ZStack(alignment: .top){
                     
                     VStack{
-                        Spacer().frame(height: geometry.size.height * 0.07)
+                        Spacer().frame(height: geometry.size.height * 0.05)
                         VStack {
                             Spacer().frame(height: geometry.size.height * 0.07)
-
-                            ZStack{
-                                Image("InstructionImage")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(height: geometry.size.width)
-                                    
-                                Text(String(localized: "GameOneInstructionTapToReturn"))
-                                    .font(Font.titleNormalBold)
-                                    .padding(.top, geometry.size.height * 0.5)
-                            }
-                            
-                            
-                            Spacer().frame(height:geometry.size.height * 0.06)
+                            GifImage("gameinstruction1")
+                                .frame(width: geometry.size.width * 0.35, height: geometry.size.height * 0.45)
+                            Spacer().frame(height:geometry.size.height * 0.02)
                             
                             Text("Tap to continue")
                                 .font(.title3)

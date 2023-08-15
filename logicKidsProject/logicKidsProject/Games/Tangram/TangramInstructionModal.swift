@@ -23,6 +23,7 @@ struct TangramInstructionModal: View {
                                     .aspectRatio(contentMode: .fit)
                                     .frame(width: geometry.size.width * 0.12)
                                 ZStack{
+                                    
                                     Image("PurpleBubble")
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)

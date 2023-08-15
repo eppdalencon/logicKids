@@ -15,22 +15,10 @@ struct TrueFalseInterrogationModal: View {
                     VStack{
                         Spacer().frame(height: geometry.size.height * 0.07)
                         VStack {
-                            Spacer().frame(height: geometry.size.height * 0.07)
-
-                            ZStack{
-                                Image("TrueFalseInstruction")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(height: geometry.size.width)
-                                    
-                                Text("TapToReturn")
-                                    .font(Font.titleNormalBold)
-                                    .padding(.top, geometry.size.height * 0.5)
-                            }
-                            
-                            
+                            Spacer().frame(height: geometry.size.height * 0.04)
+                            GifImage("gameinstruction2")
+                                .frame(width: geometry.size.width * 0.45, height: geometry.size.height * 0.37)
                             Spacer().frame(height:geometry.size.height * 0.06)
-                            
                             Text("TapToContinue")
                                 .font(.title3)
                                 .bold()

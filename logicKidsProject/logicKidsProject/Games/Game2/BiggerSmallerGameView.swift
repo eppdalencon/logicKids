@@ -156,7 +156,7 @@ struct BiggerSmallerGameView: View {
                 }
             }
             .padding(.vertical,32)
-            .padding(.horizontal,64)
+            .padding(.horizontal,32)
         }
         .onAppear(){
             option = generateRandomValues()
