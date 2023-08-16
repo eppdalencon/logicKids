@@ -23,7 +23,7 @@
 
 //MARK: - Game 01 - tangram
 
-"GameOneTitle" = "Select the missing part";
+"GameOneTitle" = "Tap the missing part";
 "SelectGameCongratulationButtonPlayAgain" = "Play Again";
 "SelectGameCongratulationButtonQuit" = "Quit";
 
@@ -147,19 +147,19 @@
 
 //Modal
 "Congrats!" = "Congrats!";
-"TryAgain" = "Try again";
+"TryAgain" = "Try Again";
 "Quit" = "Quit";
-"PlayAgain" = "Play again";
+"PlayAgain" = "Play Again";
 "Congratulations" = "Woo hoo! You've proven your skills like a superstar!";
 "HowToPlay" = "How to play";
 "TapToContinue" = "Tap to continue";
 "TapToReturn" = "Tap to clone";
 "TrueFalseInitial" = "Read the sentences and choose which are true or false.";
-"Lessons" = "But don't worry! There are no wrong answers, only new lessons!";
+"Lessons" = "Don't worry! There are no wrong answers, only new lessons!";
 
 
 //MARK: - GAME 3
-"WhichSideHasABiggerQuantity" = "Which side has a bigger quantity?";
-"GameThreeInstructionTextHowToPlay" = "Tan always open his arms to hug the side that has a bigger quantity.";
+"WhichSideHasABiggerQuantity" = "Which option does embrace the greatest quantity?";
+"GameThreeInstructionTextHowToPlay" = "Tan always open his arms to hug the side that has the greatest quantity.";
 "Bigger" = "is greater than";
 "Smaller" = "is less than";

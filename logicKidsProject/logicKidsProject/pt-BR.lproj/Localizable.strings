@@ -25,7 +25,7 @@
 "SelectGameCongratulationButtonPlayAgain" = "Jogar Novamente";
 "SelectGameCongratulationButtonQuit" = "Sair";
 
-"GameOneInstructionTitleHowToPlay" = "Como jogar";
+"GameOneInstructionTitleHowToPlay" = "Como jogar";//"HowToPlay"
 "GameOneInstructionTextHowToPlay" = "Procure a peça faltante e coloque no local em pontilhado.";
 "GameOneInstructionTapToContinue" = "Toque para continuar";
 "GameOneInstructionTapToReturn" = "Toque para retornar";
@@ -47,8 +47,8 @@
 "DavidIsAParallelogram" = "Davi é um paralelogramo";
 "DavidIsAngry" = "David está com raiva";
 "DavidIsHappy" = "Davi está feliz";
-"DavidIsWearingAHat" = "David usa um chapéu";
-"DavidIsWearingAFlower" = "Davi usa uma flor";
+"DavidIsWearingAHat" = "Davi usa um chapéu";
+"DavidIsWearingAFlower" = "Davi está com uma flor";
 
 
 "TaylorIsATriangle" = "Tiago é um triângulo";
@@ -61,7 +61,7 @@
 
 "JonhIsASquare" = "João é um quadrado";
 "JonhIsATriangle" = "João é um triângulo";
-"JonhIsHappy" = "João é feliz";
+"JonhIsHappy" = "João está feliz";
 "JonhIsAngry" = "João está com raiva";
 "JonhIsWearingAHat" = "João usa um chapéu";
 "JonhIsWearingGlasses" = "João usa óculos";
@@ -71,7 +71,7 @@
 "SarahIsACircle" = "Sara é um círculo";
 "SarahIsHappy" = "Sara está com raiva";
 "SarahIsWinking" = "Sara está piscando";
-"SarahIsWearingGlasses" = "Sara usa óculos";
+"SarahIsWearingCrown" = "Sara usa uma coroa";
 "SarahIsWearingAHat" = "Sara usa um chapéu";
 
 
@@ -80,7 +80,7 @@
 "ChrisIsHappy" = "Gus está feliz";
 "ChrisIsWinking" = "Gus está piscando";
 "ChrisIsWearingSunglasses" = "Gus usa óculos escuros";
-"ChrisIsWearingACap" = "Gus usa touca";
+"ChrisIsWearingACap" = "Gus usa uma touca";
 
 
 "SkylerIsATriangle" = "Mel é um triângulo";
@@ -100,8 +100,8 @@
 
 
 "JennIsATriangle" = "Julia é um triângulo";
-"JennIsACircle" = "Julia é um cícrculo";
-"JennIsSurprised" = "Júlia está surpresa";
+"JennIsACircle" = "Julia é um círculo";
+"JennIsSurprised" = "Julia está surpresa";
 "JennIsHappy" = "Julia está feliz";
 "JennIsWearingAFlower" = "Julia está usando uma flor";
 "JennIsWearingGlasses" = "Julia está usando óculos";
@@ -120,7 +120,7 @@
 "GregIsSurprised" = "Jarbas está surpreso";
 "GregIsSleeping" = "Jarbas está dormindo";
 "GregIsWearingGlasses" = "Jarbas está usando óculos";
-"GregIsWearingAHat" = "Jarbas está usando chapéu";
+"GregIsWearingAHat" = "Jarbas está usando um chapéu";
 
 
 "LindaIsAParallelogram" = "Linda é um paralelogramo";
@@ -146,20 +146,20 @@
 //Modal
 
 "Congrats!" = "Parabéns!";
-"TryAgain" = "Tente novamente";
+"TryAgain" = "Tente Novamente";
 "Quit" = "Sair";
-"PlayAgain" = "Jogar novamente";
+"PlayAgain" = "Jogar Novamente";
 "Congratulations" = "Woo hoo! Você provou suas habilidades como um superstar!";
 "HowToPlay" = "Como jogar";
 "TapToContinue" = "Toque para continuar";
 "TapToReturn" = "Toque para fechar";
 "TrueFalseInitial" = "Leia as frases e escolha o que é certo ou errado.";
-"Lessons" = "Mas não se preocupe! Não há respostas erradas, apenas novos aprendizados!";
+"Lessons" = "Não se preocupe! Não há respostas erradas, apenas novos aprendizados!";
 
 
 //MARK: - GAME 3
 
-"WhichSideHasABiggerQuantity" = "Qual o lado que tem mais quantidade?";
+"WhichSideHasABiggerQuantity" = "Qual opção abraça a maior quantidade?";
 "GameThreeInstructionTextHowToPlay" = "O tan abre os braços para abraçar o lado com mais quantidade.";
 "Bigger" = "é maior que";
 "Smaller" = "é menor que";

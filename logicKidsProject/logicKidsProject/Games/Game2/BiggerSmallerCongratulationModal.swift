@@ -54,10 +54,10 @@ struct BiggerSmallerCongratulationModal: View {
                                     Spacer().frame(height: geometry.size.width * 0.03)
                                 }
                                 HStack (spacing: 30){
-                                    HomeButton(title: "Quit", color: Color.red, largura: geometry.size.width * 0.2, altura: geometry.size.height * 0.1, action: {
+                                    HomeButton(title: "Quit", color: Color.red, largura: geometry.size.width * 0.22, altura: geometry.size.height * 0.12, action: {
                                         dismissGame();dismissComplete()
                                     })
-                                    HomeButton(title: "PlayAgain", color: Color.blue, largura: geometry.size.width * 0.2, altura: geometry.size.height * 0.1, action: {
+                                    HomeButton(title: "PlayAgain", color: Color.blue, largura: geometry.size.width * 0.22, altura: geometry.size.height * 0.12, action: {
                                         shuffleGame();dismissComplete()
                                     })
                                 }
@@ -83,8 +83,7 @@ struct BiggerSmallerCongratulationModal: View {
                 
                 Text(String(localized: "Congrats!"))
                     .foregroundColor(Color.white)
-                    .bold()
-                    .font(.title2)
+                    .font(Font.titleNormalBold1)
                     .frame(width: geometry.size.width * 0.2, height: geometry.size.height * 0.14)
                     .background(Color.teal)
                     .cornerRadius(10)

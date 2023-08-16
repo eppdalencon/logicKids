@@ -68,7 +68,7 @@ struct BiggerSmallerGameView: View {
                 VStack{
                     HStack{
                         Text(String(localized: "WhichSideHasABiggerQuantity"))
-                            .font(Font.titleLargeBold)
+                            .font(Font.titleNormalBold1)
                     }
                     HStack{
                         Spacer()

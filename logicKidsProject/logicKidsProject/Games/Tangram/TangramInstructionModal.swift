@@ -31,7 +31,6 @@ struct TangramInstructionModal: View {
                                     
                                     Text(String(localized: "GameOneInstructionTextHowToPlay"))
                                         .font(Font.titleMiddleBold)
-                                        .foregroundColor(.white)
                                         .padding(30)
                                 }
                             }
@@ -50,11 +49,10 @@ struct TangramInstructionModal: View {
                         )
                         .cornerRadius(20)
                     }
-                    Text(String(localized: "GameOneInstructionTitleHowToPlay"))
+                    Text(String(localized: "HowToPlay"))
                         .foregroundColor(Color.white)
-                        .bold()
-                        .font(.title2)
-                        .frame(width: geometry.size.width * 0.2, height: geometry.size.height * 0.14)
+                        .font(Font.titleNormalBold1)
+                        .frame(width: geometry.size.width * 0.24, height: geometry.size.height * 0.14)
                         .background(Color.teal)
                         .cornerRadius(10)
                 }

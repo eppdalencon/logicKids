@@ -24,7 +24,7 @@ struct BiggerSmallerInterrogationModal: View {
                                 .bold()
                         }
                         .padding(30)
-                        .frame(width: geometry.size.width / 1.5, height: geometry.size.height / 1.5)
+                        .frame(width: geometry.size.width * 0.6, height: geometry.size.height / 1.5)
                         .background(Color("lightBackground"))
                         .overlay(
                             RoundedRectangle(cornerRadius: 20)
@@ -35,11 +35,10 @@ struct BiggerSmallerInterrogationModal: View {
                     }
                     
                     
-                    Text(String(localized: "GameOneInstructionTitleHowToPlay"))
+                    Text(String(localized: "HowToPlay"))
                         .foregroundColor(Color.white)
-                        .bold()
-                        .font(.title2)
-                        .frame(width: geometry.size.width * 0.2, height: geometry.size.height * 0.14)
+                        .font(Font.titleNormalBold1)
+                        .frame(width: geometry.size.width * 0.24, height: geometry.size.height * 0.14)
                         .background(Color.teal)
                         .cornerRadius(10)
                 }

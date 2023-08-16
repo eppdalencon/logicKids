@@ -81,8 +81,7 @@ struct CompleteModalView: View {
                 
                 Text("Congrats!")
                     .foregroundColor(Color.white)
-                    .bold()
-                    .font(.title2)
+                    .font(Font.titleNormalBold1)
                     .frame(width: geometry.size.width * 0.2, height: geometry.size.height * 0.14)
                     .background(Color.teal)
                     .cornerRadius(10)

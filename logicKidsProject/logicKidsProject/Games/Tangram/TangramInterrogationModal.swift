@@ -4,14 +4,13 @@ struct TangramInterrogationModal: View {
     var dismissInstruction: (() -> Void)
     
     var body: some View {
-        
-        Button(action: {
-            dismissInstruction()
-       
-        }) {
-            GeometryReader { geometry in
+        GeometryReader { geometry in
+            
+            Button(action: {
+                dismissInstruction()
+                
+            }) {
                 ZStack(alignment: .top){
-                    
                     VStack{
                         Spacer().frame(height: geometry.size.height * 0.05)
                         VStack {
@@ -25,7 +24,7 @@ struct TangramInterrogationModal: View {
                                 .bold()
                         }
                         .padding(30)
-                        .frame(width: geometry.size.width / 1.5, height: geometry.size.height / 1.5)
+                        .frame(width: geometry.size.width * 0.45, height: geometry.size.height / 1.5)
                         .background(Color("lightBackground"))
                         .overlay(
                             RoundedRectangle(cornerRadius: 20)
@@ -36,21 +35,19 @@ struct TangramInterrogationModal: View {
                     }
                     
                     
-                    Text(String(localized: "GameOneInstructionTitleHowToPlay"))
+                    Text(String(localized: "HowToPlay"))
                         .foregroundColor(Color.white)
-                        .bold()
-                        .font(.title2)
-                        .frame(width: geometry.size.width * 0.2, height: geometry.size.height * 0.14)
+                        .font(Font.titleNormalBold1)
+                        .frame(width: geometry.size.width * 0.24, height: geometry.size.height * 0.14)
                         .background(Color.teal)
                         .cornerRadius(10)
                 }
                 .frame(width: geometry.size.width, height: geometry.size.height)
+                
             }
-        }
-        .buttonStyle(.plain)
-        
-        
-        
+            .buttonStyle(.plain)
+            
+    }
         
     }
 }

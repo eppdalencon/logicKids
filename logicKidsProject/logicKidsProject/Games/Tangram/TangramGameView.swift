@@ -195,14 +195,14 @@ struct TangramGameView: View {
     var body: some View {
         GeometryReader { geometry in
             ZStack {
-                Image("background_image")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
+//                Image("background_image")
+//                    .resizable()
+//                    .aspectRatio(contentMode: .fit)
                 Image(questionLevel[questionSelected].getQuestion())
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(height: geometry.size.height * 0.6)
-                    .position(CGPoint(x: geometry.size.width * 0.43,y: geometry.size.height * 0.54))
+                    .frame(height: geometry.size.height * 0.73)
+                    .position(CGPoint(x: geometry.size.width * 0.45,y: geometry.size.height * 0.54))
             // MARK: - Buttons
                 HStack{
                     VStack {
@@ -235,21 +235,21 @@ struct TangramGameView: View {
                 // MARK: - Game
 
                 Text(String(localized: "GameOneTitle"))
-                    .font(Font.titleLargeBold)
-                    .position(CGPoint(x: geometry.size.width * 0.42, y: geometry.size.height * 0.14))
+                    .font(Font.titleNormalBold1)
+                    .position(CGPoint(x: geometry.size.width * 0.45, y: geometry.size.height * 0.14))
                 VStack {
                     ZStack{
                         Image("backgroundOptions")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(height: geometry.size.height * 0.8)
+                            .frame(height: geometry.size.height * 0.9)
                             .position(CGPoint(x: geometry.size.width * 0.8, y: geometry.size.height * 0.5))
                         VStack{
                             ForEach(0..<(objectsOptions.count)) { i in
                                 Image("answer\(questionLevel[questionSelected].questionInt)\(objectsOptions[i])")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
-                                    .frame(height: geometry.size.height * 0.15)
+                                    .frame(height: geometry.size.height * 0.17)
                                     .saturation(selectedImageIndex == i ? 0.0 : 1.0)
                                     .onTapGesture {
                                         if ((questionLevel[questionSelected].answerInt) == (objectsOptions[i])) {
@@ -271,9 +271,9 @@ struct TangramGameView: View {
                             }
                         }
                         .position(CGPoint(x: geometry.size.width * 0.8, y: geometry.size.height * 0.5))
-
                     }
                 }
+                .offset(CGSize(width: 64, height: 0))
 
             }
             .onAppear(){

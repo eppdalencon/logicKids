@@ -30,7 +30,7 @@ struct BiggerSmallerInstructionModal: View {
                                     
                                     Text(String(localized: "GameThreeInstructionTextHowToPlay"))
                                         .font(Font.titleMiddleBold)
-                                        .foregroundColor(.white)
+                                        //.foregroundColor(.white)
                                         .padding(30)
                                 }
                             }
@@ -41,7 +41,7 @@ struct BiggerSmallerInstructionModal: View {
                                 .font(Font.titleNormalBold)
                         }
                         .padding(30)
-                        .frame(width: geometry.size.width / 1.5, height: geometry.size.height / 1.5)
+                        .frame(width: geometry.size.width * 0.66, height: geometry.size.height / 1.5)
                         .background(Color("lightBackground"))
                         .overlay(
                             RoundedRectangle(cornerRadius: 20)
@@ -52,11 +52,10 @@ struct BiggerSmallerInstructionModal: View {
                     }
                     
                 
-                    Text(String(localized: "GameOneInstructionTitleHowToPlay"))
+                    Text(String(localized: "HowToPlay"))
                         .foregroundColor(Color.white)
-                        .bold()
-                        .font(.title2)
-                        .frame(width: geometry.size.width * 0.2, height: geometry.size.height * 0.14)
+                        .font(Font.titleNormalBold1)
+                        .frame(width: geometry.size.width * 0.24, height: geometry.size.height * 0.14)
                         .background(Color.teal)
                         .cornerRadius(10)
                 }

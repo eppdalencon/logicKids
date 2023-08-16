@@ -132,7 +132,7 @@ struct TrueFalseGameView: View {
                 
                 VStack(spacing:0){
                     Text("SelectTrueOrFalse")
-                        .font(Font.titleLargeBold)
+                        .font(Font.titleNormalBold1)
                         .frame(width:geometry.size.width * 0.85 ,height: geometry.size.height * 0.08)
                         .padding(.top,10)
                         .padding(.bottom,-15)
@@ -157,7 +157,7 @@ struct TrueFalseGameView: View {
                         VStack(spacing:geometry.size.height * 0.05) {
                             HStack{
                                 Text(questionsArray[questionNumber].questionColor[answerArray[0]])
-                                    .bold()
+                                    .font(Font.titleNormalBold)
                                 Spacer()
                                 HStack(spacing: 3){
                                     Button(action: {
@@ -197,7 +197,7 @@ struct TrueFalseGameView: View {
                             
                             HStack{
                                 Text(questionsArray[questionNumber].questionMood[answerArray[1]])
-                                    .bold()
+                                    .font(Font.titleNormalBold)
                                 Spacer()
                                 HStack(spacing: 3){
                                     Button(action: {
@@ -239,7 +239,7 @@ struct TrueFalseGameView: View {
                             
                             HStack{
                                 Text(questionsArray[questionNumber].questionAccessory[answerArray[2]])
-                                    .bold()
+                                    .font(Font.titleNormalBold)
                                 Spacer()
                                 HStack(spacing: 3){
                                     Button(action: {
@@ -296,7 +296,7 @@ struct TrueFalseGameView: View {
                                 }
                             }) {
                                Text("SendAnswer")
-                                    .bold()
+                                    .font(Font.titleNormalBold)
                                     .frame(width: geometry.size.width * 0.55, height: geometry.size.height * 0.08)
                                     .padding(10)
                                     .foregroundColor(Color.white)

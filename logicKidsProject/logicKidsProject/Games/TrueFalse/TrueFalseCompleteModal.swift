@@ -18,14 +18,14 @@ struct TrueFalseCompleteModalView: View {
                                 Image("\(gameName)_star")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
-                                    .frame(height: geometry.size.height * 0.4)
+                                    .frame(height: geometry.size.height * 0.5)
                                     .padding(.bottom,geometry.size.height * 0.08)
                                 
                                 
                                 Text("Congratulations")
                                     .padding(.bottom, 40)
-                                    .bold()
-                                    .font(.title2)
+                                    .font(Font.titleNormalBold2)
+                                    .multilineTextAlignment(.center)
                             }
                             
                             
@@ -67,8 +67,7 @@ struct TrueFalseCompleteModalView: View {
                 
                 Text("Congrats!")
                     .foregroundColor(Color.white)
-                    .bold()
-                    .font(.title2)
+                    .font(Font.titleNormalBold1)
                     .frame(width: geometry.size.width * 0.2, height: geometry.size.height * 0.14)
                     .background(Color.teal)
                     .cornerRadius(10)

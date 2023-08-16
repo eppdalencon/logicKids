@@ -18,8 +18,8 @@ struct TrueFalseTryAgainModal: View {
                             Spacer().frame(height: geometry.size.height * 0.07)
 
                             Text("Lessons")
-                                .bold()
-                                .font(.title2)
+                                .font(Font.titleNormalBold1)
+                                .multilineTextAlignment(.center)
 
                             Spacer().frame(height:geometry.size.height * 0.06)
                             
@@ -37,12 +37,10 @@ struct TrueFalseTryAgainModal: View {
                         
                     }
                     
-                
                     Text("TryAgain")
                         .foregroundColor(Color.white)
-                        .bold()
-                        .font(.title2)
-                        .frame(width: geometry.size.width * 0.24, height: geometry.size.height * 0.14)
+                        .font(Font.titleNormalBold1)
+                        .frame(width: geometry.size.width * 0.34, height: geometry.size.height * 0.14)
                         .background(Color.teal)
                         .cornerRadius(10)
                 }

@@ -23,15 +23,13 @@ struct TrueFalseInstructionModal: View {
                                     .aspectRatio(contentMode: .fit)
                                     .frame(width: geometry.size.width * 0.12)
                                 ZStack{
-                                    Image("PinkBubble")
+                                    Image("PurpleBubble")
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
                                         .frame(width: geometry.size.width * 0.4)
                                     
                                     Text("TrueFalseInitial")
-                                        .bold()
-                                        .font(Font.titleMiddleBold)
-                                        .foregroundColor(.white)
+                                        .font(Font.titleNormalBold)
                                         .padding(30)
                                         .padding(.leading, 10)
                                 }
@@ -40,7 +38,7 @@ struct TrueFalseInstructionModal: View {
                             Spacer().frame(height:geometry.size.height * 0.06)
                             
                             Text("TapToContinue")
-                                .font(Font.titleNormalBold)
+                             .font(Font.titleNormalBold)
                         }
                         .padding(30)
                         .frame(width: geometry.size.width / 1.5, height: geometry.size.height / 1.5)
@@ -56,9 +54,8 @@ struct TrueFalseInstructionModal: View {
                 
                     Text("HowToPlay")
                         .foregroundColor(Color.white)
-                        .bold()
-                        .font(.title2)
-                        .frame(width: geometry.size.width * 0.2, height: geometry.size.height * 0.14)
+                        .font(Font.titleNormalBold1)
+                        .frame(width: geometry.size.width * 0.24, height: geometry.size.height * 0.14)
                         .background(Color.teal)
                         .cornerRadius(10)
                 }
