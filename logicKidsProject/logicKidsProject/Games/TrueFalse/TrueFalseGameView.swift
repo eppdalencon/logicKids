@@ -147,7 +147,8 @@ struct TrueFalseGameView: View {
                         }
                         .frame(width:geometry.size.width * 0.32)
                         .padding(.bottom, geometry.size.height * 0.12)
-                        .padding(.leading, -40)
+                        .padding(.leading, -100)
+                        .padding(.trailing, 40)
                         
                         
                         //.background(Color.red)
@@ -165,7 +166,7 @@ struct TrueFalseGameView: View {
                                     }) {
                                        Text("True")
                                             .font(Font.titleNormalBold)
-                                            .frame(width:geometry.size.width * 0.12, height: geometry.size.height * 0.08)
+                                            .frame(width:geometry.size.width * 0.10, height: geometry.size.height * 0.08)
                                             .foregroundColor(Color.white)
                                             .padding(5)
                                             .padding(.horizontal, 0)
@@ -178,7 +179,7 @@ struct TrueFalseGameView: View {
                                     }) {
                                        Text("False")
                                             .font(Font.titleNormalBold)
-                                            .frame(width:geometry.size.width * 0.12, height: geometry.size.height * 0.08)
+                                            .frame(width:geometry.size.width * 0.10, height: geometry.size.height * 0.08)
                                             .foregroundColor(Color.white)
                                             .padding(5)
                                             .padding(.horizontal, 0)
@@ -188,7 +189,7 @@ struct TrueFalseGameView: View {
                                   
                                 }
                             }
-                            .frame(width: geometry.size.width * 0.55)
+                            .frame(width: geometry.size.width * 0.59)
                             .padding(3)
                             .padding(.leading,10)
                             .background(Color.white)
@@ -205,7 +206,7 @@ struct TrueFalseGameView: View {
                                     }) {
                                        Text("True")
                                             .font(Font.titleNormalBold)
-                                            .frame(width:geometry.size.width * 0.12, height: geometry.size.height * 0.08)
+                                            .frame(width:geometry.size.width * 0.10, height: geometry.size.height * 0.08)
                                             .foregroundColor(Color.white)
                                             .padding(5)
                                             .padding(.horizontal, 0)
@@ -220,7 +221,7 @@ struct TrueFalseGameView: View {
                                     }) {
                                        Text("False")
                                             .font(Font.titleNormalBold)
-                                            .frame(width:geometry.size.width * 0.12, height: geometry.size.height * 0.08)
+                                            .frame(width:geometry.size.width * 0.10, height: geometry.size.height * 0.08)
                                             .foregroundColor(Color.white)
                                             .padding(5)
                                             .padding(.horizontal, 0)
@@ -229,7 +230,7 @@ struct TrueFalseGameView: View {
                                     }
                                 }
                             }
-                            .frame(width: geometry.size.width * 0.55)
+                            .frame(width: geometry.size.width * 0.59)
                             .padding(3)
                             .padding(.leading,10)
                             .background(Color.white)
@@ -247,7 +248,7 @@ struct TrueFalseGameView: View {
                                     }) {
                                        Text("True")
                                             .font(Font.titleNormalBold)
-                                            .frame(width:geometry.size.width * 0.12, height: geometry.size.height * 0.08)
+                                            .frame(width:geometry.size.width * 0.10, height: geometry.size.height * 0.08)
                                             .foregroundColor(Color.white)
                                             .padding(5)
                                             .padding(.horizontal, 0)
@@ -262,7 +263,7 @@ struct TrueFalseGameView: View {
                                     }) {
                                        Text("False")
                                             .font(Font.titleNormalBold)
-                                            .frame(width:geometry.size.width * 0.12, height: geometry.size.height * 0.08)
+                                            .frame(width:geometry.size.width * 0.10, height: geometry.size.height * 0.08)
                                             .foregroundColor(Color.white)
                                             .padding(5)
                                             .padding(.horizontal, 0)
@@ -274,7 +275,7 @@ struct TrueFalseGameView: View {
                                 }
                                 
                             }
-                            .frame(width: geometry.size.width * 0.55)
+                            .frame(width: geometry.size.width * 0.59)
                             .padding(3)
                             .padding(.leading,10)
                             .background(Color.white)
@@ -297,7 +298,7 @@ struct TrueFalseGameView: View {
                             }) {
                                Text("SendAnswer")
                                     .font(Font.titleNormalBold)
-                                    .frame(width: geometry.size.width * 0.55, height: geometry.size.height * 0.08)
+                                    .frame(width: geometry.size.width * 0.59, height: geometry.size.height * 0.08)
                                     .padding(10)
                                     .foregroundColor(Color.white)
                                     .background((answer1 != nil && answer2 != nil && answer3 != nil) ? Color("blueTan") : Color("systemGray"))
