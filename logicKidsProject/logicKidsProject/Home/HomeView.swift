@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State private var impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .medium)
+    //@State private var impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .rigid)
     
     @State private var isShowingMenu = false
     @State private var isShowingAchievements = false
@@ -28,7 +28,7 @@ struct HomeView: View {
                         .frame(width: geometry.size.width * 0.5)
                     Spacer().frame(height: geometry.size.height * 0.06)
                     HomeButton(title: "HomeButtonSelectGame", color: Color("blueTan"), largura: geometry.size.width * 0.35, altura: geometry.size.height * 0.12, action: {
-                        self.hapticFeedback()
+                        HapticFeedbackManager.shared.hapticFeedback()
                         isShowingMenu.toggle()
                     })
                     Spacer()
@@ -46,10 +46,10 @@ struct HomeView: View {
         }
     }
     
-    private func hapticFeedback() {
-        self.impactFeedbackgenerator.prepare()
-        self.impactFeedbackgenerator.impactOccurred()
-    }
+//    private func hapticFeedback() {
+//        self.impactFeedbackgenerator.prepare()
+//        self.impactFeedbackgenerator.impactOccurred()
+//    }
 }
 
 struct HomeView_Previews: PreviewProvider {

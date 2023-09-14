@@ -37,6 +37,7 @@ struct GameSelectionView: View {
                         Image(systemName: "xmark")
                             .font(.largeTitle)
                             .onTapGesture{
+                                HapticFeedbackManager.shared.hapticFeedback() // Usando a função de feedback háptico
                                 dismissSelection()
                             }
                         Spacer()
@@ -57,6 +58,7 @@ struct GameSelectionView: View {
                                         .aspectRatio(contentMode: .fit)
                                         .frame(height: geometry.size.height * 0.6)
                                         .onTapGesture {
+                                            HapticFeedbackManager.shared.hapticFeedback() // Usando a função de feedback háptico
                                             isShowingGame1.toggle()
                                         }
                                     
@@ -65,6 +67,7 @@ struct GameSelectionView: View {
                                         .aspectRatio(contentMode: .fit)
                                         .frame(height: geometry.size.height * 0.6)
                                         .onTapGesture {
+                                            HapticFeedbackManager.shared.hapticFeedback() // Usando a função de feedback háptico
                                             isShowingGame2.toggle()
                                         }
                                     
@@ -73,6 +76,7 @@ struct GameSelectionView: View {
                                         .aspectRatio(contentMode: .fit)
                                         .frame(height: geometry.size.height * 0.6)
                                         .onTapGesture {
+                                            HapticFeedbackManager.shared.hapticFeedback() // Usando a função de feedback háptico
                                             isShowingGame3.toggle()
                                         }
                                     
@@ -91,6 +95,7 @@ struct GameSelectionView: View {
                                         .aspectRatio(contentMode: .fit)
                                         .frame(height: geometry.size.height * 0.6)
                                         .onTapGesture {
+                                            HapticFeedbackManager.shared.hapticFeedback() // Usando a função de feedback háptico
                                             isShowingGame1.toggle()
                                         }
                                     
@@ -99,6 +104,7 @@ struct GameSelectionView: View {
                                         .aspectRatio(contentMode: .fit)
                                         .frame(height: geometry.size.height * 0.6)
                                         .onTapGesture {
+                                            HapticFeedbackManager.shared.hapticFeedback() // Usando a função de feedback háptico
                                             isShowingGame2.toggle()
                                         }
                                     
@@ -107,6 +113,7 @@ struct GameSelectionView: View {
                                         .aspectRatio(contentMode: .fit)
                                         .frame(height: geometry.size.height * 0.6)
                                         .onTapGesture {
+                                            HapticFeedbackManager.shared.hapticFeedback() // Usando a função de feedback háptico
                                             isShowingGame3.toggle()
                                         }
                                     

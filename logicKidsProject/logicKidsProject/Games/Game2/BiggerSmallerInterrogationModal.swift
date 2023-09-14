@@ -6,8 +6,8 @@ struct BiggerSmallerInterrogationModal: View {
     var body: some View {
         
         Button(action: {
+            HapticFeedbackManager.shared.hapticFeedback()
             dismissInstruction()
-       
         }) {
             GeometryReader { geometry in
                 ZStack(alignment: .top){
@@ -25,7 +25,7 @@ struct BiggerSmallerInterrogationModal: View {
                         }
                         .padding(30)
                         .frame(width: geometry.size.width * 0.6, height: geometry.size.height / 1.5)
-                        .background(Color("lightBackground"))
+                        .background(Color("backgroundColor"))
                         .overlay(
                             RoundedRectangle(cornerRadius: 20)
                                 .stroke(Color.teal, lineWidth: 10)

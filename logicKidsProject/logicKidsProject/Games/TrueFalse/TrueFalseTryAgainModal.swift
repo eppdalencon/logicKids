@@ -6,6 +6,7 @@ struct TrueFalseTryAgainModal: View {
     var body: some View {
         
         Button(action: {
+            HapticFeedbackManager.shared.hapticFeedback()
             dismissTryAgain()
        
         }) {
@@ -28,7 +29,7 @@ struct TrueFalseTryAgainModal: View {
                         }
                         .padding(30)
                         .frame(width: geometry.size.width / 1.5, height: geometry.size.height / 1.8)
-                        .background(Color("lightBackground"))
+                        .background(Color("backgroundColor"))
                         .overlay(
                             RoundedRectangle(cornerRadius: 20)
                                 .stroke(Color.teal, lineWidth: 10)

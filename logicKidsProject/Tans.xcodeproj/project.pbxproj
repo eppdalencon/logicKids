@@ -35,6 +35,7 @@
 		7B2983312A8AED9A00047C14 /* gameinstruction1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7B29832E2A8AED9A00047C14 /* gameinstruction1.gif */; };
 		7B2983322A8AED9A00047C14 /* gameinstruction3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7B29832F2A8AED9A00047C14 /* gameinstruction3.gif */; };
 		7B2983332A8AED9A00047C14 /* gameinstruction2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7B2983302A8AED9A00047C14 /* gameinstruction2.gif */; };
+		7B4D15812AB3CBB40009FB62 /* HapticFeedbackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4D15802AB3CBB40009FB62 /* HapticFeedbackManager.swift */; };
 		7B6884B62A840F9500B1C30B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B6884B82A840F9500B1C30B /* Localizable.strings */; };
 		7BCABD7E2A85590D009C5E0B /* BiggerSmallerCongratulationModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCABD7D2A85590D009C5E0B /* BiggerSmallerCongratulationModal.swift */; };
 		7BF3E1762A72E3C500482E7E /* fontsExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF3E1752A72E3C500482E7E /* fontsExtention.swift */; };
@@ -47,7 +48,7 @@
 		09DEA6322A79704E00B72928 /* CustomButtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtom.swift; sourceTree = "<group>"; };
 		3060AC9C2A86A81E002292BE /* TrueFalseTryAgainModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrueFalseTryAgainModal.swift; sourceTree = "<group>"; };
 		3060AC9E2A86BAD4002292BE /* TrueFalseCompleteModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrueFalseCompleteModal.swift; sourceTree = "<group>"; };
-		3088F78B2A6EFC1900FD7540 /* logicKidsProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = logicKidsProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3088F78B2A6EFC1900FD7540 /* Tans.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tans.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3088F78E2A6EFC1900FD7540 /* logicKidsProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logicKidsProjectApp.swift; sourceTree = "<group>"; };
 		3088F7902A6EFC1900FD7540 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3088F7922A6EFC1900FD7540 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -70,6 +71,7 @@
 		7B29832E2A8AED9A00047C14 /* gameinstruction1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gameinstruction1.gif; sourceTree = "<group>"; };
 		7B29832F2A8AED9A00047C14 /* gameinstruction3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gameinstruction3.gif; sourceTree = "<group>"; };
 		7B2983302A8AED9A00047C14 /* gameinstruction2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gameinstruction2.gif; sourceTree = "<group>"; };
+		7B4D15802AB3CBB40009FB62 /* HapticFeedbackManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedbackManager.swift; sourceTree = "<group>"; };
 		7B6884B72A840F9500B1C30B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7B6884B92A840F9A00B1C30B /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		7BCABD7D2A85590D009C5E0B /* BiggerSmallerCongratulationModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiggerSmallerCongratulationModal.swift; sourceTree = "<group>"; };
@@ -109,7 +111,7 @@
 		3088F78C2A6EFC1900FD7540 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3088F78B2A6EFC1900FD7540 /* logicKidsProject.app */,
+				3088F78B2A6EFC1900FD7540 /* Tans.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -129,6 +131,7 @@
 				3088F7922A6EFC1900FD7540 /* Assets.xcassets */,
 				3088F7942A6EFC1900FD7540 /* Preview Content */,
 				7B6884B82A840F9500B1C30B /* Localizable.strings */,
+				7B4D15802AB3CBB40009FB62 /* HapticFeedbackManager.swift */,
 			);
 			path = logicKidsProject;
 			sourceTree = "<group>";
@@ -240,9 +243,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3088F78A2A6EFC1900FD7540 /* logicKidsProject */ = {
+		3088F78A2A6EFC1900FD7540 /* Tans */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3088F7992A6EFC1900FD7540 /* Build configuration list for PBXNativeTarget "logicKidsProject" */;
+			buildConfigurationList = 3088F7992A6EFC1900FD7540 /* Build configuration list for PBXNativeTarget "Tans" */;
 			buildPhases = (
 				3088F7872A6EFC1900FD7540 /* Sources */,
 				3088F7882A6EFC1900FD7540 /* Frameworks */,
@@ -252,9 +255,9 @@
 			);
 			dependencies = (
 			);
-			name = logicKidsProject;
+			name = Tans;
 			productName = logicKidsProject;
-			productReference = 3088F78B2A6EFC1900FD7540 /* logicKidsProject.app */;
+			productReference = 3088F78B2A6EFC1900FD7540 /* Tans.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -272,7 +275,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3088F7862A6EFC1900FD7540 /* Build configuration list for PBXProject "logicKidsProject" */;
+			buildConfigurationList = 3088F7862A6EFC1900FD7540 /* Build configuration list for PBXProject "Tans" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -286,7 +289,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3088F78A2A6EFC1900FD7540 /* logicKidsProject */,
+				3088F78A2A6EFC1900FD7540 /* Tans */,
 			);
 		};
 /* End PBXProject section */
@@ -336,6 +339,7 @@
 				3088F7B42A72E51C00FD7540 /* Extensions.swift in Sources */,
 				30CEA72F2A81885D003098A5 /* TrueFalseGameView.swift in Sources */,
 				3088F78F2A6EFC1900FD7540 /* logicKidsProjectApp.swift in Sources */,
+				7B4D15812AB3CBB40009FB62 /* HapticFeedbackManager.swift in Sources */,
 				09DEA6332A79704E00B72928 /* CustomButtom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,12 +479,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"logicKidsProject/Preview Content\"";
 				DEVELOPMENT_TEAM = J7JQJTT8YZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Tans: Logic for Kids";
+				INFOPLIST_KEY_CFBundleDisplayName = Tans;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -493,7 +497,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.eduardodalencon.logicKidsProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -511,12 +515,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"logicKidsProject/Preview Content\"";
 				DEVELOPMENT_TEAM = J7JQJTT8YZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Tans: Logic for Kids";
+				INFOPLIST_KEY_CFBundleDisplayName = Tans;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -529,7 +533,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.eduardodalencon.logicKidsProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -544,7 +548,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3088F7862A6EFC1900FD7540 /* Build configuration list for PBXProject "logicKidsProject" */ = {
+		3088F7862A6EFC1900FD7540 /* Build configuration list for PBXProject "Tans" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3088F7972A6EFC1900FD7540 /* Debug */,
@@ -553,7 +557,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3088F7992A6EFC1900FD7540 /* Build configuration list for PBXNativeTarget "logicKidsProject" */ = {
+		3088F7992A6EFC1900FD7540 /* Build configuration list for PBXNativeTarget "Tans" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3088F79A2A6EFC1900FD7540 /* Debug */,

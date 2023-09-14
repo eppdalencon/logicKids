@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
    LastUpgradeVersion = "1430"
-   version = "1.8">
+   version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3088F78A2A6EFC1900FD7540"
-               BuildableName = "logicKidsProject.app"
-               BlueprintName = "logicKidsProject"
-               ReferencedContainer = "container:logicKidsProject.xcodeproj">
+               BuildableName = "Tans.app"
+               BlueprintName = "Tans"
+               ReferencedContainer = "container:Tans.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,14 +28,11 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
       shouldAutocreateTestPlan = "YES">
-      <Testables>
-      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = "pt-BR"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -47,9 +44,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3088F78A2A6EFC1900FD7540"
-            BuildableName = "logicKidsProject.app"
-            BlueprintName = "logicKidsProject"
-            ReferencedContainer = "container:logicKidsProject.xcodeproj">
+            BuildableName = "Tans.app"
+            BlueprintName = "Tans"
+            ReferencedContainer = "container:Tans.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -64,9 +61,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3088F78A2A6EFC1900FD7540"
-            BuildableName = "logicKidsProject.app"
-            BlueprintName = "logicKidsProject"
-            ReferencedContainer = "container:logicKidsProject.xcodeproj">
+            BuildableName = "Tans.app"
+            BlueprintName = "Tans"
+            ReferencedContainer = "container:Tans.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -48,6 +48,7 @@ struct BiggerSmallerGameView: View {
             HStack{
                 VStack {
                     Button(action: {
+                        HapticFeedbackManager.shared.hapticFeedback()
                         isShowingPause.toggle()
                     }) {
                         Image("PauseButton")
@@ -57,6 +58,7 @@ struct BiggerSmallerGameView: View {
                     }
                     Spacer()
                     Button(action: {
+                        HapticFeedbackManager.shared.hapticFeedback()
                         isShowingInstructions.toggle()
                     }) {
                         Image("InfoButton")
@@ -107,6 +109,7 @@ struct BiggerSmallerGameView: View {
                             .shadow(color: Color.black.opacity(0.2), radius: 20)
                             .saturation(topOption ? 0 : 1.0)
                             .onTapGesture {
+                                HapticFeedbackManager.shared.hapticFeedback()
                                 if(option[0]>option[1]) {
                                     colorOption1 = true
                                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
@@ -145,6 +148,7 @@ struct BiggerSmallerGameView: View {
                             .cornerRadius(10)
                             .shadow(color: Color.black.opacity(0.2), radius: 20)                            .saturation(bottomOption ? 0.0 : 1.0)
                             .onTapGesture {
+                                HapticFeedbackManager.shared.hapticFeedback()
                                 if(option[0]<option[1]) {
                                     colorOption2 = true
                                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {

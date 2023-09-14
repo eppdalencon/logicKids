@@ -49,6 +49,7 @@ struct QuestionsLevelOne {
 //}
 
 struct TangramGameView: View {
+    @State private var impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .rigid)
     
     @State private var isShowingPause = false
     @State private var isShowingCongratulation = false
@@ -207,6 +208,7 @@ struct TangramGameView: View {
                 HStack{
                     VStack {
                         Button(action: {
+                            HapticFeedbackManager.shared.hapticFeedback()
                             isShowingPause.toggle()
                         }) {
                             Image("PauseButton")
@@ -217,6 +219,7 @@ struct TangramGameView: View {
                         
                         Spacer()
                         Button(action: {
+                            HapticFeedbackManager.shared.hapticFeedback()
                             isShowingInstructions.toggle()
                         }) {
                             Image("InfoButton")
@@ -252,6 +255,7 @@ struct TangramGameView: View {
                                     .frame(height: geometry.size.height * 0.17)
                                     .saturation(selectedImageIndex == i ? 0.0 : 1.0)
                                     .onTapGesture {
+                                        HapticFeedbackManager.shared.hapticFeedback()
                                         if ((questionLevel[questionSelected].answerInt) == (objectsOptions[i])) {
                                             isShowingCongratulation = true
                                             //print("CERTO")

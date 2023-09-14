@@ -29,35 +29,14 @@ struct CompleteModalView: View {
                                     
                                     
                                     HomeButton(title: "Quit", color: Color.red, largura: geometry.size.width * 0.22, altura: geometry.size.height * 0.12, action: {
+                                        HapticFeedbackManager.shared.hapticFeedback()
                                         dismissGame();dismissComplete()
                                     })
                                     
                                     HomeButton(title: "PlayAgain", color: Color.blue, largura: geometry.size.width * 0.22, altura: geometry.size.height * 0.12, action: {
+                                        HapticFeedbackManager.shared.hapticFeedback()
                                         shuffleGame();dismissComplete()
                                     })
-        //                            Button(action: {
-        //                                withAnimation {
-        //                                    dismissGame()
-        //                                    dismissComplete()
-        //                                }
-        //                            }) {
-        //                                Text("Quit")
-        //                                    .padding()
-        //                                    .foregroundColor(.white)
-        //                                    .background(Color.blue)
-        //                                    .cornerRadius(10)
-        //                            }
-        //
-        //                            Button(action: {
-        //                                shuffleGame()
-        //                                dismissComplete()
-        //                            }) {
-        //                                Text("Play Again")
-        //                                    .padding()
-        //                                    .foregroundColor(.white)
-        //                                    .background(Color.blue)
-        //                                    .cornerRadius(10)
-        //                            }
                                 }
                                 .padding(.bottom,geometry.size.height * 0.0)
                             }

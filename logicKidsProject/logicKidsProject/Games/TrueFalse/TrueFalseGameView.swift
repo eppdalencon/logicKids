@@ -104,6 +104,7 @@ struct TrueFalseGameView: View {
             HStack(spacing:0){
                 VStack {
                     Button(action: {
+                        HapticFeedbackManager.shared.hapticFeedback()
                         isShowingPause.toggle()
                     }) {
                         Image("PauseButton")
@@ -115,6 +116,7 @@ struct TrueFalseGameView: View {
                     
                     Spacer()
                     Button(action: {
+                        HapticFeedbackManager.shared.hapticFeedback()
                         isShowingInstructions.toggle()
                     }) {
                         Image("InfoButton")
@@ -162,6 +164,7 @@ struct TrueFalseGameView: View {
                                 Spacer()
                                 HStack(spacing: 3){
                                     Button(action: {
+                                        HapticFeedbackManager.shared.hapticFeedback()
                                         answer1 = 1
                                     }) {
                                        Text("True")
@@ -175,6 +178,7 @@ struct TrueFalseGameView: View {
                                     }
                                     
                                     Button(action: {
+                                        HapticFeedbackManager.shared.hapticFeedback()
                                         answer1 = 0
                                     }) {
                                        Text("False")
@@ -202,6 +206,7 @@ struct TrueFalseGameView: View {
                                 Spacer()
                                 HStack(spacing: 3){
                                     Button(action: {
+                                        HapticFeedbackManager.shared.hapticFeedback()
                                         answer2 = 1
                                     }) {
                                        Text("True")
@@ -217,6 +222,7 @@ struct TrueFalseGameView: View {
                                     }
                                     
                                     Button(action: {
+                                        HapticFeedbackManager.shared.hapticFeedback()
                                         answer2 = 0
                                     }) {
                                        Text("False")
@@ -244,6 +250,7 @@ struct TrueFalseGameView: View {
                                 Spacer()
                                 HStack(spacing: 3){
                                     Button(action: {
+                                        HapticFeedbackManager.shared.hapticFeedback()
                                         answer3 = 1
                                     }) {
                                        Text("True")
@@ -259,6 +266,7 @@ struct TrueFalseGameView: View {
                                     }
                                     
                                     Button(action: {
+                                        HapticFeedbackManager.shared.hapticFeedback()
                                         answer3 = 0
                                     }) {
                                        Text("False")
@@ -286,6 +294,8 @@ struct TrueFalseGameView: View {
                             
                             
                             Button(action: {
+                                HapticFeedbackManager.shared.hapticFeedback()
+
                                 if (answer1 != nil && answer2 != nil && answer3 != nil){
                                     if([answer1, answer2, answer3] == answerArray){
                                         isShowingCongratulation = true

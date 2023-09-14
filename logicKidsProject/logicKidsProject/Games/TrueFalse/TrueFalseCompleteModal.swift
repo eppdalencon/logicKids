@@ -37,10 +37,12 @@ struct TrueFalseCompleteModalView: View {
                                     
                                     
                                     HomeButton(title: "Quit", color: Color.red, largura: geometry.size.width * 0.22, altura: geometry.size.height * 0.12, action: {
+                                        HapticFeedbackManager.shared.hapticFeedback()
                                         dismissGame();dismissComplete()
                                     })
                                     
                                     HomeButton(title: "PlayAgain", color: Color.blue, largura: geometry.size.width * 0.22, altura: geometry.size.height * 0.12, action: {
+                                        HapticFeedbackManager.shared.hapticFeedback()
                                         shuffleGame();dismissComplete()
                                     })
         //
@@ -56,7 +58,7 @@ struct TrueFalseCompleteModalView: View {
                     
                     .padding(30)
                     .frame(width: geometry.size.width / 1.4, height: geometry.size.height / 1.4)
-                    .background(Color("lightBackground"))
+                    .background(Color("backgroundColor"))
                     .overlay(
                         RoundedRectangle(cornerRadius: 20)
                             .stroke(Color.teal, lineWidth: 10)

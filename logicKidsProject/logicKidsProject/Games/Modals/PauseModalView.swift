@@ -20,6 +20,7 @@ struct PauseModalView: View {
                     HStack(spacing:geometry.size.width * 0.05){
                         VStack{
                             Button(action: {
+                                HapticFeedbackManager.shared.hapticFeedback()
                                 dismissGame()
                             }) {
                                 Image("QuitButton")
@@ -36,6 +37,7 @@ struct PauseModalView: View {
                         
                         VStack{
                             Button(action: {
+                                HapticFeedbackManager.shared.hapticFeedback()
                                 show.toggle()
                                 shuffleGame()
                             }) {
@@ -56,6 +58,7 @@ struct PauseModalView: View {
                         
                         VStack{
                             Button(action: {
+                                HapticFeedbackManager.shared.hapticFeedback()
                                 show.toggle()
                             }) {
                                 Image("ContinueButton")
@@ -76,7 +79,7 @@ struct PauseModalView: View {
                     
                     .padding(30)
                     .frame(width: geometry.size.width / 2, height: geometry.size.height / 2.1)
-                    .background(Color("lightBackground"))
+                    .background(Color("backgroundColor"))
                     .overlay(
                         RoundedRectangle(cornerRadius: 20)
                             .stroke(Color.teal, lineWidth: 10)
